@@ -1,0 +1,24 @@
+:root {
+  --motion-ease-reveal: cubic-bezier(0.42, 0, 0.58, 1);
+  --motion-ease-exit: cubic-bezier(0.3, 0.18, 0.86, 0.66);
+  --motion-ease-rest: cubic-bezier(0.16, 1, 0.3, 1);
+  --motion-ease-shift-start: cubic-bezier(0.08, 0.8, 0.18, 1);
+  --motion-ease-shift-coast: cubic-bezier(0.4, 0, 0.8, 0.2);
+  --motion-ease-shift-drive: cubic-bezier(0.16, 0.6, 0.42, 1);
+  --motion-ease-shift-settle: cubic-bezier(0.12, 0.75, 0.35, 1);
+  --motion-ease-bounce-lift: cubic-bezier(0.16, 0.8, 0.28, 1);
+  --motion-ease-bounce-fall: cubic-bezier(0.48, 0, 0.82, 1);
+  --motion-ease-bounce-return: cubic-bezier(0.18, 0.8, 0.36, 1);
+  --motion-duration-feedback: 0.12s;
+  --motion-duration-reveal: 0.32s;
+  --motion-duration-shift: 0.48s;
+  --motion-duration-exit: 0.18s;
+  --motion-duration-bounce: 0.5s;
+  --motion-distance-tap: 0.125rem;
+  --motion-distance-lift: -0.3rem;
+  --motion-distance-reveal: 1.5rem;
+  --motion-distance-shift: 4rem;
+  --motion-bounce-peak: -0.4rem;
+  --motion-bounce-rebound: -0.24rem;
+  --motion-bounce-settle: -0.32rem;
+}

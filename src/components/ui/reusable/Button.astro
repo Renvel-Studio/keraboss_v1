@@ -1,0 +1,38 @@
+---
+interface Props {
+  href?: string;
+  variant?: 'primary' | 'secondary' | 'outline' | 'quiet';
+  type?: 'button' | 'submit' | 'reset';
+  disabled?: boolean;
+  id?: string;
+  class?: string;
+  ariaLabel?: string;
+  'data-motion-play'?: string;
+}
+const {
+  href,
+  variant = 'primary',
+  type = 'button',
+  disabled = false,
+  class: className,
+  ariaLabel,
+  ...attributes
+} = Astro.props;
+const classes = ['button', `button--${variant}`, className];
+---
+
+{href && !disabled ? (
+  <a class:list={classes} href={href} aria-label={ariaLabel} {...attributes}>
+    <slot />
+  </a>
+) : (
+  <button
+    class:list={classes}
+    type={type}
+    disabled={disabled}
+    aria-label={ariaLabel}
+    {...attributes}
+  >
+    <slot />
+  </button>
+)}

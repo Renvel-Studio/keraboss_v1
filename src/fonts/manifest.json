@@ -1,0 +1,210 @@
+{
+  "families": [
+    {
+      "package": "@fontsource-variable/inter",
+      "version": "5.3.0",
+      "family": "Inter Variable",
+      "sourceCss": "opsz.css",
+      "sourceCssSha256": "b18a8ac2834206f36bf07f710df6f8bba30164ae242bfa290d1221e939dfb6c5",
+      "archiveIntegrity": "sha512-OupL48va4JNofb97w6NYeF9S7W/kHNKM0Er8Dem5nqi4jeOLrVJDoE8tZEpnMJmtkvNbB1EIPPwHcdkF6b1oUA==",
+      "source": "https://registry.npmjs.org/@fontsource-variable/inter/-/inter-5.3.0.tgz",
+      "license": "OFL-1.1",
+      "licenseSha256": "3b0a5fca3d17942cde889069889dedbbbd075e9b599968c82a95f4d944e9b345",
+      "files": [
+        {
+          "filename": "inter-greek-ext-opsz-normal.woff2",
+          "subset": "greek-ext",
+          "bytes": 17376,
+          "sha256": "e0f32d9ee75a83f4031e1a7bc8926f962278e282d3535be7d8dbeb3bd62914b5",
+          "unicodeRange": "U+1F00-1FFF",
+          "axes": {
+            "opsz": {
+              "name": "Optical size",
+              "min": 14,
+              "default": 14,
+              "max": 32
+            },
+            "wght": {
+              "name": "Weight",
+              "min": 100,
+              "default": 400,
+              "max": 900
+            }
+          },
+          "characterCount": 239
+        },
+        {
+          "filename": "inter-greek-opsz-normal.woff2",
+          "subset": "greek",
+          "bytes": 30200,
+          "sha256": "93c5ac80e25cda1cf289206c724027eeb187c9d398106f0079a912cbe80616ce",
+          "unicodeRange": "U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF",
+          "axes": {
+            "opsz": {
+              "name": "Optical size",
+              "min": 14,
+              "default": 14,
+              "max": 32
+            },
+            "wght": {
+              "name": "Weight",
+              "min": 100,
+              "default": 400,
+              "max": 900
+            }
+          },
+          "characterCount": 111
+        },
+        {
+          "filename": "inter-latin-ext-opsz-normal.woff2",
+          "subset": "latin-ext",
+          "bytes": 133336,
+          "sha256": "5e6d4fe9d9f4bff8b2a2469d25ab19576bb85331e22c6ed51398e16f95d56a9c",
+          "unicodeRange": "U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF",
+          "axes": {
+            "opsz": {
+              "name": "Optical size",
+              "min": 14,
+              "default": 14,
+              "max": 32
+            },
+            "wght": {
+              "name": "Weight",
+              "min": 100,
+              "default": 400,
+              "max": 900
+            }
+          },
+          "characterCount": 734
+        },
+        {
+          "filename": "inter-latin-opsz-normal.woff2",
+          "subset": "latin",
+          "bytes": 72920,
+          "sha256": "2c295d99e26dcf357d4d01bcf270fd6924b600c9a13dd8c363ef114f4c6976fa",
+          "unicodeRange": "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD",
+          "axes": {
+            "opsz": {
+              "name": "Optical size",
+              "min": 14,
+              "default": 14,
+              "max": 32
+            },
+            "wght": {
+              "name": "Weight",
+              "min": 100,
+              "default": 400,
+              "max": 900
+            }
+          },
+          "characterCount": 231
+        }
+      ],
+      "coverage": [
+        {
+          "text": "Διαμόρφωσε το δικό σου Super K",
+          "allCodePointsPresent": true
+        },
+        {
+          "text": "Μαΐου, προϊόν, ΐ, ΰ, Ἑλλάς",
+          "allCodePointsPresent": true
+        },
+        {
+          "text": "1.250,50 €",
+          "allCodePointsPresent": true
+        }
+      ]
+    },
+    {
+      "package": "@fontsource-variable/noto-sans",
+      "version": "5.3.0",
+      "family": "Noto Sans Variable",
+      "sourceCss": "wght.css",
+      "sourceCssSha256": "124f01c4ca525bf77b6cb19d584237113b967297bbe62a700c136535acd6cfc5",
+      "archiveIntegrity": "sha512-e3ZuxzY9AL2psXPZlhwhnYrHUHv6PMoyK9MQ7croF0CUgURLqu9EMjW7q2FgVLwij1tjLsIHQrnwQ8aUcg4BiA==",
+      "source": "https://registry.npmjs.org/@fontsource-variable/noto-sans/-/noto-sans-5.3.0.tgz",
+      "license": "OFL-1.1",
+      "licenseSha256": "54ec7b5a35310ad66f9f3091426f7028484cbf9ae1ab5da30122ee412a3009e1",
+      "files": [
+        {
+          "filename": "noto-sans-greek-ext-wght-normal.woff2",
+          "subset": "greek-ext",
+          "bytes": 10760,
+          "sha256": "790b255c10c32e0b10bdcd961abad098c9697b7ffbabc1b09aca0b17af3201fd",
+          "unicodeRange": "U+1F00-1FFF",
+          "axes": {
+            "wght": {
+              "name": "Weight",
+              "min": 100,
+              "default": 400,
+              "max": 900
+            }
+          },
+          "characterCount": 238
+        },
+        {
+          "filename": "noto-sans-greek-wght-normal.woff2",
+          "subset": "greek",
+          "bytes": 21776,
+          "sha256": "7f655207c2f6c140c327d6bd263bccc7a11833084f4fb0c51d9a24b7cd753651",
+          "unicodeRange": "U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF",
+          "axes": {
+            "wght": {
+              "name": "Weight",
+              "min": 100,
+              "default": 400,
+              "max": 900
+            }
+          },
+          "characterCount": 126
+        },
+        {
+          "filename": "noto-sans-latin-ext-wght-normal.woff2",
+          "subset": "latin-ext",
+          "bytes": 167960,
+          "sha256": "6d5a79315528df191b9d86f97b0c4272a8b588fcb166773fe6588ac795de0613",
+          "unicodeRange": "U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF",
+          "axes": {
+            "wght": {
+              "name": "Weight",
+              "min": 100,
+              "default": 400,
+              "max": 900
+            }
+          },
+          "characterCount": 1139
+        },
+        {
+          "filename": "noto-sans-latin-wght-normal.woff2",
+          "subset": "latin",
+          "bytes": 35820,
+          "sha256": "51ca196f49a33e79e7870ff88ebd2829a3f627a51e7d690986618f0e7ad2b52d",
+          "unicodeRange": "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD",
+          "axes": {
+            "wght": {
+              "name": "Weight",
+              "min": 100,
+              "default": 400,
+              "max": 900
+            }
+          },
+          "characterCount": 233
+        }
+      ],
+      "coverage": [
+        {
+          "text": "Διαμόρφωσε το δικό σου Super K",
+          "allCodePointsPresent": true
+        },
+        {
+          "text": "Μαΐου, προϊόν, ΐ, ΰ, Ἑλλάς",
+          "allCodePointsPresent": true
+        },
+        {
+          "text": "1.250,50 €",
+          "allCodePointsPresent": true
+        }
+      ]
+    }
+  ]
+}

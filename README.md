@@ -1,7 +1,8 @@
 # KERABOSS — Astro foundation
 
 Τοπική βάση για το νέο site της Keraboss Cars Manufacturing. Δεν έχει γίνει deployment.
-Brand fonts, παλέτα, τελικό logo και φωτογραφίες παραμένουν προς επιλογή.
+Design system: Inter Variable / Noto Sans Variable, Keraboss Yellow και sand/carbon surfaces.
+Το τελικό logo και η τελική επιλογή φωτογραφιών του production site παραμένουν προς επιλογή.
 
 ```sh
 npm ci
@@ -13,6 +14,12 @@ npm run assets:generate
 
 Απαιτείται Node 22.12+ σε έκδοση συμβατή με Astro. Το lockfile αποθηκεύει τις ακριβείς εκδόσεις.
 Το build παράγει αυτόματα το Lucide sprite, icon types, προσωρινά manifest icons, sitemap και headers.
+Ετοιμάζει επίσης τα οκτώ verified WOFF2 subsets και τα responsive photo exports.
+
+Σελίδα δοκιμών: `/design-system/` (noindex, εκτός sitemap). Περιλαμβάνει hero, typography,
+components, configurator swatches, media ratios και τέσσερα motion demos.
+Δες την [αναφορά υλοποίησης και επαλήθευσης](docs/design-system.md) και τα
+[ακριβή font filenames / άδειες / checksums](docs/fonts-verification.md).
 
 ## Ρυθμίσεις
 
@@ -49,11 +56,13 @@ src/
   config/site.ts                εταιρικά στοιχεία / metadata defaults
   content/company.ts            κοινό περιεχόμενο HTML / Markdown / LLM files
   generated/                    generated IconName union
+  fonts/                        αυτόνομη καταχώριση self-hosted @font-face
   layouts/                      BaseLayout.astro
   lib/seo/                      typed schema builders
   pages/                        σελίδες / static discovery endpoints
   scripts/{gsap,lenis}/          opt-in motion, reduced motion / cleanup
-  styles/{reset,tokens,primary}/ CSS layers και υποδομή fonts
+  styles/{reset,tokens,primary}/ βασικά CSS layers
+  styles/pages/                 styles της σελίδας δοκιμών
 ```
 
 ## Χρήση
@@ -85,6 +94,16 @@ import Icon from '@/components/ui/reusable/Icon.astro';
 
 Για scroll smoothing δώσε `smoothScroll` στο layout· για section animation πρόσθεσε `data-reveal`.
 GSAP/Lenis φορτώνουν μόνο σε opt-in σελίδες, χωρίς reduced motion. Το περιεχόμενο είναι ορατό χωρίς JS.
+
+Τα components χρησιμοποιούν semantic tokens. Raw χρώματα υπάρχουν μόνο στο
+`src/styles/tokens/primitives.css`. Οι οπτικοί ρόλοι `.type-h1`, `.type-display`, `.type-body`
+είναι ανεξάρτητοι από το επίπεδο HTML heading. Τα containers είναι `.container-reading`,
+`.container-content`, `.container-wide`, `.container-full-bleed`. Το `.grid-auto` χρησιμοποιεί
+parent-safe ελάχιστες στήλες. Σε κάθε κάρτα `.card-container` οι `.type-card-title` χρησιμοποιούν cqi.
+
+Τα `@fontsource-variable/inter` και `@fontsource-variable/noto-sans` είναι pinned στο `5.3.0`.
+Το `npm run fonts:prepare` αντιγράφει μόνο latin, latin-ext, greek και greek-ext, μαζί με OFL.
+Δεν προφορτώνονται font subsets χωρίς browser evidence από το τελικό πρώτο viewport.
 
 Πριν τη δημοσίευση διάβασε το [discoverability checklist](docs/discoverability.md).
 Τα επαληθευμένα στοιχεία και τα όρια έρευνας είναι στο [research](docs/keraboss-research.md).

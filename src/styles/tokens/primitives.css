@@ -1,0 +1,15 @@
+:root {
+  --primitive-white: #ffffff;
+  --primitive-yellow: #ffcc00;
+  --primitive-yellow-hover: #e6b800;
+  --primitive-desert-sand: #e9dfcd;
+  --primitive-light-sand: #f7f4ed;
+  --primitive-carbon: #141414;
+  --primitive-stone: #5c584f;
+  --primitive-sand-border: #d8cebd;
+  --primitive-control-border: #746d60;
+  --primitive-success-text: #1d633e;
+  --primitive-success-surface: #e7f3ea;
+  --primitive-error-text: #a22b30;
+  --primitive-error-surface: #fbeaec;
+}

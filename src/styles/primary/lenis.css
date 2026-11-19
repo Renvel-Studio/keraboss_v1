@@ -1,0 +1,21 @@
+/* Logical sizing integration for the installed Lenis version. */
+html.lenis,
+html.lenis body {
+  block-size: auto;
+}
+.lenis:not(.lenis-autoToggle).lenis-stopped {
+  overflow: clip;
+}
+.lenis
+  :is(
+    [data-lenis-prevent],
+    [data-lenis-prevent-wheel],
+    [data-lenis-prevent-touch],
+    [data-lenis-prevent-vertical],
+    [data-lenis-prevent-horizontal]
+  ) {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}

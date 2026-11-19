@@ -7,15 +7,21 @@ body,
 h1,
 h2,
 h3,
+h4,
+h5,
+h6,
+figure,
+blockquote,
 p {
-  margin: 0;
+  margin-block: 0;
+  margin-inline: 0;
 }
 html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
 body {
-  min-block-size: 100svh;
+  min-block-size: 100dvh;
 }
 img,
 picture,

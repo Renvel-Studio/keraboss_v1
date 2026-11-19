@@ -1,0 +1,137 @@
+.container,
+.container-content,
+.container-wide,
+.container-reading {
+  inline-size: min(calc(100% - var(--page-gutter) * 2), var(--container-content));
+  margin-inline: auto;
+}
+.container-wide {
+  inline-size: min(calc(100% - var(--page-gutter) * 2), var(--container-wide));
+}
+.container-reading {
+  inline-size: min(calc(100% - var(--page-gutter) * 2), var(--container-reading));
+}
+.container-full-bleed {
+  inline-size: 100%;
+  max-inline-size: none;
+}
+.reading {
+  max-inline-size: var(--container-reading);
+}
+.section {
+  padding-block: var(--section-space);
+}
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--stack-gap);
+}
+.stack > * {
+  min-inline-size: 0;
+}
+.stack--tight {
+  --stack-gap: var(--space-sm);
+}
+.stack--loose {
+  --stack-gap: var(--space-xl);
+}
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--cluster-gap);
+}
+.cluster > * {
+  min-inline-size: 0;
+}
+.cluster--between {
+  justify-content: space-between;
+}
+.grid-auto {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--card-min)), 1fr));
+  gap: var(--card-gap);
+}
+.grid-auto > * {
+  min-inline-size: 0;
+}
+.card-container {
+  container: card / inline-size;
+}
+.surface-soft {
+  background: var(--surface-soft);
+}
+.surface-muted {
+  background: var(--surface-muted);
+}
+.surface-inverse {
+  background: var(--surface-inverse);
+  color: var(--text-inverse);
+  --text-primary: var(--text-inverse);
+  --text-secondary: var(--text-inverse-secondary);
+  --focus-color: var(--focus-on-inverse);
+  --focus-outline: var(--focus-width) solid var(--focus-color);
+}
+.text-secondary {
+  color: var(--text-secondary);
+}
+.media {
+  aspect-ratio: var(--media-ratio, var(--ratio-card));
+  overflow: hidden;
+  background: var(--surface-muted);
+  border-start-start-radius: var(--radius-card);
+  border-start-end-radius: var(--radius-card);
+  border-end-start-radius: var(--radius-card);
+  border-end-end-radius: var(--radius-card);
+}
+.media > :is(img, picture, video) {
+  inline-size: 100%;
+  block-size: 100%;
+}
+.media > picture > img {
+  inline-size: 100%;
+  block-size: 100%;
+}
+.media :is(img, video) {
+  object-fit: var(--media-fit, cover);
+  object-position: var(--media-focal-inline) var(--media-focal-block);
+}
+.media--square {
+  --media-ratio: var(--ratio-square);
+}
+.media--portrait {
+  --media-ratio: var(--ratio-portrait);
+}
+.media--card {
+  --media-ratio: var(--ratio-card);
+}
+.media--landscape {
+  --media-ratio: var(--ratio-landscape);
+}
+.media--video {
+  --media-ratio: var(--ratio-video);
+}
+.media--cinematic {
+  --media-ratio: var(--ratio-cinematic);
+}
+.media--contain {
+  --media-fit: contain;
+}
+.media--car-right {
+  --media-focal-inline: 88%;
+  --media-focal-block: 70%;
+}
+.sr-only {
+  position: absolute;
+  inline-size: 0.0625rem;
+  block-size: 0.0625rem;
+  padding-block: 0;
+  padding-inline: 0;
+  margin-block: -0.0625rem;
+  margin-inline: -0.0625rem;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border-block: 0;
+  border-inline: 0;
+}

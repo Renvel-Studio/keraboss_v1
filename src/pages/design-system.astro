@@ -1,0 +1,458 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Button from '@/components/ui/reusable/Button.astro';
+import TextField from '@/components/ui/reusable/TextField.astro';
+import CarMedia from '@/components/ui/reusable/CarMedia.astro';
+import VehicleCard from '@/components/ui/reusable/VehicleCard.astro';
+import { colors, typeRoles, motionProfiles } from '@/data/design-system';
+import '@/styles/pages/design-system.css';
+---
+
+<BaseLayout
+  title="Design System | KERABOSS Super K"
+  description="Το σύστημα σχεδιασμού του Keraboss Super K: τυπογραφία, χρώματα, components και κίνηση."
+  noindex
+>
+  <header class="ds-header container-wide">
+    <a class="ds-brand" href="/" aria-label="KERABOSS — Αρχική">
+      KERABOSS<span class="type-micro">CARS MANUFACTURING</span>
+    </a>
+    <nav aria-label="Περιεχόμενα συστήματος σχεδιασμού">
+      <ul class="nav-list">
+        <li>
+          <a class="nav-link" href="#typography">
+            Τυπογραφία
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" href="#components">
+            Components
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" href="#motion">
+            Κίνηση
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <span class="tag">Design system</span>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <section class="ds-hero container-wide" aria-labelledby="hero-title">
+      <div class="ds-hero-heading">
+        <p class="type-label type-label-wide">ΧΑΡΑΚΤΗΡΑΣ. ΑΠΛΟΤΗΤΑ. ΕΛΕΥΘΕΡΙΑ.</p>
+        <h1 id="hero-title" class="ds-wordmark" lang="en">
+          SUPER K
+        </h1>
+        <div class="ds-hero-intro cluster cluster--between">
+          <p class="type-lead reading">
+            Το δικό σου ταξίδι.
+            <br />
+            Με τον δικό σου τρόπο.
+          </p>
+          <Button href="#configurator">Διαμόρφωσε το δικό σου</Button>
+        </div>
+      </div>
+      <figure class="stack stack--tight">
+        <CarMedia eager ratio="cinematic" />
+        <figcaption class="type-caption text-secondary">
+          Super K · Βάρκιζα, Αθηναϊκή Ριβιέρα
+        </figcaption>
+      </figure>
+    </section>
+
+    <section id="typography" class="section container-wide" aria-labelledby="type-title">
+      <div class="ds-section-head">
+        <p class="type-label type-label-wide text-secondary">ΤΥΠΟΓΡΑΦΙΑ</p>
+        <h2 id="type-title" class="type-h2">
+          Καθαρή φωνή.
+          <br />
+          Σε κάθε μέγεθος.
+        </h2>
+        <p class="type-body reading text-secondary">
+          Inter για τα δυνατά μηνύματα και τις επιλογές. Noto Sans για τις ιστορίες που αξίζει να
+          διαβαστούν. Το οπτικό μέγεθος επιλέγεται ανεξάρτητα από το επίπεδο του HTML heading.
+        </p>
+      </div>
+      <div class="ds-type-scale">
+        {typeRoles.map(({ role, text, note }) => (
+          <div class="ds-type-row">
+            <div class="stack stack--tight">
+              <p class="type-label">{role}</p>
+              <p class="type-micro text-secondary">{note}</p>
+            </div>
+            <p class:list={[`type-${role}`, 'ds-type-sample', role === 'body' && 'reading']}>
+              {text}
+            </p>
+          </div>
+        ))}
+      </div>
+      <div class="ds-font-proofs grid-auto">
+        {['Inter Variable', 'Noto Sans Variable'].map((family, index) => (
+          <article class="card card-body stack">
+            <h3 class="type-h5">{family} · Greek / Latin</h3>
+            <div
+              class:list={[
+                'ds-font-proof',
+                index === 0 ? 'ds-font-proof--inter' : 'ds-font-proof--noto',
+              ]}
+              data-font-family={family}
+            >
+              <p>Διαμόρφωσε το δικό σου Super K</p>
+              <p>Μαΐου, προϊόν, ΐ, ΰ, Ἑλλάς</p>
+              <p class="type-tabular">1.250,50 €</p>
+              <p>ΜΑΪΟΥ · ΕΛΕΥΘΕΡΊΑ · ΑΫΛΗ</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section id="palette" class="section surface-soft" aria-labelledby="palette-title">
+      <div class="container-wide stack stack--loose">
+        <div class="ds-section-head">
+          <p class="type-label type-label-wide text-secondary">ΧΡΩΜΑ & ΕΠΙΦΑΝΕΙΕΣ</p>
+          <h2 id="palette-title" class="type-h2">
+            Φως. Άμμος. Carbon.
+          </h2>
+          <p class="type-body reading text-secondary">
+            Λευκό για χώρο και καθαρότητα. Ήρεμες γήινες επιφάνειες. Κίτρινο εκεί όπου μια επιλογή
+            χρειάζεται να ξεχωρίσει.
+          </p>
+        </div>
+        <div class="ds-color-grid">
+          {colors.map(({ name, hex, style }) => (
+            <figure class="ds-color-card">
+              <div class:list={['ds-color', `ds-color--${style}`]}></div>
+              <figcaption class="stack stack--tight">
+                <span class="type-label">{name}</span>
+                <span class="type-micro text-secondary">{hex}</span>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+        <div class="grid-auto">
+          <article class="ds-border ds-border--subtle card-body">
+            <h3 class="type-h5">Subtle</h3>
+            <p class="type-body text-secondary">
+              Διαχωριστικά και διακοσμητικές ακμές.
+              <br />
+              Sand Border · 0.0625rem
+            </p>
+          </article>
+          <article class="ds-border ds-border--default card-body">
+            <h3 class="type-h5">Default</h3>
+            <p class="type-body text-secondary">
+              Πεδία και διαδραστικά controls.
+              <br />
+              Control Border · 0.0625rem
+            </p>
+          </article>
+          <article class="ds-border ds-border--strong card-body">
+            <h3 class="type-h5">Strong</h3>
+            <p class="type-body text-secondary">
+              Επιλογή και έντονη οριοθέτηση.
+              <br />
+              Carbon · 0.125rem
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="components"
+      class="section container-wide stack stack--loose"
+      aria-labelledby="components-title"
+    >
+      <div class="ds-section-head">
+        <p class="type-label type-label-wide text-secondary">COMPONENTS</p>
+        <h2 id="components-title" class="type-h2">
+          Κάθε επιλογή,
+          <br />
+          ξεκάθαρη.
+        </h2>
+      </div>
+      <div class="ds-component-block stack">
+        <h3 class="type-h4">Buttons & navigation</h3>
+        <div class="cluster">
+          <Button class="motion-reveal" href="#configurator">
+            Διαμόρφωσε το Super K
+          </Button>
+          <Button variant="secondary" href="#cards">
+            Γνώρισε το αυτοκίνητο
+          </Button>
+          <Button variant="outline" href="#forms">
+            Επικοινωνία
+          </Button>
+          <Button variant="quiet" href="#typography">
+            Περισσότερα
+          </Button>
+          <Button disabled>Μη διαθέσιμο</Button>
+        </div>
+        <nav aria-label="Παράδειγμα πλοήγησης">
+          <ul class="nav-list">
+            <li>
+              <a class="nav-link" href="#components" aria-current="location">
+                Super K · επιλεγμένο
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" href="#configurator">
+                Διαμόρφωση
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" href="#reading">
+                Η ιστορία
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div id="forms" class="ds-component-block stack stack--loose">
+        <h3 class="type-h4">Πεδία & ανατροφοδότηση</h3>
+        <form id="demo-form" class="stack" novalidate>
+          <div class="grid-auto">
+            <TextField
+              id="demo-name"
+              label="Ονοματεπώνυμο"
+              placeholder="Πώς σε λένε;"
+              required
+              autocomplete="name"
+              message="Υποχρεωτικό πεδίο. Η δοκιμή δεν αποστέλλει στοιχεία."
+            />
+            <TextField
+              id="demo-email"
+              label="Email"
+              type="email"
+              value="keraboss@"
+              required
+              autocomplete="email"
+              state="error"
+              message="Σφάλμα: συμπλήρωσε μια έγκυρη διεύθυνση email."
+            />
+            <TextField
+              id="demo-success"
+              label="Έγκυρη διεύθυνση"
+              type="email"
+              value="hello@example.com"
+              state="success"
+              message="Επιτυχία: η μορφή της διεύθυνσης είναι σωστή."
+            />
+          </div>
+          <div class="cluster">
+            <Button type="submit">Έλεγχος πεδίων</Button>
+            <p id="form-status" class="type-caption" role="status">
+              Συμπλήρωσε τα υποχρεωτικά πεδία για δοκιμή.
+            </p>
+          </div>
+        </form>
+        <div class="grid-auto">
+          <p class="feedback feedback--success">
+            <strong>✓ Η επιλογή αποθηκεύτηκε.</strong>
+            <br />
+            Μπορείς να συνεχίσεις στη δοκιμή διαμόρφωσης.
+          </p>
+          <p class="feedback feedback--error">
+            <strong>! Χρειάζεται έλεγχος.</strong>
+            <br />
+            Διόρθωσε τα πεδία με την ένδειξη «Σφάλμα».
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="configurator" class="section surface-muted" aria-labelledby="config-title">
+      <div class="container-wide ds-configurator">
+        <div class="stack stack--loose">
+          <div class="stack">
+            <p class="type-label type-label-wide text-secondary">ΔΟΚΙΜΗ ΔΙΑΜΟΡΦΩΣΗΣ</p>
+            <h2 id="config-title" class="type-h2">
+              Το δικό σου
+              <br />
+              Super K.
+            </h2>
+            <p class="type-body reading">
+              Μια επιλογή δηλώνεται με χρώμα, περίγραμμα, κανονικό radio και ορατή ένδειξη
+              επιβεβαίωσης.
+            </p>
+          </div>
+          <fieldset class="choice-group">
+            <legend class="type-label">Χρώμα αμαξώματος</legend>
+            <div class="choice-options">
+              {[
+                { name: 'Keraboss Yellow', style: 'yellow' },
+                { name: 'Desert Sand', style: 'sand' },
+                { name: 'Carbon', style: 'carbon' },
+              ].map(({ name, style }, index) => (
+                <label class="choice">
+                  <input type="radio" name="finish" value={name} checked={index === 0} />
+                  <span class="choice-label">
+                    <span
+                      class:list={['color-chip', `color-chip--${style}`]}
+                      aria-hidden="true"
+                    ></span>
+                    <span>{name}</span>
+                    <span class="choice-check" aria-hidden="true">
+                      ✓
+                    </span>
+                  </span>
+                </label>
+              ))}
+            </div>
+          </fieldset>
+          <p id="finish-status" class="type-label" role="status">
+            Επιλεγμένο χρώμα: Keraboss Yellow ✓
+          </p>
+          <p class="type-caption text-secondary">
+            Η φωτογραφία παρουσιάζει το υπάρχον αυτοκίνητο. Οι επιλογές είναι δείγματα του design
+            system.
+          </p>
+        </div>
+        <CarMedia ratio="landscape" contain />
+      </div>
+    </section>
+
+    <section
+      id="cards"
+      class="section container-wide stack stack--loose"
+      aria-labelledby="cards-title"
+    >
+      <div class="ds-section-head">
+        <p class="type-label type-label-wide text-secondary">CARDS & MEDIA</p>
+        <h2 id="cards-title" class="type-h2">
+          Η εικόνα
+          <br />
+          στο προσκήνιο.
+        </h2>
+        <p class="type-body text-secondary reading">
+          Τα ratios αφορούν μόνο τη φωτογραφία. Το κείμενο κρατά τον χώρο που χρειάζεται, με τίτλους
+          που προσαρμόζονται στο πλάτος της κάρτας.
+        </p>
+      </div>
+      <div class="grid-auto">
+        <VehicleCard
+          title="Μια διαδρομή δίπλα στη θάλασσα."
+          description="Card media · 4:3. Focal point προς το αυτοκίνητο."
+        />
+        <VehicleCard
+          title="Η ελευθερία έχει τον δικό της χαρακτήρα."
+          description="Landscape media · 3:2. Φυσικό wrapping ελληνικού τίτλου."
+          ratio="landscape"
+        />
+        <VehicleCard
+          title="Διαμόρφωσε το δικό σου Super K."
+          description="Portrait media · 4:5. Κείμενο ανεξάρτητο από το ύψος της εικόνας."
+          ratio="portrait"
+        />
+      </div>
+      <div class="ds-ratio-grid">
+        {(['square', 'portrait', 'card', 'landscape', 'video', 'cinematic'] as const).map(
+          (ratio) => (
+            <figure class="stack stack--tight">
+              <CarMedia ratio={ratio} />
+              <figcaption class="type-caption">{ratio}</figcaption>
+            </figure>
+          ),
+        )}
+      </div>
+    </section>
+
+    <section id="motion" class="section surface-soft" aria-labelledby="motion-title">
+      <div class="container-wide stack stack--loose">
+        <div class="ds-section-head">
+          <p class="type-label type-label-wide text-secondary">MOTION</p>
+          <h2 id="motion-title" class="type-h2">
+            Ρυθμός.
+            <br />
+            Αδράνεια. Επαναφορά.
+          </h2>
+          <p class="type-body text-secondary reading">
+            Τέσσερις υπογραφές κίνησης. Κάθε δοκιμή επιστρέφει σε ηρεμία. Με reduced motion, η
+            μετατόπιση αφαιρείται και η ενημέρωση κατάστασης παραμένει.
+          </p>
+        </div>
+        <div class="grid-auto">
+          {motionProfiles.map((profile) => (
+            <article class="card card-body stack" data-motion-demo={profile.id}>
+              <div class="cluster cluster--between">
+                <h3 class="type-h5">{profile.title}</h3>
+                <span class="tag">{profile.timing}</span>
+              </div>
+              <p class="type-body text-secondary">{profile.description}</p>
+              <div class="ds-motion-stage" aria-hidden="true">
+                <span class="motion-runner">K</span>
+              </div>
+              <Button
+                variant="outline"
+                class={profile.className}
+                data-motion-play={profile.id}
+                ariaLabel={`Δοκιμή: ${profile.title}`}
+              >
+                Δοκιμή κίνησης
+              </Button>
+              <p class="type-caption text-secondary" data-motion-status role="status">
+                Σε ηρεμία.
+              </p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="reading"
+      class="section container-reading stack stack--loose"
+      aria-labelledby="reading-title"
+    >
+      <h2 id="reading-title" class="type-h2">
+        Μια ιστορία
+        <br />
+        με δικό της ρυθμό.
+      </h2>
+      <p class="type-lead">
+        Το αυτοκίνητο αφήνει χώρο στην εικόνα. Η τυπογραφία αφήνει χώρο στην ιστορία.
+      </p>
+      <p class="type-body type-long-form">
+        Αυτή είναι μια δοκιμή συνεχούς ανάγνωσης στα ελληνικά, σε πλάτος περίπου εξήντα πέντε
+        χαρακτήρων. Οι τόνοι, τα διαλυτικά και οι αριθμοί χρειάζονται την ίδια προσοχή με έναν
+        μεγάλο τίτλο. Μαΐου, προϊόν, ΐ, ΰ, Ἑλλάς — κάθε χαρακτήρας έχει τον χώρο του. Η ιστορία
+        μπορεί να μεγαλώνει φυσικά, χωρίς σταθερό ύψος και χωρίς να κρύβεται περιεχόμενο.
+      </p>
+      <div>
+        <details class="disclosure">
+          <summary>Πώς επιλέγεται το χρώμα;</summary>
+          <p class="type-body type-long-form">
+            Χρησιμοποίησε Tab για να φτάσεις στο radio group και τα βελάκια για αλλαγή επιλογής. Το
+            επιλεγμένο χρώμα εμφανίζει ένδειξη ✓ και κείμενο επιβεβαίωσης.
+          </p>
+        </details>
+        <details class="disclosure">
+          <summary>Τι αλλάζει με reduced motion;</summary>
+          <p class="type-body type-long-form">
+            Οι περιττές μετακινήσεις και τα animation αφαιρούνται. Τα περιγράμματα, τα labels, το
+            focus και οι ενημερώσεις παραμένουν ορατά.
+          </p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="section surface-inverse">
+    <div class="container-wide cluster cluster--between">
+      <p class="type-h3">KERABOSS</p>
+      <p class="type-caption">Super K · Design system</p>
+      <a class="type-label" href="mailto:info@keraboss.com">
+        info@keraboss.com
+      </a>
+    </div>
+  </footer>
+  <script>
+    import { mountDesignSystem } from '@/scripts/design-system';
+    mountDesignSystem();
+  </script>
+</BaseLayout>

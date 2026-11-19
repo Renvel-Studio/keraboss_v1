@@ -7,3 +7,6 @@ src/generated/
 src/assets/
 src/assets-compressed/
 public/fonts/
+src/fonts/sources/
+src/fonts/index.css
+src/fonts/manifest.json

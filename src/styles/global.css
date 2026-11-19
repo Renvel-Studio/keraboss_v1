@@ -1,4 +1,9 @@
-@layer reset, tokens, primary;
+@layer reset, tokens, primary, utilities, components, demos;
 @import './reset/index.css' layer(reset);
 @import './tokens/index.css' layer(tokens);
 @import './primary/index.css' layer(primary);
+@import './primary/typography.css' layer(utilities);
+@import './primary/layout.css' layer(utilities);
+@import './primary/components.css' layer(components);
+@import './primary/motion.css' layer(components);
+@import './primary/lenis.css' layer(components);

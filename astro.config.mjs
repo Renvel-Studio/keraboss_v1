@@ -17,7 +17,12 @@ export default defineConfig({
   integrations: [
     securityHeadersIntegration(settings.indexable),
     ...(settings.indexable
-      ? [sitemap({ filter: (page) => !new URL(page).pathname.startsWith('/404') })]
+      ? [
+          sitemap({
+            filter: (page) =>
+              !['/404.html', '/404/', '/design-system/'].includes(new URL(page).pathname),
+          }),
+        ]
       : []),
   ],
   markdown: { syntaxHighlight: 'prism' },

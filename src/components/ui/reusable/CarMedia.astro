@@ -1,0 +1,35 @@
+---
+import { getImage } from 'astro:assets';
+import car from '@/assets-compressed/images/keraboss-super-k-varkiza.webp';
+
+interface Props {
+  alt?: string;
+  ratio?: 'square' | 'portrait' | 'card' | 'landscape' | 'video' | 'cinematic';
+  eager?: boolean;
+  contain?: boolean;
+}
+const {
+  alt = 'Κίτρινο Keraboss Super K δίπλα στη θάλασσα στη Βάρκιζα.',
+  ratio = 'card',
+  eager = false,
+  contain = false,
+} = Astro.props;
+const images = await Promise.all(
+  [480, 960, 1440, 1920].map((width) => getImage({ src: car, width, format: 'webp', quality: 82 })),
+);
+const largest = images[images.length - 1]!;
+---
+
+<div class:list={['media', `media--${ratio}`, 'media--car-right', contain && 'media--contain']}>
+  <img
+    src={largest.src}
+    srcset={images.map((image) => `${image.src} ${image.attributes.width}w`).join(', ')}
+    sizes="(min-width: 80rem) 90vw, 100vw"
+    width={car.width}
+    height={car.height}
+    alt={alt}
+    loading={eager ? 'eager' : 'lazy'}
+    decoding="async"
+    fetchpriority={eager ? 'high' : 'auto'}
+  />
+</div>

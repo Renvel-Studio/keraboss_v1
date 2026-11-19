@@ -1,0 +1,20 @@
+---
+import CarMedia from './CarMedia.astro';
+interface Props {
+  title: string;
+  description: string;
+  ratio?: 'card' | 'landscape' | 'portrait';
+}
+const { title, description, ratio = 'card' } = Astro.props;
+---
+
+<article class="card card-container">
+  <CarMedia ratio={ratio} />
+  <div class="card-body">
+    <h3 class="type-card-title">{title}</h3>
+    <p class="type-body text-secondary">{description}</p>
+    <a class="card-link type-label" href="#configurator">
+      Δες τις επιλογές του Super K
+    </a>
+  </div>
+</article>

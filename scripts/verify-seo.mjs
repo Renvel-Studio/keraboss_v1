@@ -84,6 +84,8 @@ for (const tag of [...tags(html, 'link'), ...tags(html, 'script'), ...tags(html,
 }
 const errorPage = await read('404.html');
 assert.match(tags(errorPage, 'meta').find((tag) => tag.name === 'robots')?.content, /^noindex/);
+const designPage = await read('design-system/index.html');
+assert.match(tags(designPage, 'meta').find((tag) => tag.name === 'robots')?.content, /^noindex/);
 
 const robots = await read('robots.txt');
 assert.match(robots, /User-agent: \*/);
@@ -94,7 +96,7 @@ if (settings.indexable) {
   assert.ok((await read('sitemap-index.xml')).includes(`${settings.origin}/sitemap-0.xml`));
   const sitemap = await read('sitemap-0.xml');
   assert.ok(sitemap.includes(`<loc>${settings.origin}/</loc>`));
-  assert.ok(!/404|llms|security\.txt|index\.md/.test(sitemap));
+  assert.ok(!/404|llms|security\.txt|index\.md|design-system/.test(sitemap));
 } else {
   assert.match(robots, /Disallow: \/\n/);
   assert.ok(!robots.includes('Sitemap:'));

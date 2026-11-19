@@ -1,55 +1,137 @@
-@import './fonts.css';
+html {
+  scroll-padding-block-start: var(--space-xl);
+}
 body {
-  font-family: var(--font-body);
-  font-size: 1rem;
-  line-height: 1.6;
-  background: var(--color-canvas);
-  color: var(--color-text);
+  font-family: var(--type-body-family);
+  font-size: var(--type-body-size);
+  font-weight: var(--type-body-weight);
+  line-height: var(--type-body-leading);
+  letter-spacing: var(--type-body-tracking);
+  font-optical-sizing: auto;
+  font-synthesis: none;
+  background: var(--surface-page);
+  color: var(--text-primary);
   overflow-wrap: break-word;
 }
-h1,
-h2,
-h3 {
+:where(h1, h2, h3, h4, h5, h6, button, input, select, textarea, label, summary, nav) {
   font-family: var(--font-heading);
-  line-height: 1.15;
+  font-optical-sizing: auto;
+}
+:where(h1, h2, h3, h4, h5, h6) {
+  font-weight: var(--type-h2-weight);
+  line-height: var(--leading-heading);
+  letter-spacing: var(--tracking-snug);
   text-wrap: balance;
+  overflow-wrap: anywhere;
+}
+h1 {
+  font-size: var(--type-h1-size);
+}
+h2 {
+  font-size: var(--type-h2-size);
+}
+h3 {
+  font-size: var(--type-h3-size);
+}
+h4 {
+  font-size: var(--type-h4-size);
+}
+h5 {
+  font-size: var(--type-h5-size);
+}
+h6 {
+  font-size: var(--type-h6-size);
 }
 a {
-  color: var(--color-link);
+  color: inherit;
   text-underline-offset: 0.2em;
+  text-decoration-thickness: var(--border-width-default);
 }
 :focus-visible {
-  outline: 2px solid currentColor;
-  outline-offset: 4px;
+  outline: var(--focus-outline);
+  outline-offset: var(--focus-offset);
+}
+::selection {
+  background: var(--selection-surface);
+  color: var(--selection-text);
 }
 address {
   font-style: normal;
 }
-.container {
-  inline-size: min(calc(100% - var(--gutter) * 2), var(--content-max));
-  margin-inline: auto;
+:where(button, a, input, select, textarea, summary) {
+  -webkit-tap-highlight-color: transparent;
 }
-.foundation {
-  padding-block: var(--space-12);
+:where(button, summary, input[type='radio'], input[type='checkbox']) {
+  cursor: pointer;
 }
-.foundation > * + *,
-.foundation section > * + * {
-  margin-block-start: var(--space-8);
+:where(button, input, select, textarea):disabled {
+  cursor: not-allowed;
 }
-.skip-link {
-  position: absolute;
-  inset-block-start: var(--space-4);
-  inset-inline-start: var(--space-4);
-  z-index: 100;
-  padding: var(--space-3);
-  background: var(--color-canvas);
-  transform: translateY(-200%);
+:where(button, input, select, textarea) {
+  border-start-start-radius: var(--radius-control);
+  border-start-end-radius: var(--radius-control);
+  border-end-start-radius: var(--radius-control);
+  border-end-end-radius: var(--radius-control);
 }
-.skip-link:focus {
-  transform: translateY(0);
+:where(p, li, dd) {
+  text-wrap: pretty;
+}
+:where(fieldset) {
+  min-inline-size: 0;
+  padding-block: 0;
+  padding-inline: 0;
+  margin-block: 0;
+  margin-inline: 0;
+  border-block: 0;
+  border-inline: 0;
+}
+:where(legend) {
+  max-inline-size: 100%;
+  padding-block: 0;
+  padding-inline: 0;
+}
+:where(ul, ol) {
+  padding-inline-start: var(--space-lg);
+}
+:where(img, video) {
+  object-fit: cover;
+}
+:where(hr) {
+  border-block: 0;
+  border-inline: 0;
+  border-block-start: var(--border-subtle);
 }
 .icon {
   display: inline-block;
   vertical-align: -0.2em;
   flex-shrink: 0;
+  stroke-width: var(--icon-stroke);
+}
+.skip-link {
+  position: absolute;
+  inset-block-start: var(--space-sm);
+  inset-inline-start: var(--page-gutter);
+  z-index: var(--layer-skip-link);
+  padding-block: var(--space-xs);
+  padding-inline: var(--space-sm);
+  background: var(--surface-page);
+  color: var(--text-primary);
+  border-block: var(--border-strong);
+  border-inline: var(--border-strong);
+  transform: translateY(-300%);
+}
+.skip-link:focus {
+  transform: translateY(0);
+}
+.foundation {
+  padding-block: var(--section-space);
+}
+.foundation > * + *,
+.foundation section > * + * {
+  margin-block-start: var(--stack-gap);
+}
+@media (forced-colors: active) {
+  :focus-visible {
+    outline-color: Highlight;
+  }
 }

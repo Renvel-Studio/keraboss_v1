@@ -1,0 +1,132 @@
+/* Each transform transition retargets from its current interpolated value on rapid pointer reversal. */
+.motion-reveal,
+.motion-shift,
+.motion-exit,
+.motion-bounce {
+  --motion-rest: 0rem;
+  transform: translateY(var(--motion-rest));
+  transition-property: transform, opacity;
+  transition-duration: var(--motion-duration-reveal);
+  transition-timing-function: var(--motion-ease-reveal);
+}
+.motion-shift {
+  transition-timing-function: var(--motion-ease-rest);
+}
+.motion-exit {
+  transition-duration: var(--motion-duration-exit);
+  transition-timing-function: var(--motion-ease-exit);
+}
+.motion-bounce {
+  transition-duration: var(--motion-duration-reveal);
+  transition-timing-function: var(--motion-ease-rest);
+}
+@keyframes motion-drive {
+  0% {
+    transform: translateX(0rem);
+    animation-timing-function: var(--motion-ease-shift-start);
+  }
+  22% {
+    transform: translateX(calc(var(--motion-distance-shift) * 0.52));
+    animation-timing-function: var(--motion-ease-shift-coast);
+  }
+  62% {
+    transform: translateX(calc(var(--motion-distance-shift) * 0.58));
+    animation-timing-function: var(--motion-ease-shift-drive);
+  }
+  80% {
+    transform: translateX(calc(var(--motion-distance-shift) * 0.82));
+    animation-timing-function: var(--motion-ease-shift-settle);
+  }
+  100% {
+    transform: translateX(var(--motion-distance-shift));
+  }
+}
+@keyframes motion-bounce-lift {
+  0% {
+    transform: translateY(0rem);
+    animation-timing-function: var(--motion-ease-bounce-lift);
+  }
+  35% {
+    transform: translateY(var(--motion-bounce-peak));
+    animation-timing-function: var(--motion-ease-bounce-fall);
+  }
+  60% {
+    transform: translateY(var(--motion-bounce-rebound));
+    animation-timing-function: var(--motion-ease-bounce-return);
+  }
+  80% {
+    transform: translateY(var(--motion-bounce-settle));
+    animation-timing-function: var(--motion-ease-bounce-fall);
+  }
+  100% {
+    transform: translateY(var(--motion-distance-lift));
+  }
+}
+@keyframes motion-reveal-once {
+  from {
+    transform: translateY(var(--motion-distance-reveal));
+    opacity: 0.45;
+  }
+  to {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+}
+@keyframes motion-exit-once {
+  from {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(calc(var(--motion-distance-reveal) * -1));
+    opacity: 0;
+  }
+}
+.motion-runner {
+  transform: translateX(0rem);
+  opacity: 1;
+}
+[data-motion-playing='reveal'] .motion-runner {
+  animation: motion-reveal-once var(--motion-duration-reveal) var(--motion-ease-reveal) both;
+}
+[data-motion-playing='shift'] .motion-runner {
+  animation: motion-drive var(--motion-duration-shift) both;
+}
+[data-motion-playing='exit'] .motion-runner {
+  animation: motion-exit-once var(--motion-duration-exit) var(--motion-ease-exit) both;
+}
+[data-motion-playing='bounce'] .motion-runner {
+  animation: motion-bounce-lift var(--motion-duration-bounce) both;
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .motion-reveal:hover {
+    transform: translateY(var(--motion-distance-lift));
+  }
+  .motion-exit:hover {
+    transform: translateY(var(--motion-distance-lift));
+  }
+  /* Bounce segments are replayed intentionally; interruptible controls use continuous transitions above. */
+  .motion-bounce:hover {
+    transform: translateY(var(--motion-distance-lift));
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-duration-feedback: 0s;
+    --motion-duration-reveal: 0s;
+    --motion-duration-shift: 0s;
+    --motion-duration-exit: 0s;
+    --motion-duration-bounce: 0s;
+  }
+  .motion-reveal,
+  .motion-shift,
+  .motion-exit,
+  .motion-bounce,
+  [data-motion-playing] .motion-runner,
+  .button:active:not(:disabled, [aria-disabled='true']) {
+    animation: none;
+    transform: none;
+    opacity: 1;
+    transition-property: background-color, border-color, color;
+  }
+}

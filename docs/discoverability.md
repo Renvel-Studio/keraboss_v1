@@ -36,8 +36,11 @@ Crawling δεν εγγυάται indexing, ranking ή citations. Η Google δε�
 Το προσωρινό favicon monogram δεν δηλώνεται ως εταιρικό logo στο schema.
 Το manifest χρησιμοποιεί `display: browser`, χωρίς υπόσχεση offline/PWA λειτουργίας.
 
-Licensed WOFF2 μπαίνουν στο `public/fonts/`, με Greek/Latin coverage. Ορισμοί στο
-`src/styles/primary/fonts.css`, `font-display: swap`, πραγματικά weights και ελάχιστα preloads.
+Τα pinned Inter Variable / Noto Sans Variable 5.3.0 βρίσκονται στο `public/fonts/`,
+με latin, latin-ext, greek, greek-ext και OFL. Οι παραγόμενοι ορισμοί είναι στο
+`src/fonts/index.css`, ανεξάρτητα από τον φάκελο styles, με `font-display: swap`.
+Το αρχείο φορτώνεται από το `BaseLayout`. Δεν υπάρχουν font preloads χωρίς browser evidence.
+Το `/design-system/` είναι εσωτερική σελίδα δοκιμών: noindex και εκτός sitemap.
 Αρχικά media στο `src/assets/`, exports στο `src/assets-compressed/`. Όταν προστεθούν,
 χρησιμοποίησε Astro Image/Picture, responsive sizes, διαστάσεις και σωστά alt. Hero/LCP χωρίς lazy loading.
 

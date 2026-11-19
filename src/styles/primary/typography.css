@@ -1,0 +1,133 @@
+/* Compose visual roles with semantic elements: <h2 class="type-display">. */
+.type-display-hero {
+  font-family: var(--type-display-hero-family);
+  font-weight: var(--type-display-hero-weight);
+  font-size: var(--type-display-hero-size);
+  letter-spacing: var(--type-display-hero-tracking);
+  line-height: var(--type-display-hero-leading);
+}
+.type-display {
+  font-family: var(--type-display-family);
+  font-weight: var(--type-display-weight);
+  font-size: var(--type-display-size);
+  letter-spacing: var(--type-display-tracking);
+  line-height: var(--type-display-leading);
+}
+.type-h1 {
+  font-family: var(--type-h1-family);
+  font-weight: var(--type-h1-weight);
+  font-size: var(--type-h1-size);
+  letter-spacing: var(--type-h1-tracking);
+  line-height: var(--type-h1-leading);
+}
+.type-h2 {
+  font-family: var(--type-h2-family);
+  font-weight: var(--type-h2-weight);
+  font-size: var(--type-h2-size);
+  letter-spacing: var(--type-h2-tracking);
+  line-height: var(--type-h2-leading);
+}
+.type-h3 {
+  font-family: var(--type-h3-family);
+  font-weight: var(--type-h3-weight);
+  font-size: var(--type-h3-size);
+  letter-spacing: var(--type-h3-tracking);
+  line-height: var(--type-h3-leading);
+}
+.type-h4 {
+  font-family: var(--type-h4-family);
+  font-weight: var(--type-h4-weight);
+  font-size: var(--type-h4-size);
+  letter-spacing: var(--type-h4-tracking);
+  line-height: var(--type-h4-leading);
+}
+.type-h5 {
+  font-family: var(--type-h5-family);
+  font-weight: var(--type-h5-weight);
+  font-size: var(--type-h5-size);
+  letter-spacing: var(--type-h5-tracking);
+  line-height: var(--type-h5-leading);
+}
+.type-h6 {
+  font-family: var(--type-h6-family);
+  font-weight: var(--type-h6-weight);
+  font-size: var(--type-h6-size);
+  letter-spacing: var(--type-h6-tracking);
+  line-height: var(--type-h6-leading);
+}
+.type-lead {
+  font-family: var(--type-lead-family);
+  font-weight: var(--type-lead-weight);
+  font-size: var(--type-lead-size);
+  letter-spacing: var(--type-lead-tracking);
+  line-height: var(--type-lead-leading);
+}
+.type-body {
+  font-family: var(--type-body-family);
+  font-weight: var(--type-body-weight);
+  font-size: var(--type-body-size);
+  letter-spacing: var(--type-body-tracking);
+  line-height: var(--type-body-leading);
+}
+.type-label {
+  font-family: var(--type-label-family);
+  font-weight: var(--type-label-weight);
+  font-size: var(--type-label-size);
+  letter-spacing: var(--type-label-tracking);
+  line-height: var(--type-label-leading);
+}
+.type-caption {
+  font-family: var(--type-caption-family);
+  font-weight: var(--type-caption-weight);
+  font-size: var(--type-caption-size);
+  letter-spacing: var(--type-caption-tracking);
+  line-height: var(--type-caption-leading);
+}
+.type-micro {
+  font-family: var(--type-micro-family);
+  font-weight: var(--type-micro-weight);
+  font-size: var(--type-micro-size);
+  letter-spacing: var(--type-micro-tracking);
+  line-height: var(--type-micro-leading);
+}
+
+:is(.type-display-hero, .type-display, .type-h1, .type-h2, .type-h3, .type-h4, .type-h5, .type-h6) {
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+  padding-block: 0.1em;
+  margin-block: -0.1em;
+  overflow: visible;
+}
+/* Greek display defaults retain heading leading. Compact leading is opt-in for Latin marks. */
+.type-display-hero:lang(el) {
+  line-height: var(--leading-heading);
+}
+.type-display-hero[data-latin-mark] {
+  line-height: var(--leading-display);
+}
+.type-label-wide {
+  letter-spacing: var(--tracking-wide);
+}
+.type-tabular {
+  font-variant-numeric: tabular-nums;
+}
+.type-long-form {
+  line-height: var(--leading-long-form);
+  max-inline-size: var(--container-reading);
+}
+.type-card-title {
+  font-family: var(--type-h4-family);
+  font-weight: var(--type-h4-weight);
+  font-size: var(--type-card-title-size);
+  line-height: var(--leading-compact);
+  letter-spacing: var(--tracking-snug);
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+}
+@supports (font-size: 1cqi) {
+  @container card (inline-size >= 0rem) {
+    .type-card-title {
+      font-size: clamp(1.375rem, calc(0.9rem + 2.8cqi), 2.25rem);
+    }
+  }
+}

@@ -11,6 +11,6 @@ Language: Greek
 Standards: HTML, CSS, SVG, JSON-LD
 Stack: Astro, TypeScript, GSAP, Lenis
 Icons: Lucide (ISC / Feather MIT)
-Fonts: System fallback pending selection of licensed self-hosted fonts
+Fonts: Self-hosted Inter Variable and Noto Sans Variable (OFL-1.1)
 `);
 }
