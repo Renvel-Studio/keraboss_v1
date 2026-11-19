@@ -1,0 +1,45 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { site } from '@/config/site';
+import Icon from '@/components/ui/reusable/Icon.astro';
+import { companySummary } from '@/content/company';
+---
+
+<BaseLayout markdownPath="/index.md">
+  <main id="main-content" class="container foundation" tabindex="-1">
+    <header>
+      <p>{site.organizationName}</p>
+      <h1>KERABOSS</h1>
+      <p>{companySummary}</p>
+    </header>
+    <section aria-labelledby="contact-title">
+      <h2 id="contact-title">Επικοινωνία</h2>
+      <address>
+        <p>
+          {site.address.streetAddress}, {site.address.postalCode} {site.address.addressLocality}
+        </p>
+        <p>
+          <a href={`tel:${site.phone}`}>
+            <Icon name="phone" /> {site.phoneDisplay}
+          </a>
+        </p>
+        <p>
+          <a href={`mailto:${site.email}`}>
+            <Icon name="mail" /> {site.email}
+          </a>
+        </p>
+      </address>
+    </section>
+    <nav aria-label="Επίσημα κοινωνικά δίκτυα">
+      <ul>
+        {site.social.map((profile) => (
+          <li>
+            <a href={profile.url} rel="me">
+              {profile.name} · {profile.handle}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  </main>
+</BaseLayout>

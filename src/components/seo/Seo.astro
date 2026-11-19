@@ -1,0 +1,84 @@
+---
+import { canonicalUrl, site, allowIndexing } from '@/config/site';
+import { createHash } from 'node:crypto';
+import { breadcrumbSchema, websiteSchema, type Breadcrumb, type JsonLd } from '@/lib/seo/schema';
+
+export interface Props {
+  title?: string;
+  description?: string;
+  path?: string;
+  noindex?: boolean;
+  image?: { src: string; alt: string; width: number; height: number; type: string };
+  breadcrumbs?: readonly Breadcrumb[];
+  structuredData?: readonly JsonLd[];
+  markdownPath?: string;
+}
+
+const {
+  title = site.title,
+  description = site.description,
+  path = Astro.url.pathname,
+  noindex = false,
+  image = site.defaultImage,
+  breadcrumbs = [],
+  structuredData = [],
+  markdownPath,
+} = Astro.props;
+const canonical = canonicalUrl(path);
+const indexable = allowIndexing && !noindex;
+const robots = indexable
+  ? 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+  : 'noindex, follow';
+const graph = [
+  ...websiteSchema(path, title, description),
+  ...(breadcrumbs.length > 1 ? [breadcrumbSchema(breadcrumbs)] : []),
+  ...structuredData,
+];
+// Prevent supplied content from closing the JSON-LD script element.
+const jsonLd = JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }).replace(
+  /</g,
+  '\\u003c',
+);
+Astro.csp?.insertScriptHash(`sha256-${createHash('sha256').update(jsonLd).digest('base64')}`);
+const verification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION?.trim();
+const imageUrl = image ? new URL(image.src, site.origin) : undefined;
+if (imageUrl && imageUrl.origin !== site.origin)
+  throw new Error('Social images must be self-hosted.');
+---
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{title}</title>
+<meta name="description" content={description} />
+<meta name="robots" content={robots} />
+<meta name="author" content={site.organizationName} />
+<link rel="canonical" href={canonical} />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content={site.organizationName} />
+<meta property="og:locale" content={site.locale} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonical} />
+<meta name="twitter:card" content={image ? 'summary_large_image' : 'summary'} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+{image && imageUrl && (
+  <>
+    <meta property="og:image" content={imageUrl.href} />
+    <meta property="og:image:secure_url" content={imageUrl.href} />
+    <meta property="og:image:alt" content={image.alt} />
+    <meta property="og:image:width" content={String(image.width)} />
+    <meta property="og:image:height" content={String(image.height)} />
+    <meta property="og:image:type" content={image.type} />
+    <meta name="twitter:image" content={imageUrl.href} />
+    <meta name="twitter:image:alt" content={image.alt} />
+  </>
+)}
+{verification && <meta name="google-site-verification" content={verification} />}
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="manifest" href="/site.webmanifest" />
+<link rel="author" href="/humans.txt" type="text/plain" />
+<link rel="describedby" href="/llms.txt" type="text/markdown" />
+{site.indexable && <link rel="sitemap" href="/sitemap-index.xml" />}
+{markdownPath && <link rel="alternate" type="text/markdown" href={canonicalUrl(markdownPath)} />}
+<script is:inline type="application/ld+json" set:html={jsonLd} />

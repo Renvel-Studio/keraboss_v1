@@ -1,0 +1,55 @@
+@import './fonts.css';
+body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  background: var(--color-canvas);
+  color: var(--color-text);
+  overflow-wrap: break-word;
+}
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  line-height: 1.15;
+  text-wrap: balance;
+}
+a {
+  color: var(--color-link);
+  text-underline-offset: 0.2em;
+}
+:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+address {
+  font-style: normal;
+}
+.container {
+  inline-size: min(calc(100% - var(--gutter) * 2), var(--content-max));
+  margin-inline: auto;
+}
+.foundation {
+  padding-block: var(--space-12);
+}
+.foundation > * + *,
+.foundation section > * + * {
+  margin-block-start: var(--space-8);
+}
+.skip-link {
+  position: absolute;
+  inset-block-start: var(--space-4);
+  inset-inline-start: var(--space-4);
+  z-index: 100;
+  padding: var(--space-3);
+  background: var(--color-canvas);
+  transform: translateY(-200%);
+}
+.skip-link:focus {
+  transform: translateY(0);
+}
+.icon {
+  display: inline-block;
+  vertical-align: -0.2em;
+  flex-shrink: 0;
+}

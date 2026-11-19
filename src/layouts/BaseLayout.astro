@@ -1,0 +1,27 @@
+---
+import Seo, { type Props as SeoProps } from '@/components/seo/Seo.astro';
+import '@/styles/global.css';
+
+interface Props extends SeoProps {
+  smoothScroll?: boolean;
+}
+const { smoothScroll = false, ...seo } = Astro.props;
+---
+
+<!doctype html>
+<html lang="el">
+  <head>
+    <Seo {...seo} />
+    <slot name="head" />
+  </head>
+  <body data-smooth-scroll={smoothScroll ? '' : undefined}>
+    <a class="skip-link" href="#main-content">
+      Μετάβαση στο περιεχόμενο
+    </a>
+    <slot />
+    <script>
+      import { mountMotion } from '@/scripts/motion';
+      mountMotion();
+    </script>
+  </body>
+</html>
