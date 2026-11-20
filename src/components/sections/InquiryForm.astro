@@ -1,0 +1,86 @@
+---
+import type { Locale } from '@/lib/content';
+const { locale } = Astro.props as { locale: Locale };
+const en = locale === 'en';
+---
+
+<form class="stack inquiry-form" method="post" action="/api/inquiries" data-inquiry-form>
+  <input type="hidden" name="locale" value={locale} />
+  <input type="hidden" name="requestId" value="" />
+  <input type="hidden" name="color" value="" />
+  <input type="hidden" name="roof" value="unsure" />
+  <div class="field">
+    <label class="field-label" for="inquiry-name">
+      {en ? 'Name' : 'Ονοματεπώνυμο'}
+    </label>
+    <input
+      class="control"
+      id="inquiry-name"
+      name="name"
+      required
+      maxlength="120"
+      autocomplete="name"
+    />
+  </div>
+  <div class="field">
+    <label class="field-label" for="inquiry-email">
+      Email
+    </label>
+    <input
+      class="control"
+      id="inquiry-email"
+      name="email"
+      type="email"
+      required
+      maxlength="254"
+      autocomplete="email"
+    />
+  </div>
+  <div class="field">
+    <label class="field-label" for="inquiry-intent">
+      {en ? 'I am interested in' : 'Ενδιαφέρομαι για'}
+    </label>
+    <select class="control" id="inquiry-intent" name="intent">
+      <option value="quote">{en ? 'A quotation' : 'Προσφορά'}</option>
+      <option value="viewing">{en ? 'A viewing' : 'Παρουσίαση'}</option>
+      <option value="rental">
+        {en ? 'Rental fleet information' : 'Πληροφορίες για στόλο ενοικιάσεων'}
+      </option>
+    </select>
+  </div>
+  <div class="field">
+    <label class="field-label" for="inquiry-message">
+      {en ? 'Your message' : 'Το μήνυμά σου'}
+    </label>
+    <textarea
+      class="control"
+      id="inquiry-message"
+      name="message"
+      maxlength="3000"
+      rows="5"
+    ></textarea>
+  </div>
+  <div hidden>
+    <label for="inquiry-website">Website</label>
+    <input id="inquiry-website" name="website" tabindex="-1" autocomplete="off" />
+  </div>
+  <label class="cluster type-caption">
+    <input type="checkbox" name="consent" value="yes" required />
+    {en
+      ? 'I agree to be contacted by Keraboss about this enquiry.'
+      : 'Συμφωνώ να επικοινωνήσει η Keraboss μαζί μου για αυτό το αίτημα.'}
+  </label>
+  <p class="type-caption text-secondary">
+    {en
+      ? 'Your name, email, preferences and message are used to respond to this enquiry. Do not include sensitive information.'
+      : 'Το όνομα, το email, οι προτιμήσεις και το μήνυμα χρησιμοποιούνται για την απάντηση στο αίτημα. Μην συμπεριλάβεις ευαίσθητες πληροφορίες.'}
+  </p>
+  <button class="button" type="submit">
+    {en ? 'Send enquiry' : 'Αποστολή αιτήματος'}
+  </button>
+  <p class="type-body" data-inquiry-status role="status" aria-live="polite"></p>
+</form>
+<script>
+  import { mountInquiryForms } from '@/scripts/inquiries';
+  mountInquiryForms();
+</script>

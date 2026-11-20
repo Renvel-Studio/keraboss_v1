@@ -1,0 +1,79 @@
+---
+import { publicContent, type Locale } from '@/lib/content';
+import { pageRoute } from '../../../config/route-policy.mjs';
+const { locale } = Astro.props as { locale: Locale };
+const { paints } = await publicContent();
+const en = locale === 'en';
+---
+
+<form
+  class="stack stack--loose configurator"
+  method="get"
+  action={pageRoute('contact', locale).path}
+  data-configurator
+>
+  <fieldset class="choice-group">
+    <legend class="type-h4">{en ? 'Colour preference' : 'Προτίμηση χρώματος'}</legend>
+    <div class="choice-options">
+      {paints.map(({ id, data }, index) => (
+        <label class="choice">
+          <input type="radio" name="color" value={id} checked={index === 0} />
+          <span class="choice-label">
+            <span>{data.label[locale]}</span>
+            <span class="choice-check" aria-hidden="true">
+              ✓
+            </span>
+          </span>
+        </label>
+      ))}
+    </div>
+  </fieldset>
+  <fieldset class="choice-group">
+    <legend class="type-h4">{en ? 'Roof preference' : 'Προτίμηση οροφής'}</legend>
+    <div class="choice-options">
+      {[
+        { id: 'hard-top', name: 'Hard Top' },
+        { id: 'soft-top', name: 'Soft Top' },
+        { id: 'unsure', name: en ? 'Discuss the options' : 'Θέλω να συζητήσουμε' },
+      ].map(({ id, name }, index) => (
+        <label class="choice">
+          <input type="radio" name="roof" value={id} checked={index === 2} />
+          <span class="choice-label">
+            <span>{name}</span>
+            <span class="choice-check" aria-hidden="true">
+              ✓
+            </span>
+          </span>
+        </label>
+      ))}
+    </div>
+  </fieldset>
+  <p class="type-caption text-secondary">
+    {en
+      ? 'Published colour names only. The photograph is not a colour simulation. Roof compatibility and the final specification are confirmed by Keraboss.'
+      : 'Δημοσιευμένες ονομασίες χρωμάτων. Η φωτογραφία δεν αποτελεί προσομοίωση βαφής. Η συμβατότητα οροφής και η τελική διαμόρφωση επιβεβαιώνονται από την Keraboss.'}
+  </p>
+  <p class="type-label" data-config-summary role="status">
+    {en
+      ? 'Choose your preferences and continue to contact.'
+      : 'Επίλεξε τις προτιμήσεις σου και συνέχισε στην επικοινωνία.'}
+  </p>
+  <input type="hidden" name="intent" value="quote" />
+  <button class="button" type="submit" data-cta="configurator-to-contact">
+    {en ? 'Discuss this configuration' : 'Συζήτησε αυτή τη διαμόρφωση'}
+  </button>
+</form>
+<script>
+  document.querySelectorAll<HTMLFormElement>('[data-configurator]').forEach((form) => {
+    const output = form.querySelector('[data-config-summary]');
+    const update = () => {
+      const selected = Array.from(form.querySelectorAll<HTMLInputElement>('input:checked')).map(
+        (input) => input.nextElementSibling?.textContent?.replace('✓', '').trim(),
+      );
+      if (output)
+        output.textContent = `${document.documentElement.lang === 'en' ? 'Your selection' : 'Η επιλογή σου'}: ${selected.join(' · ')} ✓`;
+    };
+    form.addEventListener('change', update);
+    update();
+  });
+</script>

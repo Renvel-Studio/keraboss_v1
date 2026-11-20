@@ -1,0 +1,268 @@
+---
+import PublicLayout from '@/layouts/PublicLayout.astro';
+import { publicContent, localizedValue, type PublicPage } from '@/lib/content';
+import { carSchema } from '@/lib/seo/car';
+import { pageRoute } from '../../../config/route-policy.mjs';
+import CarMedia from '@/components/ui/reusable/CarMedia.astro';
+import Configurator from './Configurator.astro';
+import InquiryForm from './InquiryForm.astro';
+const { page } = Astro.props as { page: PublicPage };
+const { key, locale, heading, intro, sections } = page.data;
+const en = locale === 'en';
+const data = await publicContent();
+const isModel = ['model', 'specs'].includes(key);
+const structuredData = isModel ? [await carSchema(locale, key === 'specs')] : [];
+const names: Record<string, string> = en
+  ? {
+      model: 'Explore Super K',
+      specs: 'Technical specifications',
+      configurator: 'Configure your Super K',
+      history: 'Construction and story',
+      contact: 'Contact Keraboss',
+      faq: 'Frequently asked questions',
+      press: 'Press coverage',
+      media: 'Media',
+      rentals: 'Rental professionals',
+    }
+  : {
+      model: 'Γνώρισε το Super K',
+      specs: 'Τεχνικά χαρακτηριστικά',
+      configurator: 'Διαμόρφωσε το Super K',
+      history: 'Κατασκευή και ιστορία',
+      contact: 'Επικοινωνία με την Keraboss',
+      faq: 'Συχνές ερωτήσεις',
+      press: 'Δημοσιεύματα',
+      media: 'Media',
+      rentals: 'Επαγγελματίες ενοικιάσεων',
+    };
+const inquiryEnabled = import.meta.env.PUBLIC_INQUIRY_ENABLED === 'true';
+---
+
+<PublicLayout page={page} structuredData={structuredData}>
+  <main id="main-content" tabindex="-1">
+    <section class:list={['public-hero', 'container-wide', key === 'home' && 'public-hero--home']}>
+      <div class="stack">
+        <p class="type-label type-label-wide">KERABOSS CARS MANUFACTURING</p>
+        <h1
+          class:list={[key === 'home' ? 'public-wordmark' : 'type-h1']}
+          lang={key === 'home' ? 'en' : locale}
+        >
+          {heading}
+        </h1>
+        <p class="type-lead reading">{intro}</p>
+        <div class="cluster">
+          <a
+            class="button"
+            href={pageRoute(key === 'home' ? 'model' : 'contact', locale).path}
+            data-cta={key === 'home' ? 'home-to-model' : `${key}-to-contact`}
+          >
+            {key === 'home'
+              ? names['model']
+              : en
+                ? 'Request information or a viewing'
+                : 'Ζήτησε πληροφορίες ή παρουσίαση'}
+          </a>
+          {key === 'home' && (
+            <a
+              class="button button--outline"
+              href={pageRoute('configurator', locale).path}
+              data-cta="home-to-configurator"
+            >
+              {names['configurator']}
+            </a>
+          )}
+        </div>
+      </div>
+      <figure class="stack stack--tight">
+        <CarMedia
+          eager
+          ratio={key === 'home' ? 'cinematic' : 'landscape'}
+          sizes={
+            key === 'home' ? '(min-width: 80rem) 90vw, 100vw' : '(min-width: 64rem) 45vw, 100vw'
+          }
+          alt={
+            en
+              ? 'Yellow Super K at the coast in Varkiza, Greece.'
+              : 'Κίτρινο Super K δίπλα στη θάλασσα στη Βάρκιζα.'
+          }
+        />
+        <figcaption class="type-caption text-secondary">
+          {en ? 'Super K · Varkiza, Greece' : 'Super K · Βάρκιζα, Ελλάδα'}
+        </figcaption>
+      </figure>
+    </section>
+    <div class="container-content section stack stack--loose">
+      {sections.map((section, index) => (
+        <section
+          class="public-section stack"
+          id={key === 'history' && index === 1 ? 'construction' : `section-${index + 1}`}
+        >
+          <h2 class="type-h3">{section.heading}</h2>
+          {section.claimIds.map((id) => (
+            <p class="type-body reading">
+              {data.claims.find((claim) => claim.id === id)!.data.text[locale]}
+            </p>
+          ))}
+          {section.paragraphs.map((paragraph) => (
+            <p class="type-body reading">{paragraph}</p>
+          ))}
+          {section.links.length > 0 && (
+            <ul class="public-link-list">
+              {section.links.map((key) => (
+                <li>
+                  <a href={pageRoute(key, locale).path}>{names[key]}</a>
+                </li>
+              ))}
+            </ul>
+          )}
+        </section>
+      ))}
+
+      {key === 'model' && (
+        <section class="stack">
+          <h2 class="type-h3">{en ? 'Super K at a glance' : 'Το Super K με μια ματιά'}</h2>
+          <dl class="spec-grid">
+            {data.specifications
+              .filter(({ id }) =>
+                ['seats', 'engine-displacement', 'engine-power', 'transmission'].includes(id),
+              )
+              .map(({ data: spec }) => (
+                <div>
+                  <dt class="type-label text-secondary">{spec.label[locale]}</dt>
+                  <dd class="type-h5">
+                    {localizedValue(spec.value, locale)} {spec.unit}
+                  </dd>
+                </div>
+              ))}
+          </dl>
+          <p class="type-caption text-secondary">
+            {en
+              ? 'Published company specifications; confirm the final vehicle configuration with Keraboss.'
+              : 'Δημοσιευμένα εταιρικά στοιχεία· επιβεβαίωσε την τελική διαμόρφωση με την Keraboss.'}
+          </p>
+        </section>
+      )}
+
+      {key === 'specs' && (
+        <section
+          class="stack"
+          aria-label={en ? 'Super K specification values' : 'Τιμές χαρακτηριστικών Super K'}
+        >
+          <dl class="spec-grid">
+            {data.specifications.map(({ data: spec }) => (
+              <div>
+                <dt class="type-label text-secondary">{spec.label[locale]}</dt>
+                <dd class="type-body">
+                  {localizedValue(spec.value, locale)} {spec.unit}
+                </dd>
+              </div>
+            ))}
+          </dl>
+          <p class="type-caption reading text-secondary">
+            {en
+              ? 'Values are from the company’s published model tables. Confirm final specifications and equipment for your order directly with Keraboss.'
+              : 'Οι τιμές προέρχονται από τους δημοσιευμένους πίνακες του μοντέλου. Επιβεβαίωσε τα τελικά χαρακτηριστικά και τον εξοπλισμό της παραγγελίας απευθείας με την Keraboss.'}
+          </p>
+          <a href={en ? 'https://keraboss.com/en/super-k-2/' : 'https://keraboss.com/super-k/'}>
+            {en ? 'Company model reference' : 'Εταιρική αναφορά μοντέλου'}
+          </a>
+        </section>
+      )}
+
+      {key === 'configurator' && <Configurator locale={locale} />}
+
+      {key === 'press' && (
+        <section class="stack">
+          <h2 class="type-h3">{en ? 'Original coverage' : 'Αρχικό δημοσίευμα'}</h2>
+          {data.press.map(({ data: item }) => (
+            <article class="card card-body stack">
+              <p class="type-label">
+                {item.publisher} · <time datetime={item.publishedDate}>{item.publishedDate}</time>
+              </p>
+              <h3 class="type-h5">
+                <a href={item.url} lang="el">
+                  {item.title}
+                </a>
+              </h3>
+              <p class="type-caption text-secondary">{item.author}</p>
+            </article>
+          ))}
+        </section>
+      )}
+
+      {key === 'media' && (
+        <section class="stack">
+          <h2 class="type-h3">
+            {en ? 'Follow the official profiles' : 'Ακολούθησε τα επίσημα προφίλ'}
+          </h2>
+          <ul class="public-link-list">
+            {data.company.social.map((profile) => (
+              <li>
+                <a href={profile.url} rel="me">
+                  {profile.name} · {profile.handle}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {key === 'contact' && (
+        <section class="stack">
+          <h2 class="type-h3">
+            {en
+              ? 'Keraboss Cars Manufacturing in Athens'
+              : 'Keraboss Cars Manufacturing στην Αθήνα'}
+          </h2>
+          <address class="stack">
+            <p>
+              {data.company.streetAddress[locale]}, {data.company.postalCode}{' '}
+              {data.company.addressLocality[locale]}
+            </p>
+            <p>
+              <a href={`tel:${data.company.telephone}`} data-cta="contact-phone">
+                {data.company.telephone}
+              </a>
+            </p>
+            <p>
+              <a href={`mailto:${data.company.email}`} data-cta="contact-email">
+                {data.company.email}
+              </a>
+            </p>
+          </address>
+          {inquiryEnabled ? (
+            <InquiryForm locale={locale} />
+          ) : (
+            <p class="type-body reading">
+              {en
+                ? 'For a quotation or viewing, contact the company directly by phone or email.'
+                : 'Για προσφορά ή παρουσίαση, επικοινώνησε απευθείας με την εταιρεία μέσω τηλεφώνου ή email.'}
+            </p>
+          )}
+        </section>
+      )}
+
+      {key !== 'contact' && (
+        <section class="surface-soft public-cta stack">
+          <h2 class="type-h3">
+            {en ? 'Talk about your Super K' : 'Ας μιλήσουμε για το δικό σου Super K'}
+          </h2>
+          <p class="type-body reading">
+            {en
+              ? 'Confirm your preferred configuration and arrange the next step directly with Keraboss.'
+              : 'Επιβεβαίωσε τη διαμόρφωση που σε ενδιαφέρει και συζήτησε το επόμενο βήμα απευθείας με την Keraboss.'}
+          </p>
+          <div>
+            <a
+              class="button"
+              href={pageRoute('contact', locale).path}
+              data-cta={`${key}-final-contact`}
+            >
+              {names['contact']}
+            </a>
+          </div>
+        </section>
+      )}
+    </div>
+  </main>
+</PublicLayout>

@@ -2,27 +2,26 @@
 import Seo, { type Props as SeoProps } from '@/components/seo/Seo.astro';
 import '@/fonts/index.css';
 import '@/styles/global.css';
+import MotionController from '@/components/motion/MotionController.astro';
 
 interface Props extends SeoProps {
   smoothScroll?: boolean;
+  motion?: boolean;
 }
-const { smoothScroll = false, ...seo } = Astro.props;
+const { smoothScroll = false, motion = false, ...seo } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="el">
+<html lang={seo.locale ?? 'el'}>
   <head>
     <Seo {...seo} />
     <slot name="head" />
   </head>
   <body data-smooth-scroll={smoothScroll ? '' : undefined}>
     <a class="skip-link" href="#main-content">
-      Μετάβαση στο περιεχόμενο
+      {seo.locale === 'en' ? 'Skip to content' : 'Μετάβαση στο περιεχόμενο'}
     </a>
     <slot />
-    <script>
-      import { mountMotion } from '@/scripts/motion';
-      mountMotion();
-    </script>
+    {(smoothScroll || motion) && <MotionController />}
   </body>
 </html>

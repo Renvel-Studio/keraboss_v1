@@ -1,5 +1,5 @@
-import { llmsFull } from '@/content/company';
+import { llmsFull } from '@/lib/exports';
 import { textResponse } from '@/lib/http';
-export function GET(): Response {
-  return textResponse(llmsFull, 'text/markdown');
+export async function GET(): Promise<Response> {
+  return textResponse(await llmsFull(), 'text/markdown');
 }

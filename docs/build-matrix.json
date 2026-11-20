@@ -1,0 +1,26 @@
+{
+  "scope": "Actual local builds and generated-HTML audits; not deployments or browser tests.",
+  "cases": [
+    {
+      "environment": { "CONTEXT": "deploy-preview", "PUBLIC_INDEXABLE": "true" },
+      "result": "passed",
+      "publicPages": 20,
+      "localReferences": 720,
+      "expected": "All page metadata noindex, robots Disallow /, no sitemap; preview context overrides an unsafe true flag."
+    },
+    {
+      "environment": { "PUBLIC_GPTBOT_ALLOWED": "false" },
+      "result": "passed",
+      "publicPages": 20,
+      "localReferences": 740,
+      "expected": "Production pages stay indexable; wildcard search/retrieval allowed; GPTBot independently disallowed."
+    },
+    {
+      "environment": {},
+      "result": "passed",
+      "publicPages": 20,
+      "localReferences": 740,
+      "expected": "Production artifact restored; public pages indexable, sitemap present, GPTBot allowed by project default."
+    }
+  ]
+}

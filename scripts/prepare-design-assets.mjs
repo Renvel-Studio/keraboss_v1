@@ -7,3 +7,8 @@ await sharp(new URL('src/assets/images/keraboss-super-k-varkiza.jpg', root).path
   .webp({ quality: 85 })
   .toFile(new URL('src/assets-compressed/images/keraboss-super-k-varkiza.webp', root).pathname);
 console.log('Prepared the official Super K photograph for responsive image generation.');
+await mkdir(new URL('public/social/', root), { recursive: true });
+await sharp(new URL('src/assets/images/keraboss-super-k-varkiza.jpg', root).pathname)
+  .resize(1200, 675)
+  .jpeg({ quality: 84 })
+  .toFile(new URL('public/social/super-k.jpg', root).pathname);

@@ -1,0 +1,656 @@
+{
+  "checkedAt": "2026-11-19",
+  "scope": "Editorial evidence from readable primary/publication snapshots; not a signed current technical sheet, legal corporate record, paint-chip approval or live HTTP crawl.",
+  "sources": [
+    {
+      "id": "model-el",
+      "url": "https://keraboss.com/super-k/",
+      "locale": "el",
+      "observation": "readable official page via web tool; crawl snapshot yesterday",
+      "httpStatus": null,
+      "checkedAt": "2026-11-19"
+    },
+    {
+      "id": "model-en",
+      "url": "https://keraboss.com/en/super-k-2/",
+      "locale": "en",
+      "observation": "readable official page via web tool; crawl snapshot yesterday",
+      "httpStatus": null,
+      "checkedAt": "2026-11-19"
+    },
+    {
+      "id": "faq-en",
+      "url": "https://keraboss.com/en/faq/",
+      "locale": "en",
+      "observation": "readable official page via web tool; crawl snapshot last week",
+      "httpStatus": null,
+      "checkedAt": "2026-11-19"
+    },
+    {
+      "id": "configurator-el",
+      "url": "https://keraboss.com/διαμόρφωσε-το-keraboss-σου/",
+      "locale": "el",
+      "observation": "readable official page via web tool; crawl snapshot today",
+      "httpStatus": null,
+      "checkedAt": "2026-11-19"
+    },
+    {
+      "id": "configurator-en",
+      "url": "https://keraboss.com/en/build-your-keraboss-2/",
+      "locale": "en",
+      "observation": "readable official page via web tool; crawl snapshot today",
+      "httpStatus": null,
+      "checkedAt": "2026-11-19"
+    },
+    {
+      "id": "history-el",
+      "url": "https://keraboss.com/ιστορία/",
+      "locale": "el",
+      "observation": "readable official page via web tool; crawl snapshot last week",
+      "httpStatus": null,
+      "checkedAt": "2026-11-19"
+    },
+    {
+      "id": "contact-el",
+      "url": "https://keraboss.com/επικοινωνία/",
+      "locale": "el",
+      "observation": "readable official page via web tool; crawl snapshot three weeks ago",
+      "httpStatus": null,
+      "checkedAt": "2026-11-19"
+    },
+    {
+      "id": "media-el",
+      "url": "https://keraboss.com/media/",
+      "locale": "el",
+      "observation": "readable official page via web tool; crawl snapshot two weeks ago",
+      "httpStatus": null,
+      "checkedAt": "2026-11-19"
+    },
+    {
+      "id": "newsauto-original",
+      "url": "https://www.newsauto.gr/test-drive/apoklistiko-odigoume-to-super-k-tis-keraboss-video/",
+      "locale": "el",
+      "observation": "original publisher article readable via web tool; dated2022-07-08",
+      "httpStatus": null,
+      "checkedAt": "2026-11-19"
+    },
+    {
+      "id": "company-home",
+      "url": "https://keraboss.com/",
+      "locale": "el",
+      "observation": "readable official page via web tool; crawl snapshot today",
+      "httpStatus": null,
+      "checkedAt": "2026-11-19"
+    },
+    {
+      "id": "official-social-links",
+      "url": "https://keraboss.com/rent-a-car-%CF%84%CF%89%CF%81%CE%B1-%CF%84%CE%B1-%CE%B1%CF%85%CF%84%CE%BF%CE%BA%CE%AF%CE%BD%CE%B7%CF%84%CE%B1-keraboss-%CE%BA%CE%B1%CE%B9-%CE%BC%CE%B5-%CF%87%CF%81%CE%B7%CE%BC%CE%B1%CF%84/",
+      "locale": "el",
+      "observation": "Official company publication links directly to the three social profiles; previously inspected in this task history.",
+      "httpStatus": null,
+      "checkedAt": "2026-11-19"
+    }
+  ],
+  "claims": [
+    {
+      "id": "identity",
+      "text": {
+        "el": "Το KERABOSS SUPER K είναι χειροποίητο ελληνικό επιβατικό αυτοκίνητο της Keraboss Cars Manufacturing.",
+        "en": "The KERABOSS SUPER K is a hand-built Greek passenger car by Keraboss Cars Manufacturing."
+      },
+      "sourceRefs": ["model-el", "faq-en"],
+      "status": "verified-public-source",
+      "publiclyUsable": true
+    },
+    {
+      "id": "manufacture-country",
+      "value": "GR",
+      "text": {
+        "el": "Κατασκευάζεται στην Ελλάδα.",
+        "en": "Manufactured in Greece."
+      },
+      "sourceRefs": ["faq-en"],
+      "status": "verified-public-source",
+      "publiclyUsable": true
+    },
+    {
+      "id": "athens-base",
+      "text": {
+        "el": "Η έδρα επικοινωνίας και ο χώρος παρουσίασης βρίσκονται στην Αθήνα.",
+        "en": "The company’s contact base and viewing location are in Athens."
+      },
+      "sourceRefs": ["faq-en", "contact-el"],
+      "status": "verified-public-source",
+      "publiclyUsable": true,
+      "note": "Do not turn viewing address into a separately audited factory address."
+    },
+    {
+      "id": "construction",
+      "text": {
+        "el": "Πολυεστερικό αμάξωμα και γαλβανισμένο πλαίσιο.",
+        "en": "Fiberglass body and galvanized chassis."
+      },
+      "sourceRefs": ["model-el", "faq-en"],
+      "status": "verified-public-source",
+      "publiclyUsable": true,
+      "note": "Do not repeat absolute rust-proof/lifetime claims."
+    },
+    {
+      "id": "limited-production",
+      "text": {
+        "el": "Χειροποίητη κατασκευή μικρής σειράς.",
+        "en": "Hand-built in limited production."
+      },
+      "sourceRefs": ["faq-en"],
+      "status": "verified-public-source",
+      "publiclyUsable": true,
+      "note": "No current annual production quantity verified."
+    },
+    {
+      "id": "off-road-scope",
+      "text": {
+        "el": "Η εταιρεία διευκρινίζει ότι δεν είναι ειδικά κατασκευασμένο off-road όχημα.",
+        "en": "The company states that it is not a purpose-built off-road vehicle."
+      },
+      "sourceRefs": ["faq-en"],
+      "status": "verified-public-source",
+      "publiclyUsable": true
+    },
+    {
+      "id": "founders-history",
+      "text": {
+        "el": "Η εταιρική ιστορία συνδέει τη δημιουργία του Super K με τον Παύλο και τη Στέλλα Κεραμπός.",
+        "en": "The company’s history associates the creation of Super K with Pavlos and Stella Keraboss."
+      },
+      "sourceRefs": ["history-el"],
+      "status": "verified-public-source",
+      "publiclyUsable": true,
+      "note": "No legal corporate foundingDate or founder structured data required without owner confirmation."
+    }
+  ],
+  "specifications": [
+    {
+      "id": "vehicle-category",
+      "label": {
+        "el": "Κατηγορία",
+        "en": "Category"
+      },
+      "value": "M1",
+      "unit": null,
+      "sourceRefs": ["model-el", "model-en"],
+      "status": "verified-public-source",
+      "currentTechnicalSheetApproval": "pending",
+      "publicationQualifier": {
+        "el": "Σύμφωνα με τα δημοσιευμένα στοιχεία της εταιρείας. Επιβεβαιώστε την τελική διαμόρφωση με την Keraboss.",
+        "en": "According to the company’s published specifications. Confirm the final configuration with Keraboss."
+      }
+    },
+    {
+      "id": "seats",
+      "label": {
+        "el": "Θέσεις",
+        "en": "Seats"
+      },
+      "value": 4,
+      "unit": null,
+      "sourceRefs": ["model-el", "configurator-en"],
+      "status": "verified-public-source",
+      "currentTechnicalSheetApproval": "pending",
+      "publicationQualifier": {
+        "el": "Σύμφωνα με τα δημοσιευμένα στοιχεία της εταιρείας. Επιβεβαιώστε την τελική διαμόρφωση με την Keraboss.",
+        "en": "According to the company’s published specifications. Confirm the final configuration with Keraboss."
+      }
+    },
+    {
+      "id": "engine-manufacturer",
+      "label": {
+        "el": "Κατασκευαστής κινητήρα",
+        "en": "Engine manufacturer"
+      },
+      "value": "Mitsubishi",
+      "unit": null,
+      "sourceRefs": ["model-el", "model-en"],
+      "status": "verified-public-source",
+      "currentTechnicalSheetApproval": "pending",
+      "publicationQualifier": {
+        "el": "Σύμφωνα με τα δημοσιευμένα στοιχεία της εταιρείας. Επιβεβαιώστε την τελική διαμόρφωση με την Keraboss.",
+        "en": "According to the company’s published specifications. Confirm the final configuration with Keraboss."
+      }
+    },
+    {
+      "id": "engine-displacement",
+      "label": {
+        "el": "Κυβισμός",
+        "en": "Displacement"
+      },
+      "value": 1000,
+      "unit": "cm³",
+      "sourceRefs": ["model-el", "model-en"],
+      "status": "verified-public-source",
+      "currentTechnicalSheetApproval": "pending",
+      "publicationQualifier": {
+        "el": "Σύμφωνα με τα δημοσιευμένα στοιχεία της εταιρείας. Επιβεβαιώστε την τελική διαμόρφωση με την Keraboss.",
+        "en": "According to the company’s published specifications. Confirm the final configuration with Keraboss."
+      }
+    },
+    {
+      "id": "engine-power",
+      "label": {
+        "el": "Ισχύς",
+        "en": "Power"
+      },
+      "value": 72,
+      "unit": "HP",
+      "sourceRefs": ["model-el", "model-en"],
+      "status": "verified-public-source",
+      "currentTechnicalSheetApproval": "pending",
+      "publicationQualifier": {
+        "el": "Σύμφωνα με τα δημοσιευμένα στοιχεία της εταιρείας. Επιβεβαιώστε την τελική διαμόρφωση με την Keraboss.",
+        "en": "According to the company’s published specifications. Confirm the final configuration with Keraboss."
+      }
+    },
+    {
+      "id": "fuel",
+      "label": {
+        "el": "Καύσιμο",
+        "en": "Fuel"
+      },
+      "value": {
+        "el": "Βενζίνη",
+        "en": "Petrol"
+      },
+      "unit": null,
+      "sourceRefs": ["model-el", "model-en"],
+      "status": "verified-public-source",
+      "currentTechnicalSheetApproval": "pending",
+      "publicationQualifier": {
+        "el": "Σύμφωνα με τα δημοσιευμένα στοιχεία της εταιρείας. Επιβεβαιώστε την τελική διαμόρφωση με την Keraboss.",
+        "en": "According to the company’s published specifications. Confirm the final configuration with Keraboss."
+      }
+    },
+    {
+      "id": "tank-capacity",
+      "label": {
+        "el": "Χωρητικότητα ρεζερβουάρ",
+        "en": "Fuel tank capacity"
+      },
+      "value": 32,
+      "unit": "L",
+      "sourceRefs": ["model-el", "model-en"],
+      "status": "verified-public-source",
+      "currentTechnicalSheetApproval": "pending",
+      "publicationQualifier": {
+        "el": "Σύμφωνα με τα δημοσιευμένα στοιχεία της εταιρείας. Επιβεβαιώστε την τελική διαμόρφωση με την Keraboss.",
+        "en": "According to the company’s published specifications. Confirm the final configuration with Keraboss."
+      }
+    },
+    {
+      "id": "transmission",
+      "label": {
+        "el": "Μετάδοση",
+        "en": "Transmission"
+      },
+      "value": {
+        "el": "Αυτόματη / σειριακή, 5 σχέσεων",
+        "en": "Automatic / sequential, 5-speed"
+      },
+      "unit": null,
+      "sourceRefs": ["model-el", "model-en"],
+      "status": "verified-public-source",
+      "currentTechnicalSheetApproval": "pending",
+      "publicationQualifier": {
+        "el": "Σύμφωνα με τα δημοσιευμένα στοιχεία της εταιρείας. Επιβεβαιώστε την τελική διαμόρφωση με την Keraboss.",
+        "en": "According to the company’s published specifications. Confirm the final configuration with Keraboss."
+      }
+    },
+    {
+      "id": "length",
+      "label": {
+        "el": "Μήκος",
+        "en": "Length"
+      },
+      "value": 3375,
+      "unit": "mm",
+      "sourceRefs": ["model-el", "model-en"],
+      "status": "verified-public-source",
+      "currentTechnicalSheetApproval": "pending",
+      "publicationQualifier": {
+        "el": "Σύμφωνα με τα δημοσιευμένα στοιχεία της εταιρείας. Επιβεβαιώστε την τελική διαμόρφωση με την Keraboss.",
+        "en": "According to the company’s published specifications. Confirm the final configuration with Keraboss."
+      }
+    },
+    {
+      "id": "width",
+      "label": {
+        "el": "Πλάτος",
+        "en": "Width"
+      },
+      "value": 1560,
+      "unit": "mm",
+      "sourceRefs": ["model-el", "model-en"],
+      "status": "verified-public-source",
+      "currentTechnicalSheetApproval": "pending",
+      "publicationQualifier": {
+        "el": "Σύμφωνα με τα δημοσιευμένα στοιχεία της εταιρείας. Επιβεβαιώστε την τελική διαμόρφωση με την Keraboss.",
+        "en": "According to the company’s published specifications. Confirm the final configuration with Keraboss."
+      }
+    },
+    {
+      "id": "height",
+      "label": {
+        "el": "Ύψος",
+        "en": "Height"
+      },
+      "value": 1590,
+      "unit": "mm",
+      "sourceRefs": ["model-el", "model-en"],
+      "status": "verified-public-source",
+      "currentTechnicalSheetApproval": "pending",
+      "publicationQualifier": {
+        "el": "Σύμφωνα με τα δημοσιευμένα στοιχεία της εταιρείας. Επιβεβαιώστε την τελική διαμόρφωση με την Keraboss.",
+        "en": "According to the company’s published specifications. Confirm the final configuration with Keraboss."
+      }
+    },
+    {
+      "id": "wheelbase",
+      "label": {
+        "el": "Μεταξόνιο",
+        "en": "Wheelbase"
+      },
+      "value": 2150,
+      "unit": "mm",
+      "sourceRefs": ["model-el", "model-en"],
+      "status": "verified-public-source",
+      "currentTechnicalSheetApproval": "pending",
+      "publicationQualifier": {
+        "el": "Σύμφωνα με τα δημοσιευμένα στοιχεία της εταιρείας. Επιβεβαιώστε την τελική διαμόρφωση με την Keraboss.",
+        "en": "According to the company’s published specifications. Confirm the final configuration with Keraboss."
+      }
+    },
+    {
+      "id": "front-brakes",
+      "label": {
+        "el": "Εμπρός φρένα",
+        "en": "Front brakes"
+      },
+      "value": {
+        "el": "Δίσκοι",
+        "en": "Discs"
+      },
+      "unit": null,
+      "sourceRefs": ["model-el", "model-en"],
+      "status": "verified-public-source",
+      "currentTechnicalSheetApproval": "pending",
+      "publicationQualifier": {
+        "el": "Σύμφωνα με τα δημοσιευμένα στοιχεία της εταιρείας. Επιβεβαιώστε την τελική διαμόρφωση με την Keraboss.",
+        "en": "According to the company’s published specifications. Confirm the final configuration with Keraboss."
+      }
+    },
+    {
+      "id": "rear-brakes",
+      "label": {
+        "el": "Πίσω φρένα",
+        "en": "Rear brakes"
+      },
+      "value": {
+        "el": "Ταμπούρα",
+        "en": "Drums"
+      },
+      "unit": null,
+      "sourceRefs": ["model-el", "model-en"],
+      "status": "verified-public-source",
+      "currentTechnicalSheetApproval": "pending",
+      "publicationQualifier": {
+        "el": "Σύμφωνα με τα δημοσιευμένα στοιχεία της εταιρείας. Επιβεβαιώστε την τελική διαμόρφωση με την Keraboss.",
+        "en": "According to the company’s published specifications. Confirm the final configuration with Keraboss."
+      }
+    },
+    {
+      "id": "electronic-systems",
+      "label": {
+        "el": "Ηλεκτρονικά συστήματα",
+        "en": "Electronic systems"
+      },
+      "value": ["ESP", "ABS", "HAS", "ASC"],
+      "unit": null,
+      "sourceRefs": ["model-el", "model-en"],
+      "status": "verified-public-source",
+      "currentTechnicalSheetApproval": "pending",
+      "publicationQualifier": {
+        "el": "Σύμφωνα με τα δημοσιευμένα στοιχεία της εταιρείας. Επιβεβαιώστε την τελική διαμόρφωση με την Keraboss.",
+        "en": "According to the company’s published specifications. Confirm the final configuration with Keraboss."
+      }
+    }
+  ],
+  "paintNames": [
+    {
+      "id": "timeless-black",
+      "label": {
+        "el": "Timeless Black",
+        "en": "Timeless Black"
+      },
+      "hex": null,
+      "sourceRefs": ["configurator-el", "configurator-en"],
+      "status": "verified-public-source",
+      "availability": "confirm-with-company"
+    },
+    {
+      "id": "highway-yellow",
+      "label": {
+        "el": "Highway Yellow",
+        "en": "Highway Yellow"
+      },
+      "hex": null,
+      "sourceRefs": ["configurator-el", "configurator-en"],
+      "status": "verified-public-source",
+      "availability": "confirm-with-company"
+    },
+    {
+      "id": "desert-storm",
+      "label": {
+        "el": "Desert Storm",
+        "en": "Desert Storm"
+      },
+      "hex": null,
+      "sourceRefs": ["configurator-el", "configurator-en"],
+      "status": "verified-public-source",
+      "availability": "confirm-with-company"
+    },
+    {
+      "id": "olympic-white",
+      "label": {
+        "el": "Olympic White",
+        "en": "Olympic White"
+      },
+      "hex": null,
+      "sourceRefs": ["configurator-el", "configurator-en"],
+      "status": "verified-public-source",
+      "availability": "confirm-with-company"
+    }
+  ],
+  "options": [
+    {
+      "id": "roof",
+      "label": {
+        "el": "Οροφή",
+        "en": "Roof"
+      },
+      "values": ["Hard Top", "Soft Top"],
+      "sourceRefs": ["configurator-el", "configurator-en"],
+      "status": "verified-public-source",
+      "compatibilityApproval": "pending-current-order-confirmation"
+    },
+    {
+      "id": "cabin",
+      "label": {
+        "el": "Καμπίνα",
+        "en": "Cabin"
+      },
+      "values": ["Short", "Long"],
+      "sourceRefs": ["configurator-el", "configurator-en"],
+      "note": "Medium-cabin edition heading conflicts with Short-Cabin bullet in EN; do not assign exact cabin dimensions.",
+      "status": "verified-public-source",
+      "compatibilityApproval": "pending-current-order-confirmation"
+    },
+    {
+      "id": "doors",
+      "label": {
+        "el": "Πόρτες",
+        "en": "Doors"
+      },
+      "values": {
+        "el": ["Ολόκληρες πόρτες"],
+        "en": ["Full doors"]
+      },
+      "sourceRefs": ["configurator-el", "configurator-en"],
+      "status": "verified-public-source",
+      "compatibilityApproval": "pending-current-order-confirmation"
+    },
+    {
+      "id": "upholstery",
+      "label": {
+        "el": "Χρώμα επένδυσης καθισμάτων",
+        "en": "Seat upholstery colour"
+      },
+      "values": [],
+      "sourceRefs": ["configurator-el", "configurator-en"],
+      "note": "Specific upholstery colour catalogue unverified; free-text enquiry only.",
+      "status": "verified-public-source",
+      "compatibilityApproval": "pending-current-order-confirmation"
+    }
+  ],
+  "company": {
+    "name": "Keraboss Cars Manufacturing",
+    "brand": "KERABOSS",
+    "model": "SUPER K",
+    "streetAddress": {
+      "el": "Βριλησσού 19",
+      "en": "19 Vrilissou Street"
+    },
+    "addressLocality": {
+      "el": "Αθήνα",
+      "en": "Athens"
+    },
+    "postalCode": "11476",
+    "addressCountry": "GR",
+    "telephone": "+302106420962",
+    "email": "info@keraboss.com",
+    "sourceRefs": ["contact-el", "model-en"],
+    "social": [
+      {
+        "name": "Instagram",
+        "handle": "@kerabosscars",
+        "url": "https://www.instagram.com/kerabosscars/",
+        "sourceRefs": ["official-social-links"]
+      },
+      {
+        "name": "TikTok",
+        "handle": "@keraboss.cars",
+        "url": "https://www.tiktok.com/@keraboss.cars",
+        "sourceRefs": ["official-social-links"]
+      },
+      {
+        "name": "Facebook",
+        "handle": "Keraboss Super K",
+        "url": "https://www.facebook.com/superKeraboss/",
+        "sourceRefs": ["official-social-links"]
+      }
+    ]
+  },
+  "editions": [
+    {
+      "id": "summer-edition",
+      "name": "KERABOSS Summer Edition",
+      "sourceRefs": ["configurator-el", "configurator-en"],
+      "status": "verified-public-source",
+      "stableManufacturerId": null
+    },
+    {
+      "id": "365-medium-cabin",
+      "name": "KERABOSS 365 — Every Season Medium Cabin",
+      "sourceRefs": ["configurator-el", "configurator-en"],
+      "status": "verified-public-source",
+      "stableManufacturerId": null,
+      "note": "Exact Medium vs Short cabin naming needs confirmation."
+    },
+    {
+      "id": "365-long-cabin",
+      "name": "KERABOSS 365 — Every Season Long Cabin",
+      "sourceRefs": ["configurator-el", "configurator-en"],
+      "status": "verified-public-source",
+      "stableManufacturerId": null
+    }
+  ],
+  "press": [
+    {
+      "id": "newsauto-2022-test-drive",
+      "title": "Αποκλειστικό: Οδηγούμε το ελληνικό Super K της Keraboss",
+      "url": "https://www.newsauto.gr/test-drive/apoklistiko-odigoume-to-super-k-tis-keraboss-video/",
+      "publisher": "NewsAuto.gr",
+      "publishedDate": "2022-07-08",
+      "author": "Γιώργος Σαργιαννίδης",
+      "sourceRefs": ["newsauto-original", "company-home"],
+      "status": "original-publication-read",
+      "republishingRights": "not-granted-by-linking",
+      "reviewRating": null
+    }
+  ],
+  "media": {
+    "officialMediaPage": "https://keraboss.com/media/",
+    "eligibleStandaloneVideos": [],
+    "reason": "No supplied approved player URL, stable thumbnail, exact upload timestamp, transcript/captions and rights bundle verified together. Do not emit VideoObject solely from a video title."
+  },
+  "pending": [
+    {
+      "id": "current-commercial-terms",
+      "status": "requires-owner-confirmation",
+      "reason": "Public pages show prices and order language; no current signed quotation, stock/lead-time or commercial approval available. No Offer or inventory promises."
+    },
+    {
+      "id": "current-technical-sheet",
+      "status": "requires-owner-confirmation",
+      "reason": "Specifications exist on official EL/EN model pages; approved current technical PDF/document not supplied."
+    },
+    {
+      "id": "paint-hex-values",
+      "status": "requires-owner-confirmation",
+      "reason": "Four official paint names are public; colorimetric/hex values are not. Design-system Yellow/Sand/Carbon tokens are not evidence of automotive paint values."
+    },
+    {
+      "id": "product-group",
+      "status": "not-applicable-until-stable-variants-confirmed",
+      "reason": "Edition labels public but no manufacturer SKU/stable variant IDs verified; do not emit ProductGroup."
+    },
+    {
+      "id": "certifications-first-claims",
+      "status": "requires-primary-document",
+      "reason": "Do not publish certification superlatives, broad safety superiority, lifetime/rust-proof or first-Greek-car claims from promotional copy."
+    },
+    {
+      "id": "press-kit-assets",
+      "status": "requires-rights-approval",
+      "reason": "Existing site credits Keraboss, Thanasis Karatzas,4TROXOI and NewsAuto photos collectively. A photograph being on the website is not a press redistribution licence. Existing Varkiza reference photo should not be offered as a downloadable press kit without approval."
+    },
+    {
+      "id": "legal-identity",
+      "status": "requires-owner-confirmation",
+      "reason": "Public display name and history available; legal entity name/registry/foundingDate not independently checked."
+    }
+  ],
+  "mediaAssets": [
+    {
+      "id": "super-k-varkiza",
+      "src": "/social/super-k.jpg",
+      "width": 1200,
+      "height": 675,
+      "type": "image/jpeg",
+      "alt": {
+        "el": "Κίτρινο Keraboss Super K δίπλα στη θάλασσα στη Βάρκιζα.",
+        "en": "A yellow Keraboss Super K beside the sea in Varkiza."
+      },
+      "sourceUrl": "https://keraboss.com/wp-content/uploads/2025/05/VARKIZA-LIMANAKIA.jpg",
+      "publicationStatus": "existing-project-asset",
+      "pressRedistributionApproved": false
+    }
+  ]
+}

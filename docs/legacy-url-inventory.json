@@ -1,0 +1,2302 @@
+{
+  "auditDate": "2026-11-19",
+  "scope": "Partial legacy inventory from official navigation, category archives and primary-source web snapshots. Not a full live production crawl.",
+  "counts": {
+    "total": 75,
+    "coreAndSupporting": 23,
+    "pressArticles": 52,
+    "liveHttpStatusesVerified": 0,
+    "canonicalsVerified": 0
+  },
+  "unavailableDiscoverySources": [
+    {
+      "url": "https://keraboss.com/robots.txt",
+      "result": "web tool inaccessible; shell curl DNS resolution denied; HTTP status unknown"
+    },
+    {
+      "url": "https://keraboss.com/sitemap_index.xml",
+      "result": "web tool inaccessible; HTTP status unknown"
+    },
+    {
+      "url": "https://keraboss.com/wp-sitemap.xml",
+      "result": "web tool inaccessible; HTTP status unknown"
+    },
+    {
+      "url": "https://keraboss.com/en/",
+      "result": "web tool inaccessible; existing status/redirect unknown; do not assume this is the legacy English canonical"
+    }
+  ],
+  "authenticatedSources": {
+    "searchConsole": "Not accessed; credentials/property access required.",
+    "bingWebmasterTools": "Not accessed; credentials/site access required.",
+    "serverOrCdnLogs": "Not accessed; hosting account/log access required."
+  },
+  "notes": [
+    "Technical specifications currently occur on /super-k/ and /en/super-k-2/ as sections. No separate old specs route was observed.",
+    "English old home is /en/αρχική-σελίδα-english/, not an observed /en/ index.",
+    "Greek /profesionals/ is misspelled but established and should not be silently renamed.",
+    "English rental navigation links to Greek /privacy-policy/; a real approved English legal translation was not observed.",
+    "Config pages and English FAQ disagree on prices; do not publish current Offer prices from snapshots without owner confirmation.",
+    "Press article inventory is not approval to republish third-party text or photographs.",
+    "Do not infer translation parity or reciprocal hreflang solely from paired purpose; validate new bilingual content and generated head."
+  ],
+  "urls": [
+    {
+      "url": "https://keraboss.com/",
+      "decodedPath": "/",
+      "locale": "el",
+      "purpose": "home",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": null
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "preserve-established-path",
+        "targetPath": "/",
+        "reason": "Purpose remains the same; avoid unnecessary URL changes.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/en/%CE%B1%CF%81%CF%87%CE%B9%CE%BA%CE%AE-%CF%83%CE%B5%CE%BB%CE%AF%CE%B4%CE%B1-english/",
+      "decodedPath": "/en/αρχική-σελίδα-english/",
+      "locale": "en",
+      "purpose": "home",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/en/%CE%B1%CF%81%CF%87%CE%B9%CE%BA%CE%AE-%CF%83%CE%B5%CE%BB%CE%AF%CE%B4%CE%B1-english/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": null
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "preserve-established-path",
+        "targetPath": "/en/αρχική-σελίδα-english/",
+        "reason": "Purpose remains the same; avoid unnecessary URL changes.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/super-k/",
+      "decodedPath": "/super-k/",
+      "locale": "el",
+      "purpose": "super-k",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": null
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "preserve-established-path",
+        "targetPath": "/super-k/",
+        "reason": "Purpose remains the same; avoid unnecessary URL changes.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/en/super-k-2/",
+      "decodedPath": "/en/super-k-2/",
+      "locale": "en",
+      "purpose": "super-k",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/en/%CE%B1%CF%81%CF%87%CE%B9%CE%BA%CE%AE-%CF%83%CE%B5%CE%BB%CE%AF%CE%B4%CE%B1-english/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": null
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "preserve-established-path",
+        "targetPath": "/en/super-k-2/",
+        "reason": "Purpose remains the same; avoid unnecessary URL changes.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/%CE%B4%CE%B9%CE%B1%CE%BC%CF%8C%CF%81%CF%86%CF%89%CF%83%CE%B5-%CF%84%CE%BF-keraboss-%CF%83%CE%BF%CF%85/",
+      "decodedPath": "/διαμόρφωσε-το-keraboss-σου/",
+      "locale": "el",
+      "purpose": "configurator",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": null
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "preserve-established-path",
+        "targetPath": "/διαμόρφωσε-το-keraboss-σου/",
+        "reason": "Purpose remains the same; avoid unnecessary URL changes.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/en/build-your-keraboss-2/",
+      "decodedPath": "/en/build-your-keraboss-2/",
+      "locale": "en",
+      "purpose": "configurator",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/en/%CE%B1%CF%81%CF%87%CE%B9%CE%BA%CE%AE-%CF%83%CE%B5%CE%BB%CE%AF%CE%B4%CE%B1-english/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": null
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "preserve-established-path",
+        "targetPath": "/en/build-your-keraboss-2/",
+        "reason": "Purpose remains the same; avoid unnecessary URL changes.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/%CE%B9%CF%83%CF%84%CE%BF%CF%81%CE%AF%CE%B1/",
+      "decodedPath": "/ιστορία/",
+      "locale": "el",
+      "purpose": "history",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": null
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "preserve-established-path",
+        "targetPath": "/ιστορία/",
+        "reason": "Purpose remains the same; avoid unnecessary URL changes.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/en/history/",
+      "decodedPath": "/en/history/",
+      "locale": "en",
+      "purpose": "history",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/en/%CE%B1%CF%81%CF%87%CE%B9%CE%BA%CE%AE-%CF%83%CE%B5%CE%BB%CE%AF%CE%B4%CE%B1-english/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": null
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "preserve-established-path",
+        "targetPath": "/en/history/",
+        "reason": "Purpose remains the same; avoid unnecessary URL changes.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/media/",
+      "decodedPath": "/media/",
+      "locale": "el",
+      "purpose": "media",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": null
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "preserve-established-path",
+        "targetPath": "/media/",
+        "reason": "Purpose remains the same; avoid unnecessary URL changes.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/en/media-en/",
+      "decodedPath": "/en/media-en/",
+      "locale": "en",
+      "purpose": "media",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/en/%CE%B1%CF%81%CF%87%CE%B9%CE%BA%CE%AE-%CF%83%CE%B5%CE%BB%CE%AF%CE%B4%CE%B1-english/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": null
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "preserve-established-path",
+        "targetPath": "/en/media-en/",
+        "reason": "Purpose remains the same; avoid unnecessary URL changes.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/category/%CE%B4%CE%B7%CE%BC%CE%BF%CF%83%CE%B9%CF%8C%CF%84%CE%B7%CF%84%CE%B1/",
+      "decodedPath": "/category/δημοσιότητα/",
+      "locale": "el",
+      "purpose": "press",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": null
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "preserve-established-path",
+        "targetPath": "/category/δημοσιότητα/",
+        "reason": "Purpose remains the same; avoid unnecessary URL changes.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/en/category/publicity/",
+      "decodedPath": "/en/category/publicity/",
+      "locale": "en",
+      "purpose": "press",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/en/%CE%B1%CF%81%CF%87%CE%B9%CE%BA%CE%AE-%CF%83%CE%B5%CE%BB%CE%AF%CE%B4%CE%B1-english/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": "9 months ago"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "preserve-established-path",
+        "targetPath": "/en/category/publicity/",
+        "reason": "Purpose remains the same; avoid unnecessary URL changes.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/%CF%83%CF%85%CF%87%CE%BD%CE%B5%CF%83-%CE%B5%CF%81%CF%89%CF%84%CE%B7%CF%83%CE%B5%CE%B9%CF%83-kai-%CE%B1%CF%80%CE%B1%CE%BD%CF%84%CE%B7%CF%83%CE%B5%CE%B9%CF%83-%CF%83%CF%87%CE%B5%CF%84%CE%B9%CE%BA%CE%B1/",
+      "decodedPath": "/συχνεσ-ερωτησεισ-kai-απαντησεισ-σχετικα/",
+      "locale": "el",
+      "purpose": "faq",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": null
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "preserve-established-path",
+        "targetPath": "/συχνεσ-ερωτησεισ-kai-απαντησεισ-σχετικα/",
+        "reason": "Purpose remains the same; avoid unnecessary URL changes.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/en/faq/",
+      "decodedPath": "/en/faq/",
+      "locale": "en",
+      "purpose": "faq",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/en/%CE%B1%CF%81%CF%87%CE%B9%CE%BA%CE%AE-%CF%83%CE%B5%CE%BB%CE%AF%CE%B4%CE%B1-english/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": null
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "preserve-established-path",
+        "targetPath": "/en/faq/",
+        "reason": "Purpose remains the same; avoid unnecessary URL changes.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/%CE%B5%CF%80%CE%B9%CE%BA%CE%BF%CE%B9%CE%BD%CF%89%CE%BD%CE%AF%CE%B1/",
+      "decodedPath": "/επικοινωνία/",
+      "locale": "el",
+      "purpose": "contact",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": null
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "preserve-established-path",
+        "targetPath": "/επικοινωνία/",
+        "reason": "Purpose remains the same; avoid unnecessary URL changes.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/en/contact-us/",
+      "decodedPath": "/en/contact-us/",
+      "locale": "en",
+      "purpose": "contact",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/en/%CE%B1%CF%81%CF%87%CE%B9%CE%BA%CE%AE-%CF%83%CE%B5%CE%BB%CE%AF%CE%B4%CE%B1-english/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": null
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "preserve-established-path",
+        "targetPath": "/en/contact-us/",
+        "reason": "Purpose remains the same; avoid unnecessary URL changes.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/rent-a-car/",
+      "decodedPath": "/rent-a-car/",
+      "locale": "el",
+      "purpose": "rentals",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": null
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "preserve-established-path",
+        "targetPath": "/rent-a-car/",
+        "reason": "Purpose remains the same; avoid unnecessary URL changes.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/en/rent-a-car-en/",
+      "decodedPath": "/en/rent-a-car-en/",
+      "locale": "en",
+      "purpose": "rentals",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/en/%CE%B1%CF%81%CF%87%CE%B9%CE%BA%CE%AE-%CF%83%CE%B5%CE%BB%CE%AF%CE%B4%CE%B1-english/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": null
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "preserve-established-path",
+        "targetPath": "/en/rent-a-car-en/",
+        "reason": "Purpose remains the same; avoid unnecessary URL changes.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/profesionals/",
+      "decodedPath": "/profesionals/",
+      "locale": "el",
+      "purpose": "professionals",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/rent-a-car/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": null
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "preserve-established-path",
+        "targetPath": "/profesionals/",
+        "reason": "Purpose remains the same; avoid unnecessary URL changes.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/en/for-professionals/",
+      "decodedPath": "/en/for-professionals/",
+      "locale": "en",
+      "purpose": "professionals",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/en/rent-a-car-en/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": null
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "preserve-established-path",
+        "targetPath": "/en/for-professionals/",
+        "reason": "Purpose remains the same; avoid unnecessary URL changes.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/%CF%80%CE%B1%CF%81%CE%BF%CF%85%CF%83%CE%AF%CE%B1%CF%83%CE%B7/",
+      "decodedPath": "/παρουσίαση/",
+      "locale": "el",
+      "purpose": "official-presentation",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/%CF%80%CE%B1%CF%81%CE%BF%CF%85%CF%83%CE%AF%CE%B1%CF%83%CE%B7/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": null
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "preserve-established-path",
+        "targetPath": "/παρουσίαση/",
+        "reason": "Purpose remains the same; avoid unnecessary URL changes.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/en/official-presentation/",
+      "decodedPath": "/en/official-presentation/",
+      "locale": "en",
+      "purpose": "official-presentation",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/en/category/publicity/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": null
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "preserve-established-path",
+        "targetPath": "/en/official-presentation/",
+        "reason": "Purpose remains the same; avoid unnecessary URL changes.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/privacy-policy/",
+      "decodedPath": "/privacy-policy/",
+      "locale": "el",
+      "purpose": "privacy-rental-terms",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/rent-a-car/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": null
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "preserve-established-path",
+        "targetPath": "/privacy-policy/",
+        "reason": "Purpose remains the same; avoid unnecessary URL changes.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/%CE%BE%CE%B5%CF%87%CE%AC%CF%83%CF%84%CE%B5-%CF%84%CE%B9%CF%82-%CE%B2%CE%B1%CF%81%CE%B5%CF%84%CE%AD%CF%82-%CE%B5%CE%BD%CE%BF%CE%B9%CE%BA%CE%B9%CE%AC%CF%83%CE%B5%CE%B9%CF%82-%CE%B6%CE%AE%CF%83/",
+      "decodedPath": "/ξεχάστε-τις-βαρετές-ενοικιάσεις-ζήσ/",
+      "locale": "el",
+      "purpose": "press-article",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/category/%CE%B4%CE%B7%CE%BC%CE%BF%CF%83%CE%B9%CF%8C%CF%84%CE%B7%CF%84%CE%B1/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": "3 months ago"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "review-and-preserve-content",
+        "targetPath": null,
+        "reason": "Retain this article or map one-to-one to a genuinely equivalent migrated article; do not redirect wholesale to category/home.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/keraboss-super-k-%CF%84%CE%BF-%CF%80%CF%81%CF%89%CF%84%CE%BF-%CE%B5%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CE%BF-%CF%87%CE%B5%CE%B9%CF%81%CE%BF%CF%80%CE%BF%CE%B9%CE%B7%CF%84%CE%BF-%CE%B1%CF%85/",
+      "decodedPath": "/keraboss-super-k-το-πρωτο-ελληνικο-χειροποιητο-αυ/",
+      "locale": "el",
+      "purpose": "press-article",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/category/%CE%B4%CE%B7%CE%BC%CE%BF%CF%83%CE%B9%CF%8C%CF%84%CE%B7%CF%84%CE%B1/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": "3 months ago"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "review-and-preserve-content",
+        "targetPath": null,
+        "reason": "Retain this article or map one-to-one to a genuinely equivalent migrated article; do not redirect wholesale to category/home.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/rent-a-car-%CF%84%CF%89%CF%81%CE%B1-%CF%84%CE%B1-%CE%B1%CF%85%CF%84%CE%BF%CE%BA%CE%AF%CE%BD%CE%B7%CF%84%CE%B1-keraboss-%CE%BA%CE%B1%CE%B9-%CE%BC%CE%B5-%CF%87%CF%81%CE%B7%CE%BC%CE%B1%CF%84/",
+      "decodedPath": "/rent-a-car-τωρα-τα-αυτοκίνητα-keraboss-και-με-χρηματ/",
+      "locale": "el",
+      "purpose": "press-article",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/category/%CE%B4%CE%B7%CE%BC%CE%BF%CF%83%CE%B9%CF%8C%CF%84%CE%B7%CF%84%CE%B1/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": "2 months ago"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "review-and-preserve-content",
+        "targetPath": null,
+        "reason": "Retain this article or map one-to-one to a genuinely equivalent migrated article; do not redirect wholesale to category/home.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/caroto-%CE%BC%CE%B5-%CF%84%CE%BF-%CF%87%CF%81%CF%85%CF%83%CF%8C-%CE%B2%CE%B1%CF%81%CE%B1%CE%B2%CE%B5%CE%AF%CE%BF-%CE%B1%CE%BE%CE%B9%CE%BF%CF%80%CE%BF%CE%AF%CE%B7%CF%83%CE%B7%CF%82-%CF%80%CF%8C/",
+      "decodedPath": "/caroto-με-το-χρυσό-βαραβείο-αξιοποίησης-πό/",
+      "locale": "el",
+      "purpose": "press-article",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/category/%CE%B4%CE%B7%CE%BC%CE%BF%CF%83%CE%B9%CF%8C%CF%84%CE%B7%CF%84%CE%B1/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": "6 months ago"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "review-and-preserve-content",
+        "targetPath": null,
+        "reason": "Retain this article or map one-to-one to a genuinely equivalent migrated article; do not redirect wholesale to category/home.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/keraboss-storytelling-h-stella-keraboss-%CE%BC%CE%B9%CE%BB%CE%AC%CE%B5%CE%B9-%CE%B3%CE%B9%CE%B1-%CF%84%CE%B7%CE%BD-%CE%B9%CF%83%CF%84%CE%BF%CF%81%CE%AF%CE%B1-%CF%84%CE%BF%CF%85-%CE%B1%CF%85%CF%84/",
+      "decodedPath": "/keraboss-storytelling-h-stella-keraboss-μιλάει-για-την-ιστορία-του-αυτ/",
+      "locale": "el",
+      "purpose": "press-article",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/category/%CE%B4%CE%B7%CE%BC%CE%BF%CF%83%CE%B9%CF%8C%CF%84%CE%B7%CF%84%CE%B1/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": "last month"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "review-and-preserve-content",
+        "targetPath": null,
+        "reason": "Retain this article or map one-to-one to a genuinely equivalent migrated article; do not redirect wholesale to category/home.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/%CF%84%CE%BF-keraboss-%CF%83%CF%84%CE%BF-%CF%86%CE%B5%CF%83%CF%84%CE%B9%CE%B2%CE%B1%CE%BB-grbossible-%CF%83%CF%84%CE%BF-%CF%83%CE%B5%CF%81%CE%B1%CF%86%CE%B5%CE%B9%CE%BF-%CF%83%CF%84%CE%B9/",
+      "decodedPath": "/το-keraboss-στο-φεστιβαλ-grbossible-στο-σεραφειο-στι/",
+      "locale": "el",
+      "purpose": "press-article",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/category/%CE%B4%CE%B7%CE%BC%CE%BF%CF%83%CE%B9%CF%8C%CF%84%CE%B7%CF%84%CE%B1/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": "last year"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "review-and-preserve-content",
+        "targetPath": null,
+        "reason": "Retain this article or map one-to-one to a genuinely equivalent migrated article; do not redirect wholesale to category/home.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/keraboss-newsletter-rent-a-car-keraboss-%CF%84%CE%BF-%CE%B1%CF%80%CF%8C%CE%BB%CF%85%CF%84%CE%BF-%CE%B5%CF%81%CE%B3%CE%B1%CE%BB%CE%B5%CE%B9%CE%BF/",
+      "decodedPath": "/keraboss-newsletter-rent-a-car-keraboss-το-απόλυτο-εργαλειο/",
+      "locale": "el",
+      "purpose": "press-article",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/category/%CE%B4%CE%B7%CE%BC%CE%BF%CF%83%CE%B9%CF%8C%CF%84%CE%B7%CF%84%CE%B1/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": "11 months ago"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "review-and-preserve-content",
+        "targetPath": null,
+        "reason": "Retain this article or map one-to-one to a genuinely equivalent migrated article; do not redirect wholesale to category/home.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/road-trip-series-%CE%BC%CE%B5-%CF%84%CE%BF-keraboss-crete-%CE%BC%CE%B9%CE%B1-%CE%B1%CF%80%CF%8C%CE%BB%CF%85%CF%84%CE%B7-%CF%84%CE%B1%CE%BE%CE%B9%CE%B4%CE%B9%CF%89%CF%84%CE%B9%CE%BA%CE%AE-%CE%B5%CE%BC/",
+      "decodedPath": "/road-trip-series-με-το-keraboss-crete-μια-απόλυτη-ταξιδιωτική-εμ/",
+      "locale": "el",
+      "purpose": "press-article",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/category/%CE%B4%CE%B7%CE%BC%CE%BF%CF%83%CE%B9%CF%8C%CF%84%CE%B7%CF%84%CE%B1/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": "last year"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "review-and-preserve-content",
+        "targetPath": null,
+        "reason": "Retain this article or map one-to-one to a genuinely equivalent migrated article; do not redirect wholesale to category/home.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/4troxoi-%CE%BF%CE%B4%CE%B7%CE%B3%CE%BF%CF%8D%CE%BC%CE%B5-%CF%84%CE%BF-%CE%B5%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CF%8C-keraboss-super-k-summer-edition/",
+      "decodedPath": "/4troxoi-οδηγούμε-το-ελληνικό-keraboss-super-k-summer-edition/",
+      "locale": "el",
+      "purpose": "press-article",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/category/%CE%B4%CE%B7%CE%BC%CE%BF%CF%83%CE%B9%CF%8C%CF%84%CE%B7%CF%84%CE%B1/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": "4 weeks ago"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "review-and-preserve-content",
+        "targetPath": null,
+        "reason": "Retain this article or map one-to-one to a genuinely equivalent migrated article; do not redirect wholesale to category/home.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/%CF%80%CE%B1%CF%85%CE%BB%CE%BF%CF%82-%CE%BA%CE%B5%CF%81%CE%B1%CE%BC%CF%80%CF%8C%CF%82/",
+      "decodedPath": "/παυλος-κεραμπός/",
+      "locale": "el",
+      "purpose": "press-article",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/category/%CE%B4%CE%B7%CE%BC%CE%BF%CF%83%CE%B9%CF%8C%CF%84%CE%B7%CF%84%CE%B1/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": "1.7 years ago"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "review-and-preserve-content",
+        "targetPath": null,
+        "reason": "Retain this article or map one-to-one to a genuinely equivalent migrated article; do not redirect wholesale to category/home.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/stern-back-to-the-industry-after-a-long-standstill-greece-puts-a-car-made-in-greece-on-the-road/",
+      "decodedPath": "/stern-back-to-the-industry-after-a-long-standstill-greece-puts-a-car-made-in-greece-on-the-road/",
+      "locale": "el",
+      "purpose": "press-article",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/category/%CE%B4%CE%B7%CE%BC%CE%BF%CF%83%CE%B9%CF%8C%CF%84%CE%B7%CF%84%CE%B1/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": "2 months ago"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "review-and-preserve-content",
+        "targetPath": null,
+        "reason": "Retain this article or map one-to-one to a genuinely equivalent migrated article; do not redirect wholesale to category/home.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/%CE%BF%CE%B4%CE%B7%CE%B3%CE%BF%CF%8D%CE%BC%CE%B5-%CF%84%CE%BF-%CE%B5%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CF%8C-%CF%84%CE%B6%CE%B9%CF%80%CE%AC%CE%BA%CE%B9-keraboss-super-k-%CE%BC%CE%B5/",
+      "decodedPath": "/οδηγούμε-το-ελληνικό-τζιπάκι-keraboss-super-k-με/",
+      "locale": "el",
+      "purpose": "press-article",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/category/%CE%B4%CE%B7%CE%BC%CE%BF%CF%83%CE%B9%CF%8C%CF%84%CE%B7%CF%84%CE%B1/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": "last month"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "review-and-preserve-content",
+        "targetPath": null,
+        "reason": "Retain this article or map one-to-one to a genuinely equivalent migrated article; do not redirect wholesale to category/home.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/newsauto-%CE%B9%CE%B4%CE%BF%CF%8D-%CF%84%CE%BF-%CE%B5%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CF%8C-%CF%84%CE%B6%CE%AF%CF%80-%CF%80%CE%BF%CF%85-%CF%80%CE%AC%CE%B5%CE%B9-%CE%BA%CE%AC%CE%BD/",
+      "decodedPath": "/newsauto-ιδού-το-ελληνικό-τζίπ-που-πάει-κάν/",
+      "locale": "el",
+      "purpose": "press-article",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/category/%CE%B4%CE%B7%CE%BC%CE%BF%CF%83%CE%B9%CF%8C%CF%84%CE%B7%CF%84%CE%B1/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": "6 months ago"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "review-and-preserve-content",
+        "targetPath": null,
+        "reason": "Retain this article or map one-to-one to a genuinely equivalent migrated article; do not redirect wholesale to category/home.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/athens-voice-%CF%84%CE%BF-love-story-%CE%BC%CE%AD%CF%83%CE%B1-%CE%B1%CF%80%CF%8C-%CF%84%CE%BF-%CE%BF%CF%80%CE%BF%CE%AF%CE%BF-%CE%B3%CE%B5%CE%BD%CE%BD%CE%AE%CE%B8%CE%B7%CE%BA%CE%B5-%CF%84%CE%BF-%CE%B5/",
+      "decodedPath": "/athens-voice-το-love-story-μέσα-από-το-οποίο-γεννήθηκε-το-ε/",
+      "locale": "el",
+      "purpose": "press-article",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/category/%CE%B4%CE%B7%CE%BC%CE%BF%CF%83%CE%B9%CF%8C%CF%84%CE%B7%CF%84%CE%B1/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": "1.6 years ago"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "review-and-preserve-content",
+        "targetPath": null,
+        "reason": "Retain this article or map one-to-one to a genuinely equivalent migrated article; do not redirect wholesale to category/home.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/4tpoxoi-%CE%BF%CE%B4%CE%B7%CE%B3%CE%BF%CF%8D%CE%BC%CE%B5-%CF%84%CE%BF-%CE%B5%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CF%8C-keraboss-super-k/",
+      "decodedPath": "/4tpoxoi-οδηγούμε-το-ελληνικό-keraboss-super-k/",
+      "locale": "el",
+      "purpose": "press-article",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/category/%CE%B4%CE%B7%CE%BC%CE%BF%CF%83%CE%B9%CF%8C%CF%84%CE%B7%CF%84%CE%B1/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": "4 weeks ago"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "review-and-preserve-content",
+        "targetPath": null,
+        "reason": "Retain this article or map one-to-one to a genuinely equivalent migrated article; do not redirect wholesale to category/home.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/greece-takes-the-car-to-the-streets-german-press-for-the-keraboss-super-k/",
+      "decodedPath": "/greece-takes-the-car-to-the-streets-german-press-for-the-keraboss-super-k/",
+      "locale": "el",
+      "purpose": "press-article",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/category/%CE%B4%CE%B7%CE%BC%CE%BF%CF%83%CE%B9%CF%8C%CF%84%CE%B7%CF%84%CE%B1/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": "3 weeks ago"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "review-and-preserve-content",
+        "targetPath": null,
+        "reason": "Retain this article or map one-to-one to a genuinely equivalent migrated article; do not redirect wholesale to category/home.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/caroto-gr-%CE%B5%CE%BF%CE%BF%CE%B5-%CE%B2%CF%81%CE%AC%CE%B2%CE%B5%CF%85%CF%83%CE%B7-%CF%84%CE%B7%CF%82-keraboss-%CE%B3%CE%B9%CE%B1-%CF%84%CE%B7%CE%BD-%CE%B5%CF%80%CE%B9%CE%BC%CE%BF%CE%BD%CE%AE/",
+      "decodedPath": "/caroto-gr-εοοε-βράβευση-της-keraboss-για-την-επιμονή/",
+      "locale": "el",
+      "purpose": "press-article",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/category/%CE%B4%CE%B7%CE%BC%CE%BF%CF%83%CE%B9%CF%8C%CF%84%CE%B7%CF%84%CE%B1/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": "1.7 years ago"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "review-and-preserve-content",
+        "targetPath": null,
+        "reason": "Retain this article or map one-to-one to a genuinely equivalent migrated article; do not redirect wholesale to category/home.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/%CE%B2%CE%B5%CE%B1-%CE%B3%CF%85%CE%BD%CE%B1%CE%B9%CE%BA%CE%B5%CE%B9%CE%B1-%CE%B5%CF%80%CE%B9%CF%87%CE%B5%CE%B9%CF%81%CE%B7%CE%BC%CE%B1%CF%84%CE%B9%CE%BA%CE%BF%CF%84%CE%B7%CF%84%CE%B1-%CF%80%CE%B1/",
+      "decodedPath": "/βεα-γυναικεια-επιχειρηματικοτητα-πα/",
+      "locale": "el",
+      "purpose": "press-article",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/category/%CE%B4%CE%B7%CE%BC%CE%BF%CF%83%CE%B9%CF%8C%CF%84%CE%B7%CF%84%CE%B1/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": false,
+        "crawlAgeAsReported": null,
+        "fetchLimitation": "Failed to fetch https://keraboss.com/%CE%B2%CE%B5%CE%B1-%CE%B3%CF%85%CE%BD%CE%B1%CE%B9%CE%BA%CE%B5%CE%B9%CE%B1-%CE%B5%CF%80%CE%B9%CF%87%CE%B5%CE%B9%CF%81%CE%B7%CE%BC%CE%B1%CF%84%CE%B9%CE%BA%CE%BF%CF%84%CE%B7%CF%84%CE%B1-%CF%80%CE%B1/: Cache miss"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "review-and-preserve-content",
+        "targetPath": null,
+        "reason": "Retain this article or map one-to-one to a genuinely equivalent migrated article; do not redirect wholesale to category/home.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/keraboss-choose-your-colour-style/",
+      "decodedPath": "/keraboss-choose-your-colour-style/",
+      "locale": "el",
+      "purpose": "press-article",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/category/%CE%B4%CE%B7%CE%BC%CE%BF%CF%83%CE%B9%CF%8C%CF%84%CE%B7%CF%84%CE%B1/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": false,
+        "crawlAgeAsReported": null,
+        "fetchLimitation": "Failed to fetch https://keraboss.com/keraboss-choose-your-colour-style/: Cache miss"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "review-and-preserve-content",
+        "targetPath": null,
+        "reason": "Retain this article or map one-to-one to a genuinely equivalent migrated article; do not redirect wholesale to category/home.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/%CF%84%CE%B9%CE%BC%CE%B7%CF%84%CE%B9%CE%BA%CE%AE-%CE%B2%CF%81%CE%AC%CE%B2%CE%B5%CF%85%CF%83%CE%B7-%CF%84%CE%B7%CF%82-keraboss-cars-manufacturing-%CE%BC%CE%B5-%CF%84%CE%BF-%CF%87%CF%81%CF%85%CF%83/",
+      "decodedPath": "/τιμητική-βράβευση-της-keraboss-cars-manufacturing-με-το-χρυσ/",
+      "locale": "el",
+      "purpose": "press-article",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/category/%CE%B4%CE%B7%CE%BC%CE%BF%CF%83%CE%B9%CF%8C%CF%84%CE%B7%CF%84%CE%B1/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": false,
+        "crawlAgeAsReported": null,
+        "fetchLimitation": "Failed to fetch https://keraboss.com/%CF%84%CE%B9%CE%BC%CE%B7%CF%84%CE%B9%CE%BA%CE%AE-%CE%B2%CF%81%CE%AC%CE%B2%CE%B5%CF%85%CF%83%CE%B7-%CF%84%CE%B7%CF%82-keraboss-cars-manufacturing-%CE%BC%CE%B5-%CF%84%CE%BF-%CF%87%CF%81%CF%85%CF%83/: Cache miss"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "review-and-preserve-content",
+        "targetPath": null,
+        "reason": "Retain this article or map one-to-one to a genuinely equivalent migrated article; do not redirect wholesale to category/home.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/road-trip-series-%CE%BC%CE%B5-%CF%84%CE%BF-keraboss-%CE%BC%CE%B9%CE%B1-%CE%B1%CF%80%CF%8C%CE%BB%CF%85%CF%84%CE%B7-%CF%84%CE%B1%CE%BE%CE%B9%CE%B4%CE%B9%CF%89%CF%84%CE%B9%CE%BA%CE%AE-%CE%B5%CE%BC/",
+      "decodedPath": "/road-trip-series-με-το-keraboss-μια-απόλυτη-ταξιδιωτική-εμ/",
+      "locale": "el",
+      "purpose": "press-article",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/category/%CE%B4%CE%B7%CE%BC%CE%BF%CF%83%CE%B9%CF%8C%CF%84%CE%B7%CF%84%CE%B1/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": false,
+        "crawlAgeAsReported": null,
+        "fetchLimitation": "Failed to fetch https://keraboss.com/road-trip-series-%CE%BC%CE%B5-%CF%84%CE%BF-keraboss-%CE%BC%CE%B9%CE%B1-%CE%B1%CF%80%CF%8C%CE%BB%CF%85%CF%84%CE%B7-%CF%84%CE%B1%CE%BE%CE%B9%CE%B4%CE%B9%CF%89%CF%84%CE%B9%CE%BA%CE%AE-%CE%B5%CE%BC/: Cache miss"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "review-and-preserve-content",
+        "targetPath": null,
+        "reason": "Retain this article or map one-to-one to a genuinely equivalent migrated article; do not redirect wholesale to category/home.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/caroto-%CE%B7-%CE%B3%CF%85%CE%BD%CE%B1%CE%AF%CE%BA%CE%B1-%CF%80%CE%AF%CF%83%CF%89-%CE%B1%CF%80%CF%8C-keraboss-%CF%80%CE%BF%CE%B9%CE%AC-%CE%B5%CE%AF%CE%BD%CE%B1%CE%B9-%CF%84%CE%B1-%CE%B5/",
+      "decodedPath": "/caroto-η-γυναίκα-πίσω-από-keraboss-ποιά-είναι-τα-ε/",
+      "locale": "el",
+      "purpose": "press-article",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/category/%CE%B4%CE%B7%CE%BC%CE%BF%CF%83%CE%B9%CF%8C%CF%84%CE%B7%CF%84%CE%B1/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": false,
+        "crawlAgeAsReported": null,
+        "fetchLimitation": "Failed to fetch https://keraboss.com/caroto-%CE%B7-%CE%B3%CF%85%CE%BD%CE%B1%CE%AF%CE%BA%CE%B1-%CF%80%CE%AF%CF%83%CF%89-%CE%B1%CF%80%CF%8C-keraboss-%CF%80%CE%BF%CE%B9%CE%AC-%CE%B5%CE%AF%CE%BD%CE%B1%CE%B9-%CF%84%CE%B1-%CE%B5/: Cache miss"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "review-and-preserve-content",
+        "targetPath": null,
+        "reason": "Retain this article or map one-to-one to a genuinely equivalent migrated article; do not redirect wholesale to category/home.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/%CE%B1%CF%80%CE%B5-%CF%84%CE%BF-%CF%80%CF%81%CF%8E%CF%84%CE%BF-%CE%B5%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CF%8C-%CE%B1%CF%85%CF%84%CE%BF%CE%BA%CE%AF%CE%BD%CE%B7%CF%84%CE%BF-%CE%B5%CE%B3%CE%BA%CE%B5/",
+      "decodedPath": "/απε-το-πρώτο-ελληνικό-αυτοκίνητο-εγκε/",
+      "locale": "el",
+      "purpose": "press-article",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/category/%CE%B4%CE%B7%CE%BC%CE%BF%CF%83%CE%B9%CF%8C%CF%84%CE%B7%CF%84%CE%B1/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": false,
+        "crawlAgeAsReported": null,
+        "fetchLimitation": "Failed to fetch https://keraboss.com/%CE%B1%CF%80%CE%B5-%CF%84%CE%BF-%CF%80%CF%81%CF%8E%CF%84%CE%BF-%CE%B5%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CF%8C-%CE%B1%CF%85%CF%84%CE%BF%CE%BA%CE%AF%CE%BD%CE%B7%CF%84%CE%BF-%CE%B5%CE%B3%CE%BA%CE%B5/: (502) Bad Gateway"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "review-and-preserve-content",
+        "targetPath": null,
+        "reason": "Retain this article or map one-to-one to a genuinely equivalent migrated article; do not redirect wholesale to category/home.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/%CE%B1%CF%80%CE%BF%CE%BA%CE%BB%CE%B5%CE%B9%CF%83%CF%84%CE%B9%CE%BA%CF%8C-%CE%BF%CE%B4%CE%B7%CE%B3%CE%BF%CF%8D%CE%BC%CE%B5-%CF%84%CE%BF-%CE%B5%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CF%8C-super-k-%CF%84/",
+      "decodedPath": "/αποκλειστικό-οδηγούμε-το-ελληνικό-super-k-τ/",
+      "locale": "el",
+      "purpose": "press-article",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/category/%CE%B4%CE%B7%CE%BC%CE%BF%CF%83%CE%B9%CF%8C%CF%84%CE%B7%CF%84%CE%B1/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": "last week"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "review-and-preserve-content",
+        "targetPath": null,
+        "reason": "Retain this article or map one-to-one to a genuinely equivalent migrated article; do not redirect wholesale to category/home.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/%CF%84%CE%BF-%CE%B5%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CF%8C-keraboss-super-k-%CF%80%CE%AE%CF%81%CE%B5-%CE%AC%CE%B4%CE%B5%CE%B9%CE%B1-%CE%BA%CF%85%CE%BA%CE%BB%CE%BF%CF%86%CE%BF%CF%81%CE%AF%CE%B1/",
+      "decodedPath": "/το-ελληνικό-keraboss-super-k-πήρε-άδεια-κυκλοφορία/",
+      "locale": "el",
+      "purpose": "press-article",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/category/%CE%B4%CE%B7%CE%BC%CE%BF%CF%83%CE%B9%CF%8C%CF%84%CE%B7%CF%84%CE%B1/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": "3 weeks ago"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "review-and-preserve-content",
+        "targetPath": null,
+        "reason": "Retain this article or map one-to-one to a genuinely equivalent migrated article; do not redirect wholesale to category/home.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/newsauto-%CE%B1%CF%85%CF%84%CF%8C-%CE%B5%CE%AF%CE%BD%CE%B1%CE%B9-%CF%84%CE%BF-%CF%80%CF%81%CF%8E%CF%84%CE%BF-%CE%B1%CF%85%CF%84%CE%BF%CE%BA%CE%AF%CE%BD%CE%B7%CF%84%CE%BF-%CF%80%CE%BF%CF%85-%CE%BA/",
+      "decodedPath": "/newsauto-αυτό-είναι-το-πρώτο-αυτοκίνητο-που-κ/",
+      "locale": "el",
+      "purpose": "press-article",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/category/%CE%B4%CE%B7%CE%BC%CE%BF%CF%83%CE%B9%CF%8C%CF%84%CE%B7%CF%84%CE%B1/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": "1.1 years ago"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "review-and-preserve-content",
+        "targetPath": null,
+        "reason": "Retain this article or map one-to-one to a genuinely equivalent migrated article; do not redirect wholesale to category/home.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/%CE%B5%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CE%AE-%CF%85%CF%80%CF%8C%CE%B8%CE%B5%CF%83%CE%B7/",
+      "decodedPath": "/ελληνική-υπόθεση/",
+      "locale": "el",
+      "purpose": "press-article",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/category/%CE%B4%CE%B7%CE%BC%CE%BF%CF%83%CE%B9%CF%8C%CF%84%CE%B7%CF%84%CE%B1/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": "2 weeks ago"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "review-and-preserve-content",
+        "targetPath": null,
+        "reason": "Retain this article or map one-to-one to a genuinely equivalent migrated article; do not redirect wholesale to category/home.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/t%CE%BF-%CF%80%CF%81%CF%8E%CF%84%CE%BF-%CF%83%CF%8D%CE%B3%CF%87%CF%81%CE%BF%CE%BD%CE%BF-%CF%84%CE%B6%CE%B9%CF%80-made-in-greece/",
+      "decodedPath": "/tο-πρώτο-σύγχρονο-τζιπ-made-in-greece/",
+      "locale": "el",
+      "purpose": "press-article",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/category/%CE%B4%CE%B7%CE%BC%CE%BF%CF%83%CE%B9%CF%8C%CF%84%CE%B7%CF%84%CE%B1/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": "1.7 years ago"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "review-and-preserve-content",
+        "targetPath": null,
+        "reason": "Retain this article or map one-to-one to a genuinely equivalent migrated article; do not redirect wholesale to category/home.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/keraboss-super-k-%CF%80%CE%B1%CF%84%CE%AC%CE%B5%CE%B9-%CE%B3%CE%BA%CE%AC%CE%B6%CE%B9-%CF%84%CE%BF-%CE%B5%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CF%8C-%CF%84%CE%B6%CE%B9%CF%80-%CE%B7-%CE%AD/",
+      "decodedPath": "/keraboss-super-k-πατάει-γκάζι-το-ελληνικό-τζιπ-η-έ/",
+      "locale": "el",
+      "purpose": "press-article",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/category/%CE%B4%CE%B7%CE%BC%CE%BF%CF%83%CE%B9%CF%8C%CF%84%CE%B7%CF%84%CE%B1/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": "7 months ago"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "review-and-preserve-content",
+        "targetPath": null,
+        "reason": "Retain this article or map one-to-one to a genuinely equivalent migrated article; do not redirect wholesale to category/home.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/%CF%84%CE%BF-keraboss-super-k-%CE%BC%CE%B5-%CF%86%CF%8C%CE%BD%CF%84%CE%BF-%CF%84%CE%BF-%CE%BD%CE%B1%CF%8D%CF%80%CE%BB%CE%B9%CE%BF-%CF%84%CE%BF-%CF%80%CF%81%CF%8E%CF%84%CE%BF-%CE%B5%CE%BB%CE%BB/",
+      "decodedPath": "/το-keraboss-super-k-με-φόντο-το-ναύπλιο-το-πρώτο-ελλ/",
+      "locale": "el",
+      "purpose": "press-article",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/category/%CE%B4%CE%B7%CE%BC%CE%BF%CF%83%CE%B9%CF%8C%CF%84%CE%B7%CF%84%CE%B1/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": "last year"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "review-and-preserve-content",
+        "targetPath": null,
+        "reason": "Retain this article or map one-to-one to a genuinely equivalent migrated article; do not redirect wholesale to category/home.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/en/%F0%9D%99%8D%F0%9D%99%9A%F0%9D%99%A3%F0%9D%99%A9-%F0%9D%99%96-%F0%9D%99%86%F0%9D%99%80%F0%9D%99%8D%F0%9D%98%BC%F0%9D%98%BD%F0%9D%99%8A%F0%9D%99%8E%F0%9D%99%8E-%F0%9D%99%96%F0%9D%99%A3%F0%9D%99%99/",
+      "decodedPath": "/en/𝙍𝙚𝙣𝙩-𝙖-𝙆𝙀𝙍𝘼𝘽𝙊𝙎𝙎-𝙖𝙣𝙙/",
+      "locale": "en",
+      "purpose": "press-article",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/en/category/publicity/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": "last year"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "review-and-preserve-content",
+        "targetPath": null,
+        "reason": "Retain this article or map one-to-one to a genuinely equivalent migrated article; do not redirect wholesale to category/home.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/en/keraboss-super-k-the-first-greek-handbuilt-vehicle-that-you-buy-and-wear-it-video-interview-drive/",
+      "decodedPath": "/en/keraboss-super-k-the-first-greek-handbuilt-vehicle-that-you-buy-and-wear-it-video-interview-drive/",
+      "locale": "en",
+      "purpose": "press-article",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/en/category/publicity/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": "3 months ago"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "review-and-preserve-content",
+        "targetPath": null,
+        "reason": "Retain this article or map one-to-one to a genuinely equivalent migrated article; do not redirect wholesale to category/home.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/en/keraboss-choose-your-colour-style-2/",
+      "decodedPath": "/en/keraboss-choose-your-colour-style-2/",
+      "locale": "en",
+      "purpose": "press-article",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/en/category/publicity/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": false,
+        "crawlAgeAsReported": null,
+        "fetchLimitation": "Failed to fetch https://keraboss.com/en/keraboss-choose-your-colour-style-2/: Cache miss"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "review-and-preserve-content",
+        "targetPath": null,
+        "reason": "Retain this article or map one-to-one to a genuinely equivalent migrated article; do not redirect wholesale to category/home.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/en/keraboss-cars-manufacturing-is-honored-receiving-the-golden-resource-utilization-award-at-the-grbossible-entrepreneurship-festival-for-the-manufacture-of-the-keraboss-car/",
+      "decodedPath": "/en/keraboss-cars-manufacturing-is-honored-receiving-the-golden-resource-utilization-award-at-the-grbossible-entrepreneurship-festival-for-the-manufacture-of-the-keraboss-car/",
+      "locale": "en",
+      "purpose": "press-article",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/en/category/publicity/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": "1.2 years ago"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "review-and-preserve-content",
+        "targetPath": null,
+        "reason": "Retain this article or map one-to-one to a genuinely equivalent migrated article; do not redirect wholesale to category/home.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/en/keraboss-storytelling-stella-keraboss-shares-the-story-of-the-keraboss-car-at-the-grbossible-festival-held-on-december-8th-and-9th-2023/",
+      "decodedPath": "/en/keraboss-storytelling-stella-keraboss-shares-the-story-of-the-keraboss-car-at-the-grbossible-festival-held-on-december-8th-and-9th-2023/",
+      "locale": "en",
+      "purpose": "press-article",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/en/category/publicity/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": "last month"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "review-and-preserve-content",
+        "targetPath": null,
+        "reason": "Retain this article or map one-to-one to a genuinely equivalent migrated article; do not redirect wholesale to category/home.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/en/road-trip-series-with-keraboss-an-ultimate-travel-experience-destination-city-of-nafplio/",
+      "decodedPath": "/en/road-trip-series-with-keraboss-an-ultimate-travel-experience-destination-city-of-nafplio/",
+      "locale": "en",
+      "purpose": "press-article",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/en/category/publicity/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": "1.6 years ago"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "review-and-preserve-content",
+        "targetPath": null,
+        "reason": "Retain this article or map one-to-one to a genuinely equivalent migrated article; do not redirect wholesale to category/home.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/en/pavlos-keraboss-article-by-stratis-hatzipanagiotou-4-troxoi/",
+      "decodedPath": "/en/pavlos-keraboss-article-by-stratis-hatzipanagiotou-4-troxoi/",
+      "locale": "en",
+      "purpose": "press-article",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/en/category/publicity/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": "7 months ago"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "review-and-preserve-content",
+        "targetPath": null,
+        "reason": "Retain this article or map one-to-one to a genuinely equivalent migrated article; do not redirect wholesale to category/home.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/en/stern-back-to-the-auto-industry-after-a-long-standstill-greece-puts-a-car-made-in-greece-on-the-roadstern-back-to-the-auto-industry/",
+      "decodedPath": "/en/stern-back-to-the-auto-industry-after-a-long-standstill-greece-puts-a-car-made-in-greece-on-the-roadstern-back-to-the-auto-industry/",
+      "locale": "en",
+      "purpose": "press-article",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/en/category/publicity/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": "last month"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "review-and-preserve-content",
+        "targetPath": null,
+        "reason": "Retain this article or map one-to-one to a genuinely equivalent migrated article; do not redirect wholesale to category/home.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/en/we-drive-the-greek-jeep-keraboss-super-k-with-the-kathimerini-of-kyriaki/",
+      "decodedPath": "/en/we-drive-the-greek-jeep-keraboss-super-k-with-the-kathimerini-of-kyriaki/",
+      "locale": "en",
+      "purpose": "press-article",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/en/category/publicity/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": "3 months ago"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "review-and-preserve-content",
+        "targetPath": null,
+        "reason": "Retain this article or map one-to-one to a genuinely equivalent migrated article; do not redirect wholesale to category/home.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/en/newsauto-here-is-the-greek-jeep-going-to-cannes/",
+      "decodedPath": "/en/newsauto-here-is-the-greek-jeep-going-to-cannes/",
+      "locale": "en",
+      "purpose": "press-article",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/en/category/publicity/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": "5 months ago"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "review-and-preserve-content",
+        "targetPath": null,
+        "reason": "Retain this article or map one-to-one to a genuinely equivalent migrated article; do not redirect wholesale to category/home.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/en/caroto-gr-the-woman-behind-keraboss-what-are-the-companys-next-plans/",
+      "decodedPath": "/en/caroto-gr-the-woman-behind-keraboss-what-are-the-companys-next-plans/",
+      "locale": "en",
+      "purpose": "press-article",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/en/category/publicity/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": "9 months ago"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "review-and-preserve-content",
+        "targetPath": null,
+        "reason": "Retain this article or map one-to-one to a genuinely equivalent migrated article; do not redirect wholesale to category/home.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/en/the-love-story-from-which-the-greek-super-k-car-was-born/",
+      "decodedPath": "/en/the-love-story-from-which-the-greek-super-k-car-was-born/",
+      "locale": "en",
+      "purpose": "press-article",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/en/category/publicity/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": "last month"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "review-and-preserve-content",
+        "targetPath": null,
+        "reason": "Retain this article or map one-to-one to a genuinely equivalent migrated article; do not redirect wholesale to category/home.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/en/4%CF%84%CF%81%CE%BF%CF%87%CE%BFi-we-drive-the-greek-keraboss-super-k/",
+      "decodedPath": "/en/4τροχοi-we-drive-the-greek-keraboss-super-k/",
+      "locale": "en",
+      "purpose": "press-article",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/en/category/publicity/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": "last week"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "review-and-preserve-content",
+        "targetPath": null,
+        "reason": "Retain this article or map one-to-one to a genuinely equivalent migrated article; do not redirect wholesale to category/home.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/en/ana-mpa-new-greek-manufactured-cars-presented-at-ministry-event/",
+      "decodedPath": "/en/ana-mpa-new-greek-manufactured-cars-presented-at-ministry-event/",
+      "locale": "en",
+      "purpose": "press-article",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/en/category/publicity/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": "10 months ago"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "review-and-preserve-content",
+        "targetPath": null,
+        "reason": "Retain this article or map one-to-one to a genuinely equivalent migrated article; do not redirect wholesale to category/home.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/en/greece-takes-the-car-to-the-streets-german-press-for-the-keraboss-super-k-2/",
+      "decodedPath": "/en/greece-takes-the-car-to-the-streets-german-press-for-the-keraboss-super-k-2/",
+      "locale": "en",
+      "purpose": "press-article",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/en/category/publicity/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": "2 weeks ago"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "review-and-preserve-content",
+        "targetPath": null,
+        "reason": "Retain this article or map one-to-one to a genuinely equivalent migrated article; do not redirect wholesale to category/home.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/en/exclusive-we-drive-the-greek-super-k-by-keraboss/",
+      "decodedPath": "/en/exclusive-we-drive-the-greek-super-k-by-keraboss/",
+      "locale": "en",
+      "purpose": "press-article",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/en/category/publicity/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": "2 months ago"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "review-and-preserve-content",
+        "targetPath": null,
+        "reason": "Retain this article or map one-to-one to a genuinely equivalent migrated article; do not redirect wholesale to category/home.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/en/the-greek-keraboss-super-k-got-approval/",
+      "decodedPath": "/en/the-greek-keraboss-super-k-got-approval/",
+      "locale": "en",
+      "purpose": "press-article",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/en/category/publicity/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": "3 weeks ago"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "review-and-preserve-content",
+        "targetPath": null,
+        "reason": "Retain this article or map one-to-one to a genuinely equivalent migrated article; do not redirect wholesale to category/home.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/en/newsauto-this-is-the-first-car-manufactured-and-assembled-entirely-in-greece-with-type-approval-and-the-relevant-certifications/",
+      "decodedPath": "/en/newsauto-this-is-the-first-car-manufactured-and-assembled-entirely-in-greece-with-type-approval-and-the-relevant-certifications/",
+      "locale": "en",
+      "purpose": "press-article",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/en/category/publicity/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": "last month"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "review-and-preserve-content",
+        "targetPath": null,
+        "reason": "Retain this article or map one-to-one to a genuinely equivalent migrated article; do not redirect wholesale to category/home.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/en/greek-case/",
+      "decodedPath": "/en/greek-case/",
+      "locale": "en",
+      "purpose": "press-article",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/en/category/publicity/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": "6 months ago"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "review-and-preserve-content",
+        "targetPath": null,
+        "reason": "Retain this article or map one-to-one to a genuinely equivalent migrated article; do not redirect wholesale to category/home.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/en/the-first-modern-jeep-made-in-greece/",
+      "decodedPath": "/en/the-first-modern-jeep-made-in-greece/",
+      "locale": "en",
+      "purpose": "press-article",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/en/category/publicity/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": "10 months ago"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "review-and-preserve-content",
+        "targetPath": null,
+        "reason": "Retain this article or map one-to-one to a genuinely equivalent migrated article; do not redirect wholesale to category/home.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/en/keraboss-super-k-greek-jeep-hits-the-road/",
+      "decodedPath": "/en/keraboss-super-k-greek-jeep-hits-the-road/",
+      "locale": "en",
+      "purpose": "press-article",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/en/category/publicity/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": "2 months ago"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "review-and-preserve-content",
+        "targetPath": null,
+        "reason": "Retain this article or map one-to-one to a genuinely equivalent migrated article; do not redirect wholesale to category/home.",
+        "implementationVerified": false
+      }
+    },
+    {
+      "url": "https://keraboss.com/en/the-keraboss-super-k-with-nafplion-in-the-background-the-first-greek-jeep-approved-and-certified-by-the-state/",
+      "decodedPath": "/en/the-keraboss-super-k-with-nafplion-in-the-background-the-first-greek-jeep-approved-and-certified-by-the-state/",
+      "locale": "en",
+      "purpose": "press-article",
+      "discovery": {
+        "method": "official-website-link-or-search-snapshot",
+        "sourceUrl": "https://keraboss.com/en/category/publicity/",
+        "observedOn": "2026-11-19",
+        "snapshotAvailable": true,
+        "crawlAgeAsReported": "3 weeks ago"
+      },
+      "currentHttpStatus": null,
+      "currentHttpStatusEvidence": "No live HTTP response available: shell DNS denied; web snapshots are not current HTTP status evidence.",
+      "currentCanonical": null,
+      "currentCanonicalEvidence": "HTML head/canonical was not exposed by snapshot tool.",
+      "organicValue": {
+        "status": "requires-authenticated-access",
+        "searchConsoleClicks": null,
+        "searchConsoleImpressions": null,
+        "bingClicks": null,
+        "backlinks": null
+      },
+      "migration": {
+        "decision": "review-and-preserve-content",
+        "targetPath": null,
+        "reason": "Retain this article or map one-to-one to a genuinely equivalent migrated article; do not redirect wholesale to category/home.",
+        "implementationVerified": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,522 @@
+[
+  {
+    "id": "home-el",
+    "key": "home",
+    "locale": "el",
+    "title": "KERABOSS Super K | Ελληνικό χειροποίητο αυτοκίνητο",
+    "description": "Γνώρισε το KERABOSS Super K: ελληνική χειροποίητη κατασκευή, δημοσιευμένα χαρακτηριστικά, επιλογές διαμόρφωσης και επικοινωνία με την εταιρεία.",
+    "heading": "SUPER K",
+    "intro": "Το δικό σου ταξίδι. Με τον δικό σου χαρακτήρα.",
+    "sections": [
+      {
+        "heading": "Τι είναι το Super K;",
+        "claimIds": ["identity", "manufacture-country"],
+        "links": ["model", "specs"],
+        "paragraphs": []
+      },
+      {
+        "heading": "Η δική σου επιλογή",
+        "claimIds": [],
+        "links": ["configurator", "contact"],
+        "paragraphs": []
+      },
+      {
+        "heading": "Η κατασκευή και η ιστορία",
+        "claimIds": ["construction"],
+        "links": ["history", "faq"],
+        "paragraphs": []
+      }
+    ],
+    "reviewedAt": "2026-11-19",
+    "contentStatus": "verified-public-source"
+  },
+  {
+    "id": "home-en",
+    "key": "home",
+    "locale": "en",
+    "title": "KERABOSS Super K | Hand-built Greek passenger car",
+    "description": "Discover the KERABOSS Super K: hand-built in Greece, with published specifications, configuration options and direct contact with the manufacturer.",
+    "heading": "SUPER K",
+    "intro": "Your journey. Your own character.",
+    "sections": [
+      {
+        "heading": "What is Super K?",
+        "claimIds": ["identity", "manufacture-country"],
+        "links": ["model", "specs"],
+        "paragraphs": []
+      },
+      {
+        "heading": "Make it yours",
+        "claimIds": [],
+        "links": ["configurator", "contact"],
+        "paragraphs": []
+      },
+      {
+        "heading": "Construction and story",
+        "claimIds": ["construction"],
+        "links": ["history", "faq"],
+        "paragraphs": []
+      }
+    ],
+    "reviewedAt": "2026-11-19",
+    "contentStatus": "verified-public-source"
+  },
+  {
+    "id": "model-el",
+    "key": "model",
+    "locale": "el",
+    "title": "KERABOSS SUPER K | Το μοντέλο, η κατασκευή και οι επιλογές του",
+    "description": "Η επίσημη αναφορά για το KERABOSS SUPER K: τι είναι, πού κατασκευάζεται, δημοσιευμένα στοιχεία και πώς να ζητήσεις παρουσίαση ή προσφορά.",
+    "heading": "Γνώρισε το SUPER K",
+    "intro": "Ένα χειροποίητο ελληνικό επιβατικό αυτοκίνητο, με ξεχωριστή εμφάνιση και προσωπικό χαρακτήρα.",
+    "sections": [
+      {
+        "heading": "Τι είναι το KERABOSS SUPER K;",
+        "claimIds": ["identity", "limited-production"],
+        "links": ["specs"],
+        "paragraphs": []
+      },
+      {
+        "heading": "Πού κατασκευάζεται;",
+        "claimIds": ["manufacture-country", "athens-base"],
+        "links": ["history"],
+        "paragraphs": []
+      },
+      {
+        "heading": "Πώς διαμορφώνεται;",
+        "claimIds": [],
+        "links": ["configurator"],
+        "paragraphs": []
+      },
+      {
+        "heading": "Πώς μπορώ να το δω;",
+        "claimIds": [],
+        "links": ["contact"],
+        "paragraphs": [
+          "Δες τα δημοσιευμένα τεχνικά στοιχεία, τις επιλογές χρώματος και οροφής και μίλησε απευθείας με την εταιρεία για την τελική διαμόρφωση."
+        ]
+      }
+    ],
+    "reviewedAt": "2026-11-19",
+    "contentStatus": "verified-public-source"
+  },
+  {
+    "id": "model-en",
+    "key": "model",
+    "locale": "en",
+    "title": "KERABOSS SUPER K | The car, construction and options",
+    "description": "The official KERABOSS SUPER K reference: what it is, where it is made, published specifications and how to request a viewing or quotation.",
+    "heading": "Meet the SUPER K",
+    "intro": "A hand-built Greek passenger car with a distinctive appearance and individual character.",
+    "sections": [
+      {
+        "heading": "What is the KERABOSS SUPER K?",
+        "claimIds": ["identity", "limited-production"],
+        "links": ["specs"],
+        "paragraphs": []
+      },
+      {
+        "heading": "Where is it made?",
+        "claimIds": ["manufacture-country", "athens-base"],
+        "links": ["history"],
+        "paragraphs": []
+      },
+      {
+        "heading": "What can I configure?",
+        "claimIds": [],
+        "links": ["configurator"],
+        "paragraphs": []
+      },
+      {
+        "heading": "How can I view it?",
+        "claimIds": [],
+        "links": ["contact"],
+        "paragraphs": [
+          "Explore the published technical specifications, colour and roof choices, and contact the company directly to confirm the final configuration."
+        ]
+      }
+    ],
+    "reviewedAt": "2026-11-19",
+    "contentStatus": "verified-public-source"
+  },
+  {
+    "id": "specs-el",
+    "key": "specs",
+    "locale": "el",
+    "title": "Τεχνικά χαρακτηριστικά KERABOSS Super K | Κινητήρας και διαστάσεις",
+    "description": "Δημοσιευμένα τεχνικά στοιχεία του Super K: κινητήρας Mitsubishi, κυβισμός, θέσεις, κιβώτιο, διαστάσεις και συστήματα. Δες τις πηγές των τιμών.",
+    "heading": "Τεχνικά χαρακτηριστικά",
+    "intro": "Τα χαρακτηριστικά του Super K, συγκεντρωμένα από τους δημοσιευμένους τεχνικούς πίνακες της εταιρείας.",
+    "sections": [
+      {
+        "heading": "Δημοσιευμένος τεχνικός πίνακας",
+        "claimIds": [],
+        "links": ["model", "contact"],
+        "paragraphs": []
+      }
+    ],
+    "reviewedAt": "2026-11-19",
+    "contentStatus": "verified-public-source"
+  },
+  {
+    "id": "specs-en",
+    "key": "specs",
+    "locale": "en",
+    "title": "KERABOSS Super K specifications | Engine and dimensions",
+    "description": "Published Super K specifications: Mitsubishi engine, displacement, seats, transmission, dimensions and systems, with links to the source tables.",
+    "heading": "Technical specifications",
+    "intro": "Super K specifications collected from the company’s published technical tables.",
+    "sections": [
+      {
+        "heading": "Published technical table",
+        "claimIds": [],
+        "links": ["model", "contact"],
+        "paragraphs": []
+      }
+    ],
+    "reviewedAt": "2026-11-19",
+    "contentStatus": "verified-public-source"
+  },
+  {
+    "id": "configurator-el",
+    "key": "configurator",
+    "locale": "el",
+    "title": "Διαμόρφωσε το KERABOSS Super K | Χρώμα και οροφή",
+    "description": "Επίλεξε ενδιαφέρον για χρώμα και οροφή του Super K και επικοινώνησε με την Keraboss για επιβεβαίωση συνδυασμού και εξατομικευμένη προσφορά.",
+    "heading": "Το δικό σου Super K",
+    "intro": "Συγκέντρωσε τις προτιμήσεις σου για χρώμα και οροφή. Η Keraboss θα επιβεβαιώσει τον τελικό συνδυασμό και την προσφορά.",
+    "sections": [
+      {
+        "heading": "Προτιμήσεις διαμόρφωσης",
+        "claimIds": [],
+        "links": ["specs", "contact"],
+        "paragraphs": [
+          "Οι ονομασίες χρωμάτων και οι επιλογές οροφής προέρχονται από τον εταιρικό κατάλογο. Το δείγμα επιλογής δεν αποτελεί δεσμευτική παραγγελία ή απεικόνιση του ακριβούς χρώματος βαφής."
+        ]
+      }
+    ],
+    "reviewedAt": "2026-11-19",
+    "contentStatus": "verified-public-source"
+  },
+  {
+    "id": "configurator-en",
+    "key": "configurator",
+    "locale": "en",
+    "title": "Configure your KERABOSS Super K | Colour and roof",
+    "description": "Choose a Super K colour and roof preference, then contact Keraboss to confirm the combination and request an individual quotation.",
+    "heading": "Your own Super K",
+    "intro": "Collect your colour and roof preferences. Keraboss will confirm the final combination and quotation.",
+    "sections": [
+      {
+        "heading": "Configuration preferences",
+        "claimIds": [],
+        "links": ["specs", "contact"],
+        "paragraphs": [
+          "Colour names and roof options come from the company’s catalogue. Your selection is an enquiry preference, not a binding order or an exact automotive paint representation."
+        ]
+      }
+    ],
+    "reviewedAt": "2026-11-19",
+    "contentStatus": "verified-public-source"
+  },
+  {
+    "id": "history-el",
+    "key": "history",
+    "locale": "el",
+    "title": "KERABOSS | Ιστορία και χειροποίητη κατασκευή του Super K",
+    "description": "Η ιστορία πίσω από το Super K, ο Παύλος και η Στέλλα Κεραμπός και η ελληνική κατασκευή με πολυεστερικό αμάξωμα και γαλβανισμένο πλαίσιο.",
+    "heading": "Μια ιστορία με χαρακτήρα",
+    "intro": "Η δημιουργία του Super K συνδέεται με την πορεία, την επιμονή και την εμπειρία του Παύλου και της Στέλλας Κεραμπός.",
+    "sections": [
+      {
+        "heading": "Οι άνθρωποι πίσω από το Super K",
+        "claimIds": ["founders-history"],
+        "links": [],
+        "paragraphs": []
+      },
+      {
+        "heading": "Κατασκευή στην Ελλάδα",
+        "claimIds": ["manufacture-country", "construction", "limited-production"],
+        "links": ["specs", "model"],
+        "paragraphs": []
+      }
+    ],
+    "reviewedAt": "2026-11-19",
+    "contentStatus": "verified-public-source"
+  },
+  {
+    "id": "history-en",
+    "key": "history",
+    "locale": "en",
+    "title": "KERABOSS | The story and hand-built construction of Super K",
+    "description": "The story behind Super K, Pavlos and Stella Keraboss, and its Greek construction with a fiberglass body and galvanized chassis.",
+    "heading": "A story with character",
+    "intro": "The creation of Super K is associated with the experience and commitment of Pavlos and Stella Keraboss.",
+    "sections": [
+      {
+        "heading": "The people behind Super K",
+        "claimIds": ["founders-history"],
+        "links": [],
+        "paragraphs": []
+      },
+      {
+        "heading": "Made in Greece",
+        "claimIds": ["manufacture-country", "construction", "limited-production"],
+        "links": ["specs", "model"],
+        "paragraphs": []
+      }
+    ],
+    "reviewedAt": "2026-11-19",
+    "contentStatus": "verified-public-source"
+  },
+  {
+    "id": "media-el",
+    "key": "media",
+    "locale": "el",
+    "title": "KERABOSS Super K | Φωτογραφίες, παρουσιάσεις και social",
+    "description": "Βρες την επίσημη φωτογραφική παρουσία του Super K και τα επαληθευμένα κοινωνικά δίκτυα της Keraboss Cars Manufacturing.",
+    "heading": "Ο κόσμος του Super K",
+    "intro": "Φωτογραφίες και σύνδεσμοι προς τα επίσημα κοινωνικά δίκτυα της Keraboss.",
+    "sections": [
+      {
+        "heading": "Επίσημα κοινωνικά δίκτυα",
+        "claimIds": [],
+        "links": ["press", "model"],
+        "paragraphs": []
+      }
+    ],
+    "reviewedAt": "2026-11-19",
+    "contentStatus": "verified-public-source"
+  },
+  {
+    "id": "media-en",
+    "key": "media",
+    "locale": "en",
+    "title": "KERABOSS Super K | Photography, presentations and social",
+    "description": "Explore Super K photography and verified official social profiles from Keraboss Cars Manufacturing.",
+    "heading": "The world of Super K",
+    "intro": "Photography and links to the official Keraboss social profiles.",
+    "sections": [
+      {
+        "heading": "Official social profiles",
+        "claimIds": [],
+        "links": ["press", "model"],
+        "paragraphs": []
+      }
+    ],
+    "reviewedAt": "2026-11-19",
+    "contentStatus": "verified-public-source"
+  },
+  {
+    "id": "press-el",
+    "key": "press",
+    "locale": "el",
+    "title": "KERABOSS Super K στον Τύπο | Δημοσιεύματα και επικοινωνία",
+    "description": "Πραγματικό δημοσίευμα και δοκιμή του Super K, με σύνδεσμο στην αρχική πηγή και στοιχεία επικοινωνίας για δημοσιογραφικά αιτήματα.",
+    "heading": "Το Super K στον Τύπο",
+    "intro": "Διάβασε τη δοκιμή στην αρχική δημοσιογραφική πηγή και επικοινώνησε με την Keraboss για υλικό παρουσίασης.",
+    "sections": [
+      {
+        "heading": "Δοκιμή από το NewsAuto",
+        "claimIds": [],
+        "links": ["media", "contact"],
+        "paragraphs": [
+          "Για δημοσιογραφικό υλικό, φωτογραφίες κατάλληλες για αναδημοσίευση και επιβεβαίωση στοιχείων, επικοινώνησε με την εταιρεία."
+        ]
+      }
+    ],
+    "reviewedAt": "2026-11-19",
+    "contentStatus": "verified-public-source"
+  },
+  {
+    "id": "press-en",
+    "key": "press",
+    "locale": "en",
+    "title": "KERABOSS Super K in the press | Coverage and media enquiries",
+    "description": "Read original Super K test-drive coverage and contact Keraboss for press enquiries and presentation material.",
+    "heading": "Super K in the press",
+    "intro": "Read the test drive at its original publisher and contact Keraboss for presentation material.",
+    "sections": [
+      {
+        "heading": "NewsAuto test drive",
+        "claimIds": [],
+        "links": ["media", "contact"],
+        "paragraphs": [
+          "For press material, photographs cleared for republication and fact checking, contact the company."
+        ]
+      }
+    ],
+    "reviewedAt": "2026-11-19",
+    "contentStatus": "verified-public-source"
+  },
+  {
+    "id": "faq-el",
+    "key": "faq",
+    "locale": "el",
+    "title": "KERABOSS Super K FAQ | Κατασκευή, επιλογές και παρουσίαση",
+    "description": "Απαντήσεις για το τι είναι το Super K, πού κατασκευάζεται, ποιες επιλογές δημοσιεύονται και πώς να ζητήσεις παρουσίαση και προσφορά.",
+    "heading": "Συχνές ερωτήσεις",
+    "intro": "Σαφείς απαντήσεις για το Super K, βασισμένες στα δημοσιευμένα στοιχεία της εταιρείας.",
+    "sections": [
+      {
+        "heading": "Τι είναι το Super K;",
+        "claimIds": ["identity"],
+        "links": ["model"],
+        "paragraphs": []
+      },
+      {
+        "heading": "Πού κατασκευάζεται και πού μπορώ να το δω;",
+        "claimIds": ["manufacture-country", "athens-base"],
+        "links": ["contact"],
+        "paragraphs": []
+      },
+      {
+        "heading": "Πώς είναι κατασκευασμένο;",
+        "claimIds": ["construction"],
+        "links": ["history"],
+        "paragraphs": []
+      },
+      {
+        "heading": "Είναι ειδικά κατασκευασμένο off-road όχημα;",
+        "claimIds": ["off-road-scope"],
+        "links": ["specs"],
+        "paragraphs": []
+      },
+      {
+        "heading": "Πώς επιβεβαιώνονται οι επιλογές και η προσφορά;",
+        "claimIds": [],
+        "links": ["configurator", "contact"],
+        "paragraphs": [
+          "Ο τελικός συνδυασμός, η τιμή και ο χρόνος παράδοσης επιβεβαιώνονται απευθείας από την Keraboss στο πλαίσιο συγκεκριμένου αιτήματος."
+        ]
+      }
+    ],
+    "reviewedAt": "2026-11-19",
+    "contentStatus": "verified-public-source"
+  },
+  {
+    "id": "faq-en",
+    "key": "faq",
+    "locale": "en",
+    "title": "KERABOSS Super K FAQ | Construction, options and viewing",
+    "description": "Answers about what Super K is, where it is made, its published options and how to request a viewing or quotation.",
+    "heading": "Frequently asked questions",
+    "intro": "Clear Super K answers based on the company’s published information.",
+    "sections": [
+      {
+        "heading": "What is Super K?",
+        "claimIds": ["identity"],
+        "links": ["model"],
+        "paragraphs": []
+      },
+      {
+        "heading": "Where is it made and where can I view it?",
+        "claimIds": ["manufacture-country", "athens-base"],
+        "links": ["contact"],
+        "paragraphs": []
+      },
+      {
+        "heading": "How is it constructed?",
+        "claimIds": ["construction"],
+        "links": ["history"],
+        "paragraphs": []
+      },
+      {
+        "heading": "Is it a purpose-built off-road vehicle?",
+        "claimIds": ["off-road-scope"],
+        "links": ["specs"],
+        "paragraphs": []
+      },
+      {
+        "heading": "How are options and quotations confirmed?",
+        "claimIds": [],
+        "links": ["configurator", "contact"],
+        "paragraphs": [
+          "The final combination, price and delivery timing are confirmed directly by Keraboss for a specific enquiry."
+        ]
+      }
+    ],
+    "reviewedAt": "2026-11-19",
+    "contentStatus": "verified-public-source"
+  },
+  {
+    "id": "contact-el",
+    "key": "contact",
+    "locale": "el",
+    "title": "Επικοινωνία KERABOSS | Προσφορά και παρουσίαση Super K",
+    "description": "Επικοινώνησε με την Keraboss Cars Manufacturing στην Αθήνα για το Super K: τηλέφωνο, email, διεύθυνση και αίτημα προσφοράς ή παρουσίασης.",
+    "heading": "Ας γνωριστούμε",
+    "intro": "Ζήτησε πληροφορίες, εξατομικευμένη προσφορά ή συνεννόηση για να γνωρίσεις το Super K από κοντά.",
+    "sections": [
+      {
+        "heading": "Επικοινώνησε απευθείας",
+        "claimIds": ["athens-base"],
+        "links": [],
+        "paragraphs": []
+      }
+    ],
+    "reviewedAt": "2026-11-19",
+    "contentStatus": "verified-public-source"
+  },
+  {
+    "id": "contact-en",
+    "key": "contact",
+    "locale": "en",
+    "title": "Contact KERABOSS | Super K quotation and viewing",
+    "description": "Contact Keraboss Cars Manufacturing in Athens for Super K information: telephone, email, address and quotation or viewing requests.",
+    "heading": "Let’s meet",
+    "intro": "Request information, an individual quotation or an appointment to discover Super K in person.",
+    "sections": [
+      {
+        "heading": "Contact us directly",
+        "claimIds": ["athens-base"],
+        "links": [],
+        "paragraphs": []
+      }
+    ],
+    "reviewedAt": "2026-11-19",
+    "contentStatus": "verified-public-source"
+  },
+  {
+    "id": "rentals-el",
+    "key": "rentals",
+    "locale": "el",
+    "title": "KERABOSS Super K για επαγγελματίες ενοικιάσεων",
+    "description": "Πληροφορίες Super K για επιχειρήσεις ενοικίασης αυτοκινήτων. Συζήτησε με την Keraboss απαιτήσεις στόλου, διαμόρφωση και εμπορική πρόταση.",
+    "heading": "Super K για επαγγελματίες",
+    "intro": "Συζήτησε με την Keraboss τις ανάγκες της επιχείρησης ενοικιάσεων και ζήτησε εξατομικευμένη εμπορική πρόταση.",
+    "sections": [
+      {
+        "heading": "Συζήτησε τις ανάγκες του στόλου σου",
+        "claimIds": ["identity"],
+        "links": ["specs", "configurator", "contact"],
+        "paragraphs": [
+          "Η διαμόρφωση και οι εμπορικοί όροι αξιολογούνται για το συγκεκριμένο αίτημα. Επικοινώνησε για αριθμό οχημάτων, χρήση και επιθυμητό εξοπλισμό."
+        ]
+      }
+    ],
+    "reviewedAt": "2026-11-19",
+    "contentStatus": "verified-public-source"
+  },
+  {
+    "id": "rentals-en",
+    "key": "rentals",
+    "locale": "en",
+    "title": "KERABOSS Super K for car rental professionals",
+    "description": "Super K information for car rental businesses. Discuss fleet requirements, configuration and an individual commercial proposal with Keraboss.",
+    "heading": "Super K for professionals",
+    "intro": "Discuss the needs of your car rental business with Keraboss and request an individual commercial proposal.",
+    "sections": [
+      {
+        "heading": "Discuss your fleet requirements",
+        "claimIds": ["identity"],
+        "links": ["specs", "configurator", "contact"],
+        "paragraphs": [
+          "Configuration and commercial terms are considered for each individual enquiry. Contact the company to discuss fleet size, intended use and preferred equipment."
+        ]
+      }
+    ],
+    "reviewedAt": "2026-11-19",
+    "contentStatus": "verified-public-source"
+  }
+]

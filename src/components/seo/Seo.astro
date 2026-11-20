@@ -2,6 +2,8 @@
 import { canonicalUrl, site, allowIndexing } from '@/config/site';
 import { createHash } from 'node:crypto';
 import { breadcrumbSchema, websiteSchema, type Breadcrumb, type JsonLd } from '@/lib/seo/schema';
+import { pageRoute, translatedRoutes, isIndexablePath } from '../../../config/route-policy.mjs';
+import type { Locale } from '@/lib/content';
 
 export interface Props {
   title?: string;
@@ -12,6 +14,8 @@ export interface Props {
   breadcrumbs?: readonly Breadcrumb[];
   structuredData?: readonly JsonLd[];
   markdownPath?: string;
+  locale?: Locale;
+  translationKey?: string;
 }
 
 const {
@@ -23,17 +27,26 @@ const {
   breadcrumbs = [],
   structuredData = [],
   markdownPath,
+  locale = 'el',
+  translationKey,
 } = Astro.props;
 const canonical = canonicalUrl(path);
-const indexable = allowIndexing && !noindex;
+const indexable = allowIndexing && !noindex && isIndexablePath(path);
+const alternates = translationKey ? translatedRoutes(translationKey) : [];
 const robots = indexable
   ? 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
   : 'noindex, follow';
 const graph = [
-  ...websiteSchema(path, title, description),
+  ...websiteSchema(path, title, description, locale),
   ...(breadcrumbs.length > 1 ? [breadcrumbSchema(breadcrumbs)] : []),
   ...structuredData,
 ];
+const pageNode = graph.find((node) => node['@type'] === 'WebPage');
+if (pageNode) {
+  if (breadcrumbs.length > 1) pageNode['breadcrumb'] = { '@id': `${canonical}#breadcrumb` };
+  const entity = structuredData.find((node) => node['@type'] === 'Car');
+  if (entity) pageNode['mainEntity'] = { '@id': entity['@id']! };
+}
 // Prevent supplied content from closing the JSON-LD script element.
 const jsonLd = JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }).replace(
   /</g,
@@ -55,7 +68,22 @@ if (imageUrl && imageUrl.origin !== site.origin)
 <link rel="canonical" href={canonical} />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content={site.organizationName} />
-<meta property="og:locale" content={site.locale} />
+<meta property="og:locale" content={locale === 'el' ? 'el_GR' : 'en_GB'} />
+{alternates
+  .filter((entry) => entry.locale !== locale)
+  .map((entry) => (
+    <meta property="og:locale:alternate" content={entry.locale === 'el' ? 'el_GR' : 'en_GB'} />
+  ))}
+{alternates.map((entry) => (
+  <link rel="alternate" hreflang={entry.locale} href={canonicalUrl(entry.path)} />
+))}
+{translationKey && alternates.length > 1 && (
+  <link
+    rel="alternate"
+    hreflang="x-default"
+    href={canonicalUrl(pageRoute(translationKey, 'el').path)}
+  />
+)}
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:url" content={canonical} />

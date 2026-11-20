@@ -7,12 +7,14 @@ interface Props {
   ratio?: 'square' | 'portrait' | 'card' | 'landscape' | 'video' | 'cinematic';
   eager?: boolean;
   contain?: boolean;
+  sizes?: string;
 }
 const {
   alt = 'Κίτρινο Keraboss Super K δίπλα στη θάλασσα στη Βάρκιζα.',
   ratio = 'card',
   eager = false,
   contain = false,
+  sizes = '(min-width: 64rem) 30vw, (min-width: 40rem) 45vw, 100vw',
 } = Astro.props;
 const images = await Promise.all(
   [480, 960, 1440, 1920].map((width) => getImage({ src: car, width, format: 'webp', quality: 82 })),
@@ -24,7 +26,7 @@ const largest = images[images.length - 1]!;
   <img
     src={largest.src}
     srcset={images.map((image) => `${image.src} ${image.attributes.width}w`).join(', ')}
-    sizes="(min-width: 80rem) 90vw, 100vw"
+    sizes={sizes}
     width={car.width}
     height={car.height}
     alt={alt}

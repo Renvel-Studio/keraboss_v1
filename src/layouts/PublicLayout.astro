@@ -1,0 +1,159 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import type { Locale } from '@/lib/content';
+import { publicContent, type PublicPage } from '@/lib/content';
+import { pageRoute, translatedRoutes, markdownPath } from '../../config/route-policy.mjs';
+import type { JsonLd, Breadcrumb } from '@/lib/seo/schema';
+import '@/styles/pages/public.css';
+
+interface Props {
+  page: PublicPage;
+  structuredData?: JsonLd[];
+}
+const { page, structuredData = [] } = Astro.props;
+const locale = page.data.locale as Locale;
+const en = locale === 'en';
+const { company } = await publicContent();
+const nav = en
+  ? {
+      model: 'Super K',
+      specs: 'Specifications',
+      configurator: 'Configure',
+      history: 'Our story',
+      media: 'Media',
+      press: 'Press',
+      faq: 'FAQ',
+      contact: 'Contact',
+      rentals: 'Professionals',
+    }
+  : {
+      model: 'Super K',
+      specs: 'Χαρακτηριστικά',
+      configurator: 'Διαμόρφωση',
+      history: 'Η ιστορία',
+      media: 'Media',
+      press: 'Τύπος',
+      faq: 'FAQ',
+      contact: 'Επικοινωνία',
+      rentals: 'Επαγγελματίες',
+    };
+const route = pageRoute(page.data.key, locale);
+const crumbs: Breadcrumb[] = [
+  { name: en ? 'Home' : 'Αρχική', path: pageRoute('home', locale).path },
+];
+if (page.data.key === 'specs')
+  crumbs.push({ name: 'Super K', path: pageRoute('model', locale).path });
+if (page.data.key !== 'home') crumbs.push({ name: page.data.heading, path: route.path });
+---
+
+<BaseLayout
+  title={page.data.title}
+  description={page.data.description}
+  path={route.path}
+  locale={locale}
+  translationKey={page.data.key}
+  breadcrumbs={crumbs}
+  markdownPath={markdownPath(route.path)}
+  structuredData={structuredData}
+  image={{
+    src: '/social/super-k.jpg',
+    alt: en
+      ? 'Yellow Keraboss Super K beside the sea in Varkiza.'
+      : 'Κίτρινο Keraboss Super K δίπλα στη θάλασσα στη Βάρκιζα.',
+    width: 1200,
+    height: 675,
+    type: 'image/jpeg',
+  }}
+>
+  <header class="site-header container-wide">
+    <a
+      class="site-brand type-h5"
+      href={pageRoute('home', locale).path}
+      aria-label={en ? 'Keraboss home' : 'Keraboss αρχική'}
+    >
+      KERABOSS
+    </a>
+    <nav aria-label={en ? 'Main navigation' : 'Κύρια πλοήγηση'}>
+      <ul class="nav-list">
+        {['model', 'specs', 'configurator', 'contact'].map((key) => (
+          <li>
+            <a
+              class="nav-link"
+              href={pageRoute(key, locale).path}
+              aria-current={page.data.key === key ? 'page' : undefined}
+            >
+              {nav[key as keyof typeof nav]}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+    <nav class="cluster" aria-label={en ? 'Language' : 'Γλώσσα'}>
+      {translatedRoutes(page.data.key).map((entry) => (
+        <a
+          class="nav-link"
+          href={entry.path}
+          lang={entry.locale}
+          hreflang={entry.locale}
+          aria-current={entry.locale === locale ? 'true' : undefined}
+        >
+          {entry.locale === 'el' ? 'Ελληνικά' : 'English'}
+        </a>
+      ))}
+    </nav>
+  </header>
+  {crumbs.length > 1 && (
+    <nav
+      class="container-wide breadcrumbs type-caption"
+      aria-label={en ? 'Breadcrumb' : 'Διαδρομή'}
+    >
+      <ol>
+        {crumbs.map((crumb, index) => (
+          <li>
+            {index === crumbs.length - 1 ? (
+              <span aria-current="page">{crumb.name}</span>
+            ) : (
+              <a href={crumb.path}>{crumb.name}</a>
+            )}
+          </li>
+        ))}
+      </ol>
+    </nav>
+  )}
+  <slot />
+  <footer class="section surface-inverse">
+    <div class="container-wide stack stack--loose">
+      <div class="cluster cluster--between">
+        <p class="type-h3">KERABOSS</p>
+        <a href={`mailto:${company.email}`} data-cta="footer-email">
+          {company.email}
+        </a>
+        <a href={`tel:${company.telephone}`} data-cta="footer-phone">
+          {company.telephone}
+        </a>
+      </div>
+      <nav aria-label={en ? 'Explore Keraboss' : 'Περισσότερα για την Keraboss'}>
+        <ul class="site-footer-links">
+          {Object.entries(nav).map(([key, label]) => (
+            <li>
+              <a href={pageRoute(key, locale).path}>{label}</a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+      <ul class="site-footer-links">
+        {company.social.map((profile) => (
+          <li>
+            <a href={profile.url} rel="me">
+              {profile.name} · {profile.handle}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </footer>
+  <script>
+    import { mountCtaTracking } from '@/scripts/analytics';
+    mountCtaTracking();
+  </script>
+</BaseLayout>

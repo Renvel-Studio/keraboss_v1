@@ -15,7 +15,7 @@
 | Reusable components                                               | `src/components/ui/reusable/{Button,TextField,CarMedia,VehicleCard,Icon}.astro`                                                                                   |
 | Test page / local interactions                                    | `src/pages/design-system.astro`, `src/data/design-system.ts`, `src/styles/pages/design-system.css`, `src/scripts/design-system.ts`                                |
 | Font registration / provenance                                    | `src/fonts/index.css`, `src/fonts/manifest.json`, `src/fonts/sources/`, `public/fonts/`                                                                           |
-| Preparation / checks                                              | `scripts/{prepare-fonts,prepare-design-assets,verify-design-system,verify-seo}.mjs`                                                                               |
+| Preparation / checks                                              | `scripts/{prepare-fonts,prepare-design-assets,verify-design-system,audit-built-site}.mjs`                                                                         |
 | Integration updates                                               | `astro.config.mjs`, `package.json`, `package-lock.json`, `.prettierignore`, `src/scripts/gsap/index.ts`, `src/pages/humans.txt.ts`, README / discoverability docs |
 
 Η δομή ρόλων typography / surfaces / borders ακολουθεί τη συνέπεια των
@@ -68,7 +68,7 @@ Inter και Noto Sans είναι pinned σε `5.3.0` σε package.json και l
 - Οκτώ WOFF2 signatures, SHA-256, variable axes και cmap: κανένας χαρακτήρας δεν λείπει από τις τρεις ζητούμενες φράσεις.
 - 26 πραγματικοί συνδυασμοί contrast με thresholds χωρίς στρογγυλοποίηση: text ≥4.5:1, controls/focus ≥3:1.
   Ενδεικτικά Carbon/Yellow 12.184:1, Stone/Desert Sand 5.365:1, Control Border/Desert Sand 3.879:1.
-- 16 CSS αρχεία: μηδενικά px και μηδενικά physical box declarations. Raw χρώματα μόνο στα primitives.
+- 17 CSS αρχεία: μηδενικά px και μηδενικά physical box declarations. Raw χρώματα μόνο στα primitives.
 - 336 αριθμητικοί έλεγχοι fluid tokens στα 20–200rem και root font μεγέθη 16 / 20 / 32.
   Αυτοί ελέγχουν τα μαθηματικά των tokens και **δεν** υποκαθιστούν browser layout / zoom.
 - Demo noindex, εξαίρεση από sitemap, ένας H1, native radios, labelled inputs, aria-invalid, τέσσερα demos και κανένα αυθαίρετο font preload.

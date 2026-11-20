@@ -13,8 +13,18 @@ export function resolveSiteSettings(environment) {
       'PUBLIC_SITE_URL must be an HTTPS origin, without a path, query, or credentials.',
     );
   }
-  const indexable = environment.PUBLIC_INDEXABLE ?? 'true';
+  const preview =
+    (environment.CONTEXT && environment.CONTEXT !== 'production') ||
+    (environment.VERCEL_ENV && environment.VERCEL_ENV !== 'production');
+  const indexable = preview ? 'false' : (environment.PUBLIC_INDEXABLE ?? 'true');
   if (!['true', 'false'].includes(indexable))
     throw new Error('PUBLIC_INDEXABLE must be true or false.');
-  return { origin: url.origin, indexable: indexable === 'true' };
+  const gptBotAllowed = environment.PUBLIC_GPTBOT_ALLOWED ?? 'true';
+  if (!['true', 'false'].includes(gptBotAllowed))
+    throw new Error('PUBLIC_GPTBOT_ALLOWED must be true or false.');
+  return {
+    origin: url.origin,
+    indexable: indexable === 'true',
+    gptBotAllowed: gptBotAllowed === 'true',
+  };
 }

@@ -1,0 +1,16 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import PublicPage from '@/components/sections/PublicPage.astro';
+import { pageRoute } from '../../config/route-policy.mjs';
+export async function getStaticPaths() {
+  return (await getCollection('pages'))
+    .filter(({ data }) => data.key !== 'home' || data.locale !== 'el')
+    .map((page) => ({
+      params: { path: pageRoute(page.data.key, page.data.locale).path.replace(/^\/|\/$/g, '') },
+      props: { page },
+    }));
+}
+const { page } = Astro.props as { page: CollectionEntry<'pages'> };
+---
+
+<PublicPage page={page} />

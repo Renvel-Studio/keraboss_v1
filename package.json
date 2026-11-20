@@ -14,10 +14,13 @@
     "check": "astro check",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "verify:seo": "node scripts/verify-seo.mjs",
-    "validate": "npm run format:check && npm run check && npm run build && npm run verify:seo && npm run verify:design",
+    "verify:seo": "node scripts/audit-built-site.mjs",
+    "validate": "npm run format:check && npm run check && npm run build && npm run verify:seo && npm run verify:design && npm run verify:inquiries && npm run verify:conversions",
     "fonts:prepare": "node scripts/prepare-fonts.mjs",
-    "verify:design": "node scripts/verify-design-system.mjs"
+    "verify:design": "node scripts/verify-design-system.mjs",
+    "verify:inquiries": "node scripts/verify-inquiries.mjs",
+    "verify:http": "node scripts/verify-http.mjs",
+    "verify:conversions": "node scripts/verify-conversions.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",
@@ -34,7 +37,8 @@
     "prettier": "^3.9.9",
     "prettier-plugin-astro": "^1.1.0",
     "sharp": "0.35.5",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "ultrahtml": "1.7.0"
   },
   "engines": {
     "node": ">=22.12.0"

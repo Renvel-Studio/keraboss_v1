@@ -3,11 +3,14 @@ import sitemap from '@astrojs/sitemap';
 import { loadEnv } from 'vite';
 import { resolveSiteSettings } from './config/site-settings.mjs';
 import { securityHeadersIntegration } from './config/security-headers.mjs';
+import { isIndexablePath, routes } from './config/route-policy.mjs';
 
 const settings = resolveSiteSettings({
   ...loadEnv(process.env.NODE_ENV ?? 'production', process.cwd(), ''),
   ...process.env,
 });
+// Propagate fail-closed deployment context to Astro's statically generated pages.
+process.env.PUBLIC_INDEXABLE = String(settings.indexable);
 
 export default defineConfig({
   site: settings.origin,
@@ -15,12 +18,17 @@ export default defineConfig({
   trailingSlash: 'always',
   build: { format: 'directory', inlineStylesheets: 'never' },
   integrations: [
-    securityHeadersIntegration(settings.indexable),
+    securityHeadersIntegration(settings.indexable, settings.origin),
     ...(settings.indexable
       ? [
           sitemap({
-            filter: (page) =>
-              !['/404.html', '/404/', '/design-system/'].includes(new URL(page).pathname),
+            filter: (page) => isIndexablePath(page),
+            serialize: (item) => {
+              const route = routes.find(
+                (entry) => entry.path === decodeURI(new URL(item.url).pathname),
+              );
+              return { ...item, ...(route ? { lastmod: route.updatedAt } : {}) };
+            },
           }),
         ]
       : []),

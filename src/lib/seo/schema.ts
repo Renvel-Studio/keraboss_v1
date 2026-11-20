@@ -1,4 +1,6 @@
 import { canonicalUrl, site } from '@/config/site';
+import evidence from '@/data/catalog-evidence.json';
+import type { Locale } from '@/lib/content';
 
 export type JsonLd = {
   [key: string]: string | number | boolean | null | JsonLd | readonly (string | number | JsonLd)[];
@@ -9,7 +11,12 @@ export interface Breadcrumb {
   path: string;
 }
 
-export function websiteSchema(path: string, title: string, description: string): JsonLd[] {
+export function websiteSchema(
+  path: string,
+  title: string,
+  description: string,
+  locale: Locale = 'el',
+): JsonLd[] {
   const home = canonicalUrl();
   const page = canonicalUrl(path);
   return [
@@ -21,7 +28,12 @@ export function websiteSchema(path: string, title: string, description: string):
       url: home,
       email: site.email,
       telephone: site.phone,
-      address: { '@type': 'PostalAddress', ...site.address },
+      address: {
+        '@type': 'PostalAddress',
+        ...site.address,
+        streetAddress: evidence.company.streetAddress[locale],
+        addressLocality: evidence.company.addressLocality[locale],
+      },
       sameAs: site.social.map(({ url }) => url),
     },
     {
@@ -29,7 +41,7 @@ export function websiteSchema(path: string, title: string, description: string):
       '@id': `${home}#website`,
       url: home,
       name: site.organizationName,
-      inLanguage: site.language,
+      inLanguage: ['el', 'en'],
       publisher: { '@id': `${home}#organization` },
     },
     {
@@ -38,7 +50,7 @@ export function websiteSchema(path: string, title: string, description: string):
       url: page,
       name: title,
       description,
-      inLanguage: site.language,
+      inLanguage: locale,
       isPartOf: { '@id': `${home}#website` },
       about: { '@id': `${home}#organization` },
     },
@@ -48,6 +60,7 @@ export function websiteSchema(path: string, title: string, description: string):
 export function breadcrumbSchema(items: readonly Breadcrumb[]): JsonLd {
   return {
     '@type': 'BreadcrumbList',
+    '@id': `${canonicalUrl(items[items.length - 1]!.path)}#breadcrumb`,
     itemListElement: items.map((item, index) => ({
       '@type': 'ListItem',
       position: index + 1,

@@ -1,5 +1,5 @@
-import { llmsIndex } from '@/content/company';
+import { llmsIndex } from '@/lib/exports';
 import { textResponse } from '@/lib/http';
-export function GET(): Response {
-  return textResponse(llmsIndex, 'text/markdown');
+export async function GET(): Promise<Response> {
+  return textResponse(await llmsIndex(), 'text/markdown');
 }

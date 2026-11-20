@@ -1,0 +1,138 @@
+{
+  "status": "requires-external-access",
+  "reason": "EPERM",
+  "observations": [
+    {
+      "path": "/",
+      "status": 200,
+      "transport": "in-process Request/Response contract; not an HTTP socket"
+    },
+    {
+      "path": "/en/αρχική-σελίδα-english/",
+      "status": 200,
+      "transport": "in-process Request/Response contract; not an HTTP socket"
+    },
+    {
+      "path": "/super-k/",
+      "status": 200,
+      "transport": "in-process Request/Response contract; not an HTTP socket"
+    },
+    {
+      "path": "/en/super-k-2/",
+      "status": 200,
+      "transport": "in-process Request/Response contract; not an HTTP socket"
+    },
+    {
+      "path": "/super-k/τεχνικά-χαρακτηριστικά/",
+      "status": 200,
+      "transport": "in-process Request/Response contract; not an HTTP socket"
+    },
+    {
+      "path": "/en/super-k-2/specifications/",
+      "status": 200,
+      "transport": "in-process Request/Response contract; not an HTTP socket"
+    },
+    {
+      "path": "/διαμόρφωσε-το-keraboss-σου/",
+      "status": 200,
+      "transport": "in-process Request/Response contract; not an HTTP socket"
+    },
+    {
+      "path": "/en/build-your-keraboss-2/",
+      "status": 200,
+      "transport": "in-process Request/Response contract; not an HTTP socket"
+    },
+    {
+      "path": "/ιστορία/",
+      "status": 200,
+      "transport": "in-process Request/Response contract; not an HTTP socket"
+    },
+    {
+      "path": "/en/history/",
+      "status": 200,
+      "transport": "in-process Request/Response contract; not an HTTP socket"
+    },
+    {
+      "path": "/media/",
+      "status": 200,
+      "transport": "in-process Request/Response contract; not an HTTP socket"
+    },
+    {
+      "path": "/en/media-en/",
+      "status": 200,
+      "transport": "in-process Request/Response contract; not an HTTP socket"
+    },
+    {
+      "path": "/category/δημοσιότητα/",
+      "status": 200,
+      "transport": "in-process Request/Response contract; not an HTTP socket"
+    },
+    {
+      "path": "/en/category/publicity/",
+      "status": 200,
+      "transport": "in-process Request/Response contract; not an HTTP socket"
+    },
+    {
+      "path": "/συχνεσ-ερωτησεισ-kai-απαντησεισ-σχετικα/",
+      "status": 200,
+      "transport": "in-process Request/Response contract; not an HTTP socket"
+    },
+    {
+      "path": "/en/faq/",
+      "status": 200,
+      "transport": "in-process Request/Response contract; not an HTTP socket"
+    },
+    {
+      "path": "/επικοινωνία/",
+      "status": 200,
+      "transport": "in-process Request/Response contract; not an HTTP socket"
+    },
+    {
+      "path": "/en/contact-us/",
+      "status": 200,
+      "transport": "in-process Request/Response contract; not an HTTP socket"
+    },
+    {
+      "path": "/rent-a-car/",
+      "status": 200,
+      "transport": "in-process Request/Response contract; not an HTTP socket"
+    },
+    {
+      "path": "/en/rent-a-car-en/",
+      "status": 200,
+      "transport": "in-process Request/Response contract; not an HTTP socket"
+    },
+    {
+      "path": "/missing-audit-page/",
+      "status": 404,
+      "transport": "in-process Request/Response contract; not an HTTP socket"
+    },
+    {
+      "path": "/en/",
+      "status": 301,
+      "transport": "in-process Request/Response contract; not an HTTP socket"
+    },
+    {
+      "path": "/.well-known/security.txt",
+      "status": 200,
+      "transport": "in-process Request/Response contract; not an HTTP socket"
+    },
+    {
+      "path": "/site.webmanifest",
+      "status": 200,
+      "transport": "in-process Request/Response contract; not an HTTP socket"
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "transport": "in-process Request/Response contract; not an HTTP socket"
+    },
+    {
+      "path": "/api/inquiries",
+      "status": 405,
+      "transport": "in-process Request/Response contract; not an HTTP socket"
+    }
+  ],
+  "redirectContracts": 144,
+  "scope": "In-process Request/Response contracts passed; actual HTTP binding was unavailable. No production or browser verification."
+}

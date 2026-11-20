@@ -16,6 +16,7 @@
     "src/styles/primary/motion.css",
     "src/styles/primary/typography.css",
     "src/styles/pages/design-system.css",
+    "src/styles/pages/public.css",
     "src/fonts/index.css"
   ],
   "forbiddenPixels": 0,

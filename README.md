@@ -43,7 +43,7 @@ config/                         κοινές ρυθμίσεις build / security
 docs/                           έρευνα και οδηγίες discoverability
 scripts/                        asset generation και SEO verification
 public/
-  fonts/                        μελλοντικά licensed self-hosted WOFF2
+  fonts/                        pinned self-hosted WOFF2 και OFL
   icons/                        generated sprite, manifest icons, άδεια Lucide
   favicon.svg                   προσωρινό K monogram
 src/
@@ -52,9 +52,11 @@ src/
   components/
     seo/                        κοινό head / JSON-LD
     ui/reusable/                reusable UI, Icon.astro
-    sections/                   sections του μελλοντικού site
+    sections/                   public sections και configurator
   config/site.ts                εταιρικά στοιχεία / metadata defaults
-  content/company.ts            κοινό περιεχόμενο HTML / Markdown / LLM files
+  data/catalog-evidence.json    εταιρικά στοιχεία, specs, επιλογές και πηγές
+  data/pages.json               μεταφρασμένο περιεχόμενο
+  content.config.ts             Zod-validated Astro collections
   generated/                    generated IconName union
   fonts/                        αυτόνομη καταχώριση self-hosted @font-face
   layouts/                      BaseLayout.astro
@@ -69,7 +71,8 @@ src/
 
 Κάθε νέα σελίδα χρησιμοποιεί `BaseLayout` με μοναδικά `title`, `description`.
 Το canonical προκύπτει από production origin + pathname χωρίς query/hash.
-Για σελίδες εκτός αναζήτησης δώσε `noindex` και εξαίρεσέ τες από το sitemap filter.
+Νέα indexable σελίδα χρειάζεται ρητή εγγραφή στο `config/routes.json` και αντίστοιχο
+μεταφρασμένο content entry. Όσα routes δεν βρίσκονται στην allowlist παραμένουν noindex.
 
 ```astro
 ---
@@ -92,7 +95,8 @@ import Icon from '@/components/ui/reusable/Icon.astro';
 Πρόσθεσε επιλεγμένα Lucide SVG στο `src/assets/icons/lucide/` και τρέξε generation.
 Το τοπικό subset περιλαμβάνει τις άδειες Lucide / Feather, χωρίς runtime CDN ή ολόκληρο icon pack.
 
-Για scroll smoothing δώσε `smoothScroll` στο layout· για section animation πρόσθεσε `data-reveal`.
+Για scroll smoothing δώσε `smoothScroll` στο layout. Για section animation δώσε
+`motion` στο layout και πρόσθεσε `data-reveal` στα επιλεγμένα στοιχεία.
 GSAP/Lenis φορτώνουν μόνο σε opt-in σελίδες, χωρίς reduced motion. Το περιεχόμενο είναι ορατό χωρίς JS.
 
 Τα components χρησιμοποιούν semantic tokens. Raw χρώματα υπάρχουν μόνο στο
@@ -107,3 +111,33 @@ parent-safe ελάχιστες στήλες. Σε κάθε κάρτα `.card-con
 
 Πριν τη δημοσίευση διάβασε το [discoverability checklist](docs/discoverability.md).
 Τα επαληθευμένα στοιχεία και τα όρια έρευνας είναι στο [research](docs/keraboss-research.md).
+
+## Πλήρες audit και δημόσια δίγλωσση δομή
+
+Η [αναφορά audit](docs/full-audit.md) διαχωρίζει πραγματικά περασμένους ελέγχους από
+παρατηρήσεις artifacts, unit tests και εξωτερικές εκκρεμότητες. Το cutover παραμένει
+μπλοκαρισμένο από 57 unmapped legacy URLs, browser/HTTP QA και μη συνδεδεμένο backend.
+
+Τα 20 canonical routes είναι στο `config/routes.json`: ελληνικά και αγγλικά home, model,
+specs, configurator, history/construction, media, press, FAQ, contact και rental-professionals.
+Διατηρούνται τα καθιερωμένα Greek/English slugs, ακόμη και τα παλιά `super-k-2` / `build-your-keraboss-2`.
+Τα HTML, JSON-LD και Markdown / LLM exports αντλούν από Astro collections με κοινά source-backed δεδομένα.
+Τα page titles, hreflang, canonicals, sitemap και indexability ελέγχονται σε κάθε production build.
+
+Το `netlify.toml` είναι reference deployment adapter· δεν έχει γίνει δημοσίευση ή hosting σύνδεση.
+Οι κανόνες host/trailing-slash redirects έχουν ένα τελικό destination ανά γνωστό route.
+Η πραγματική εφαρμογή των headers και redirects απαιτεί έλεγχο στο επιλεγμένο hosting.
+
+Η φόρμα ενεργοποιείται μόνο με `PUBLIC_INQUIRY_ENABLED=true`, αφού συνδεθεί HTTPS webhook,
+server-only token, durable idempotency/receipt και εγκριθεί το privacy handling. Μέχρι τότε
+λειτουργεί η απευθείας διαδρομή τηλεφώνου/email. Δες το [inquiry contract](docs/inquiries.md).
+Τα `keraboss:analytics` events είναι integration hooks, όχι ενεργός εξωτερικός collector.
+
+Το `PUBLIC_GPTBOT_ALLOWED` ρυθμίζει το training ανεξάρτητα από search/retrieval bots.
+Netlify deploy-preview/branch και Vercel preview contexts εξαναγκάζουν `noindex`, κλειστό
+robots και απουσία sitemap, ακόμη και με λανθασμένο `PUBLIC_INDEXABLE=true`. Private previews
+χρειάζονται επιπλέον access control του hosting.
+
+Το `npm run verify:http` επιχειρεί πραγματικό local HTTP και επιστρέφει exit2 αν το
+περιβάλλον δεν επιτρέπει socket. Τα in-process Request/Response contracts καταγράφονται
+χωριστά και δεν θεωρούνται επιτυχής HTTP ή browser επαλήθευση.

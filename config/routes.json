@@ -1,0 +1,182 @@
+[
+  {
+    "id": "home-el",
+    "key": "home",
+    "locale": "el",
+    "path": "/",
+    "indexable": true,
+    "updatedAt": "2026-11-19",
+    "indexReason": "Localized company and model entry point"
+  },
+  {
+    "id": "home-en",
+    "key": "home",
+    "locale": "en",
+    "path": "/en/αρχική-σελίδα-english/",
+    "indexable": true,
+    "updatedAt": "2026-11-19",
+    "indexReason": "Localized company and model entry point"
+  },
+  {
+    "id": "model-el",
+    "key": "model",
+    "locale": "el",
+    "path": "/super-k/",
+    "indexable": true,
+    "updatedAt": "2026-11-19",
+    "indexReason": "Canonical official Super K entity reference"
+  },
+  {
+    "id": "model-en",
+    "key": "model",
+    "locale": "en",
+    "path": "/en/super-k-2/",
+    "indexable": true,
+    "updatedAt": "2026-11-19",
+    "indexReason": "Canonical official Super K entity reference"
+  },
+  {
+    "id": "specs-el",
+    "key": "specs",
+    "locale": "el",
+    "path": "/super-k/τεχνικά-χαρακτηριστικά/",
+    "indexable": true,
+    "updatedAt": "2026-11-19",
+    "indexReason": "Published source-backed technical specification table"
+  },
+  {
+    "id": "specs-en",
+    "key": "specs",
+    "locale": "en",
+    "path": "/en/super-k-2/specifications/",
+    "indexable": true,
+    "updatedAt": "2026-11-19",
+    "indexReason": "Published source-backed technical specification table"
+  },
+  {
+    "id": "configurator-el",
+    "key": "configurator",
+    "locale": "el",
+    "path": "/διαμόρφωσε-το-keraboss-σου/",
+    "indexable": true,
+    "updatedAt": "2026-11-19",
+    "indexReason": "Stable catalogue preferences and direct enquiry journey; combinations are not separate routes"
+  },
+  {
+    "id": "configurator-en",
+    "key": "configurator",
+    "locale": "en",
+    "path": "/en/build-your-keraboss-2/",
+    "indexable": true,
+    "updatedAt": "2026-11-19",
+    "indexReason": "Stable catalogue preferences and direct enquiry journey; combinations are not separate routes"
+  },
+  {
+    "id": "history-el",
+    "key": "history",
+    "locale": "el",
+    "path": "/ιστορία/",
+    "indexable": true,
+    "updatedAt": "2026-11-19",
+    "indexReason": "Published company history and construction information"
+  },
+  {
+    "id": "history-en",
+    "key": "history",
+    "locale": "en",
+    "path": "/en/history/",
+    "indexable": true,
+    "updatedAt": "2026-11-19",
+    "indexReason": "Published company history and construction information"
+  },
+  {
+    "id": "media-el",
+    "key": "media",
+    "locale": "el",
+    "path": "/media/",
+    "indexable": true,
+    "updatedAt": "2026-11-19",
+    "indexReason": "First-party photography and verified official social profiles"
+  },
+  {
+    "id": "media-en",
+    "key": "media",
+    "locale": "en",
+    "path": "/en/media-en/",
+    "indexable": true,
+    "updatedAt": "2026-11-19",
+    "indexReason": "First-party photography and verified official social profiles"
+  },
+  {
+    "id": "press-el",
+    "key": "press",
+    "locale": "el",
+    "path": "/category/δημοσιότητα/",
+    "indexable": true,
+    "updatedAt": "2026-11-19",
+    "indexReason": "Original publisher coverage and press contact"
+  },
+  {
+    "id": "press-en",
+    "key": "press",
+    "locale": "en",
+    "path": "/en/category/publicity/",
+    "indexable": true,
+    "updatedAt": "2026-11-19",
+    "indexReason": "Original publisher coverage and press contact"
+  },
+  {
+    "id": "faq-el",
+    "key": "faq",
+    "locale": "el",
+    "path": "/συχνεσ-ερωτησεισ-kai-απαντησεισ-σχετικα/",
+    "indexable": true,
+    "updatedAt": "2026-11-19",
+    "indexReason": "Source-backed model questions and answers"
+  },
+  {
+    "id": "faq-en",
+    "key": "faq",
+    "locale": "en",
+    "path": "/en/faq/",
+    "indexable": true,
+    "updatedAt": "2026-11-19",
+    "indexReason": "Source-backed model questions and answers"
+  },
+  {
+    "id": "contact-el",
+    "key": "contact",
+    "locale": "el",
+    "path": "/επικοινωνία/",
+    "indexable": true,
+    "updatedAt": "2026-11-19",
+    "indexReason": "Verified direct contact and viewing/quotation journey"
+  },
+  {
+    "id": "contact-en",
+    "key": "contact",
+    "locale": "en",
+    "path": "/en/contact-us/",
+    "indexable": true,
+    "updatedAt": "2026-11-19",
+    "indexReason": "Verified direct contact and viewing/quotation journey"
+  },
+  {
+    "id": "rentals-el",
+    "key": "rentals",
+    "locale": "el",
+    "path": "/rent-a-car/",
+    "indexable": true,
+    "updatedAt": "2026-11-19",
+    "indexReason": "Established professional fleet enquiry purpose"
+  },
+  {
+    "id": "rentals-en",
+    "key": "rentals",
+    "locale": "en",
+    "path": "/en/rent-a-car-en/",
+    "indexable": true,
+    "updatedAt": "2026-11-19",
+    "indexReason": "Established professional fleet enquiry purpose"
+  }
+]

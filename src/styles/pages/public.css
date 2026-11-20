@@ -1,0 +1,112 @@
+@layer demos {
+  .site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    padding-block: var(--space-md);
+    border-block-end: var(--border-subtle);
+  }
+  .site-brand {
+    text-decoration: none;
+  }
+  .site-footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    list-style: none;
+    padding-block: 0;
+    padding-inline: 0;
+    margin-block: 0;
+    margin-inline: 0;
+  }
+  .breadcrumbs {
+    padding-block: var(--space-sm);
+  }
+  .breadcrumbs ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    list-style: none;
+    padding-block: 0;
+    padding-inline: 0;
+    margin-block: 0;
+    margin-inline: 0;
+  }
+  .breadcrumbs li + li::before {
+    content: '/';
+    padding-inline-end: var(--space-sm);
+    color: var(--text-secondary);
+  }
+  .public-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    align-items: center;
+    gap: var(--space-xl);
+    padding-block: var(--space-xl);
+  }
+  .public-hero > * {
+    min-inline-size: 0;
+  }
+  .public-hero--home {
+    min-block-size: clamp(32rem, 85dvh, 72rem);
+    container: public-hero / inline-size;
+  }
+  .public-wordmark {
+    font-size: clamp(2.75rem, calc(0.25rem + 21vw), 42rem);
+    line-height: var(--leading-display);
+    letter-spacing: var(--tracking-ultra-tight);
+    font-weight: var(--type-display-hero-weight);
+    padding-block: 0.1em;
+    overflow-wrap: anywhere;
+  }
+  .public-section {
+    border-block-start: var(--border-subtle);
+    padding-block-start: var(--space-lg);
+  }
+  .public-link-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-lg);
+    padding-inline-start: var(--space-md);
+    margin-block: 0;
+  }
+  .spec-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+    gap: var(--space-lg);
+    margin-block: 0;
+    margin-inline: 0;
+  }
+  .spec-grid > div {
+    padding-block: var(--space-md);
+    border-block-end: var(--border-subtle);
+  }
+  .spec-grid dd {
+    margin-block-start: var(--space-xs);
+    margin-inline: 0;
+  }
+  .public-cta {
+    padding-block: var(--component-padding);
+    padding-inline: var(--component-padding);
+  }
+  .inquiry-form {
+    max-inline-size: var(--container-reading);
+  }
+  .inquiry-form input[type='checkbox'] {
+    inline-size: 1.125rem;
+    block-size: 1.125rem;
+    accent-color: var(--text-primary);
+  }
+  @supports (font-size: 1cqi) {
+    .public-wordmark {
+      font-size: clamp(2.75rem, calc(0.25rem + 23cqi), 42rem);
+    }
+  }
+  @media (width >= 64rem) {
+    .public-hero:not(.public-hero--home) {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    }
+  }
+}

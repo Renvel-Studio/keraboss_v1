@@ -1,0 +1,14 @@
+[
+  {
+    "from": "/en/",
+    "to": "/en/αρχική-σελίδα-english/",
+    "status": 301,
+    "reason": "Explicit English-language directory entry alias; canonical legacy home is preserved."
+  },
+  {
+    "from": "/en",
+    "to": "/en/αρχική-σελίδα-english/",
+    "status": 301,
+    "reason": "Direct-to-final English-language directory entry alias."
+  }
+]
